@@ -1,0 +1,1042 @@
+{
+  "$schema": "./catalog.schema.json",
+  "name": "plugin4ai",
+  "description": "Personal AI CLI plugin catalog — cross-platform productivity skills",
+  "owner": {
+    "name": "rmompo",
+    "email": "rmompo@gmail.com"
+  },
+  "clis": {
+    "claudecode": {
+      "name": "Claude Code",
+      "vendor": "Anthropic",
+      "url": "https://claude.ai/code",
+      "install": "claude plugins marketplace add rmompo/plugin4ai"
+    },
+    "ghcopilot": {
+      "name": "GitHub Copilot CLI",
+      "vendor": "Microsoft / GitHub",
+      "url": "https://cli.github.com",
+      "install": "gh extension install github/gh-copilot"
+    },
+    "geminicli": {
+      "name": "Gemini CLI",
+      "vendor": "Google",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "install": "npm install -g @google/gemini-cli",
+      "notes": "Transitioning to Antigravity CLI (Google I/O 2026). Plugin system preserved under new name."
+    },
+    "codex": {
+      "name": "Codex CLI",
+      "vendor": "OpenAI",
+      "url": "https://github.com/openai/codex",
+      "install": "npm install -g @openai/codex",
+      "notes": "Extension system based on MCP. Native plugin format still maturing."
+    }
+  },
+  "plugins": [
+    {
+      "name": "p4-core",
+      "description": "Core productivity plugin: behavioral directives (P4D), intelligent model routing via subagents, and Conventional Commits enforcement.",
+      "category": "productivity",
+      "status": "stable",
+      "version": "1.2.17",
+      "spec": "specs/p4-core.md",
+      "changelog": [
+        {
+          "version": "1.2.17",
+          "changes": "sanitize: update argument-hint to [path]"
+        },
+        {
+          "version": "1.2.16",
+          "changes": "sanitize: new skill (moved from p4-plugin) — scans all sensitive-capable files in repo"
+        },
+        {
+          "version": "1.2.15",
+          "changes": "setup: add plugin dep check; skill-list: rename column to ready, check all dep types"
+        },
+        {
+          "version": "1.2.13",
+          "changes": "setup: read dependencies[] instead of requires[]"
+        },
+        {
+          "version": "1.2.12",
+          "changes": "skill-list: fix skill version source to catalog.json"
+        },
+        {
+          "version": "1.2.11",
+          "changes": "skill-list: add dedicated v column for skill version"
+        },
+        {
+          "version": "1.2.10",
+          "changes": "skill-list: add plugin/skill version display, collapse repeated plugin column"
+        },
+        {
+          "version": "1.2.9",
+          "changes": "Add setup skill to verify git and other tool dependencies"
+        },
+        {
+          "version": "1.2.8",
+          "changes": "git-commit: declare git as skill-level requires; skill-list: resolve tools from skill.requires when present"
+        },
+        {
+          "version": "1.2.7",
+          "changes": "skill-list: setup skills always show empty tools column"
+        },
+        {
+          "version": "1.2.6",
+          "changes": "skill-list: add tools column showing external dependency status"
+        },
+        {
+          "version": "1.2.5",
+          "changes": "skill-list: use Markdown table format in output"
+        },
+        {
+          "version": "1.2.4",
+          "changes": "Add skill-list skill"
+        },
+        {
+          "version": "1.2.3",
+          "changes": "Skill versions normalized to Z system (integers)"
+        },
+        {
+          "version": "1.2.0",
+          "changes": "Skill renames: commit→git-commit, model-routing→model-route, behaviour→model-behaviour"
+        },
+        {
+          "version": "1.1.0",
+          "changes": "Add model-behaviour skill (P4D directives)"
+        },
+        {
+          "version": "1.0.0",
+          "changes": "Initial release with git-commit and model-route skills"
+        }
+      ],
+      "skills": [
+        {
+          "name": "git-commit",
+          "version": 1,
+          "changelog": [
+            {
+              "version": 1,
+              "changes": "Initial release — extracted from p4-core inline instructions"
+            }
+          ],
+          "dependencies": [
+            {
+              "type": "tool",
+              "name": "git",
+              "version": "*"
+            }
+          ]
+        },
+        {
+          "name": "model-behaviour",
+          "version": 2,
+          "changelog": [
+            {
+              "version": 2,
+              "changes": "Renamed from behaviour to model-behaviour"
+            },
+            {
+              "version": 1,
+              "changes": "Initial release — P4D directives extracted from .project/rules.md"
+            }
+          ]
+        },
+        {
+          "name": "model-route",
+          "version": 3,
+          "changelog": [
+            {
+              "version": 3,
+              "changes": "Version alignment to Z system"
+            },
+            {
+              "version": 2,
+              "changes": "Stabilized model routing logic"
+            },
+            {
+              "version": 1,
+              "changes": "Initial release"
+            }
+          ]
+        },
+        {
+          "name": "skill-list",
+          "version": 15,
+          "changelog": [
+            {
+              "version": 15,
+              "changes": "rename tools column to ready; check both tool and plugin deps; update example table"
+            },
+            {
+              "version": 12,
+              "changes": "Read skill version from catalog.json (source of truth) instead of SKILL.md frontmatter"
+            },
+            {
+              "version": 11,
+              "changes": "Separate skill version into dedicated v column; plugin version stays concatenated"
+            },
+            {
+              "version": 10,
+              "changes": "Show plugin version in first row only; show skill version next to skill name"
+            },
+            {
+              "version": 8,
+              "changes": "support skill-level requires in tools column — skill.requires takes precedence over plugin.requires; git-commit now shows git status"
+            },
+            {
+              "version": 7,
+              "changes": "exclude setup skills from tools column — setup IS the tool checker, showing status there would be circular"
+            },
+            {
+              "version": 6,
+              "changes": "add tools column: ✅/❌ based on plugin requires availability via which; empty if no requires"
+            },
+            {
+              "version": 5,
+              "changes": "Use Markdown table format in output"
+            },
+            {
+              "version": 4,
+              "changes": "Initial release"
+            }
+          ]
+        },
+        {
+          "name": "setup",
+          "version": 14,
+          "changelog": [
+            {
+              "version": 14,
+              "changes": "add plugin dependency check to unified type table; update description"
+            },
+            {
+              "version": 13,
+              "changes": "Read dependencies[] filtered by type=tool instead of requires[]"
+            },
+            {
+              "version": 9,
+              "changes": "Initial release"
+            }
+          ]
+        },
+        {
+          "name": "sanitize",
+          "version": 29,
+          "changelog": [
+            {
+              "version": 29,
+              "changes": "Update argument-hint to [path]"
+            },
+            {
+              "version": 28,
+              "changes": "Moved from p4-plugin to p4-core; scope extended to all sensitive-capable file types"
+            },
+            {
+              "version": 28,
+              "changes": "Extend scan scope to all sensitive-capable file types across the repo (docs, configs, scripts, structured data), not just plugin/skill files"
+            },
+            {
+              "version": 27,
+              "changes": "Initial release"
+            }
+          ]
+        }
+      ],
+      "ports": {
+        "claudecode": {
+          "status": "stable",
+          "path": "claudecode/p4-core"
+        },
+        "ghcopilot": {
+          "status": "beta",
+          "path": "ghcopilot/plugins/p4-core"
+        },
+        "geminicli": {
+          "status": "proposal",
+          "notes": "Architecture compatible. Pending evaluation of Antigravity plugin format."
+        },
+        "codex": {
+          "status": "proposal",
+          "notes": "Pending evaluation of Codex extension format."
+        }
+      }
+    },
+    {
+      "name": "p4-claudecode",
+      "description": "Claude Code-exclusive enhancements: custom statusline with project path, git branch, active model and color-coded usage metrics.",
+      "category": "productivity",
+      "status": "stable",
+      "version": "1.0.2",
+      "spec": "specs/p4-claudecode.md",
+      "changelog": [
+        {
+          "version": "1.0.2",
+          "changes": "Rename setup skill directory to match canonical name"
+        },
+        {
+          "version": "1.0.1",
+          "changes": "Version alignment to Z system"
+        },
+        {
+          "version": "1.0.0",
+          "changes": "Initial release — renamed from p4-statusline"
+        }
+      ],
+      "skills": [
+        {
+          "name": "statusline",
+          "version": 2,
+          "changelog": [
+            {
+              "version": 2,
+              "changes": "Fix frontmatter name: setup → statusline to match directory and catalog"
+            },
+            {
+              "version": 1,
+              "changes": "Initial release"
+            }
+          ]
+        }
+      ],
+      "ports": {
+        "claudecode": {
+          "status": "stable",
+          "path": "claudecode/p4-claudecode"
+        },
+        "ghcopilot": {
+          "status": "not-applicable"
+        },
+        "geminicli": {
+          "status": "not-applicable"
+        },
+        "codex": {
+          "status": "not-applicable"
+        }
+      }
+    },
+    {
+      "name": "p4-buddy",
+      "description": "Skills for <company> employees: GComp mission report generation from workspace context.",
+      "category": "productivity",
+      "status": "beta",
+      "version": "1.0.2",
+      "spec": "specs/p4-buddy.md",
+      "changelog": [
+        {
+          "version": "1.0.2",
+          "changes": "gcomp: use AskUserQuestion for interactive confirmations"
+        },
+        {
+          "version": "1.0.1",
+          "changes": "Add gcomp skill"
+        },
+        {
+          "version": "1.0.0",
+          "changes": "Initial release"
+        }
+      ],
+      "skills": [
+        {
+          "name": "gcomp",
+          "version": 2,
+          "changelog": [
+            {
+              "version": 2,
+              "changes": "Use AskUserQuestion for section confirmations instead of plain text"
+            },
+            {
+              "version": 1,
+              "changes": "Initial release"
+            }
+          ]
+        }
+      ],
+      "ports": {
+        "claudecode": {
+          "status": "beta",
+          "path": "claudecode/p4-buddy"
+        },
+        "ghcopilot": {
+          "status": "proposal"
+        },
+        "geminicli": {
+          "status": "proposal"
+        },
+        "codex": {
+          "status": "proposal"
+        }
+      }
+    },
+    {
+      "name": "p4-ccvv",
+      "description": "AI-powered CV generation and management — multi-user profiles, job offer adaptation, and multi-format export.",
+      "category": "productivity",
+      "status": "beta",
+      "version": "1.0.16",
+      "spec": "specs/p4-ccvv.md",
+      "scopes": [
+        "global"
+      ],
+      "changelog": [
+        {
+          "version": "1.0.16",
+          "changes": "setup: add plugin dep check with unified type table"
+        },
+        {
+          "version": "1.0.15",
+          "changes": "setup: read dependencies[] instead of requires[]"
+        },
+        {
+          "version": "1.0.14",
+          "changes": "profile-gather: photo detection from input/; generate: dual templates, DIGITAL IDENTITY section, 6-language label translation"
+        },
+        {
+          "version": "1.0.12",
+          "changes": "profile-gather+profile-update: social networks y repositorios profesionales"
+        },
+        {
+          "version": "1.0.10",
+          "changes": "generate: Reescritura completa: optimización ATS/AI >95%"
+        },
+        {
+          "version": "1.0.9",
+          "changes": "generate: añade Step 4b que adapta info.titles al puesto objetivo antes de generar el CV, en lugar de copiar los títulos del perfil verbatim"
+        },
+        {
+          "version": "1.0.8",
+          "changes": "profile-gather: solicita al usuario una ruta donde encontrar un fichero de cv y una foto, adicionalmente el skill debe copiarla a la carpeta de datos del profile y preguntar si la elimina del origen (puesto que ya esta copiada en el storage del plugin)"
+        },
+        {
+          "version": "1.0.7",
+          "changes": "export: sugerir 1: copiar fichero exportado a cwd, copiar fichero exportado a otro path, no copiar"
+        },
+        {
+          "version": "1.0.6",
+          "changes": "Initial release with 6 skills"
+        }
+      ],
+      "skills": [
+        {
+          "name": "setup",
+          "version": 16,
+          "changelog": [
+            {
+              "version": 16,
+              "changes": "add plugin dependency check with unified type table; update description"
+            },
+            {
+              "version": 15,
+              "changes": "Read dependencies[] filtered by type=tool instead of requires[]"
+            },
+            {
+              "version": 1,
+              "changes": "Initial release"
+            }
+          ]
+        },
+        {
+          "name": "profile-gather",
+          "version": 13,
+          "changelog": [
+            {
+              "version": 13,
+              "changes": "Step 3 rewritten: scan input/ for existing images and present as options before asking for manual path; photo and CV handled as separate sub-steps 3a/3b"
+            },
+            {
+              "version": 11,
+              "changes": "añade Step 4b: solicitud explícita de redes sociales y repositorios por tiers (LinkedIn, GitHub, GitLab, Stack Overflow, portfolio, blog, Credly, NPM/PyPI) tras extraer el CV"
+            },
+            {
+              "version": 8,
+              "changes": "solicita al usuario una ruta donde encontrar un fichero de cv y una foto, adicionalmente el skill debe copiarla a la carpeta de datos del profile y preguntar si la elimina del origen (puesto que ya esta copiada en el storage del plugin)"
+            },
+            {
+              "version": 2,
+              "changes": "Initial release"
+            }
+          ]
+        },
+        {
+          "name": "profile-update",
+          "version": 12,
+          "changelog": [
+            {
+              "version": 12,
+              "changes": "añade operación Add/update social networks en modo interactivo: gestión de contact.others con plataformas por tipo clave y validación de URL"
+            },
+            {
+              "version": 3,
+              "changes": "Initial release"
+            }
+          ]
+        },
+        {
+          "name": "generate",
+          "version": 14,
+          "changelog": [
+            {
+              "version": 14,
+              "changes": "add template selection (photo/nophoto), full section label translation table for 6 languages, DIGITAL IDENTITY section with contact.others rendering and conditional omission"
+            },
+            {
+              "version": 10,
+              "changes": "Reescritura completa: optimización ATS/AI >95%"
+            },
+            {
+              "version": 9,
+              "changes": "añade Step 4b que adapta info.titles al puesto objetivo antes de generar el CV, en lugar de copiar los títulos del perfil verbatim"
+            },
+            {
+              "version": 4,
+              "changes": "Initial release"
+            }
+          ]
+        },
+        {
+          "name": "regen",
+          "version": 5,
+          "changelog": [
+            {
+              "version": 5,
+              "changes": "Initial release"
+            }
+          ]
+        },
+        {
+          "name": "export",
+          "version": 7,
+          "changelog": [
+            {
+              "version": 7,
+              "changes": "sugerir 1: copiar fichero exportado a cwd, copiar fichero exportado a otro path, no copiar"
+            },
+            {
+              "version": 6,
+              "changes": "Initial release"
+            }
+          ]
+        }
+      ],
+      "ports": {
+        "claudecode": {
+          "status": "beta",
+          "path": "claudecode/p4-ccvv"
+        },
+        "ghcopilot": {
+          "status": "proposal"
+        },
+        "geminicli": {
+          "status": "proposal"
+        },
+        "codex": {
+          "status": "proposal"
+        }
+      },
+      "dependencies": [
+        {
+          "type": "tool",
+          "name": "pandoc",
+          "version": ">=2.0.0"
+        },
+        {
+          "type": "tool",
+          "name": "pdflatex",
+          "version": "*"
+        },
+        {
+          "type": "tool",
+          "name": "python3",
+          "version": ">=3.8.0"
+        }
+      ]
+    },
+    {
+      "name": "p4-plugin",
+      "description": "Marketplace lifecycle tooling: create and manage plugins and skills with automatic version tracking.",
+      "category": "productivity",
+      "status": "beta",
+      "version": "1.1.29",
+      "spec": "specs/p4-plugin.md",
+      "changelog": [
+        {
+          "version": "1.1.29",
+          "changes": "sanitize: skill moved to p4-core"
+        },
+        {
+          "version": "1.1.28",
+          "changes": "sanitize: Extend scan scope to all sensitive-capable file types across the repo (docs, configs, scripts, structured data), not just plugin/skill files"
+        },
+        {
+          "version": "1.1.27",
+          "changes": "Add sanitize skill"
+        },
+        {
+          "version": "1.1.26",
+          "changes": "create: unified dep scaffold; skill-doctor: C6 plugin dep check; doc-doctor: D9 plugin dep docs"
+        },
+        {
+          "version": "1.1.23",
+          "changes": "schema migration: requires[] → dependencies[{type,name,version}] in skill-doctor, create, doc-doctor"
+        },
+        {
+          "version": "1.1.20",
+          "changes": "skill-remove: remove skill row from README.md"
+        },
+        {
+          "version": "1.1.19",
+          "changes": "skill-add: update README.md on skill creation"
+        },
+        {
+          "version": "1.1.18",
+          "changes": "doc-doctor: D7→[auto], add D8 language check"
+        },
+        {
+          "version": "1.1.17",
+          "changes": "skill-doctor: tighten C5 detection to avoid prose false positives"
+        },
+        {
+          "version": "1.1.16",
+          "changes": "skill-doctor: expand C6 to cover skill-level tool dependencies"
+        },
+        {
+          "version": "1.1.14",
+          "changes": "Rename skill-check → skill-doctor"
+        },
+        {
+          "version": "1.1.15",
+          "changes": "Rename doc-update → doc-doctor"
+        },
+        {
+          "version": "1.1.13",
+          "changes": "Add doc-update skill"
+        },
+        {
+          "version": "1.1.12",
+          "changes": "Add skill-check — global plugin/skill auditor with auto-fix support"
+        },
+        {
+          "version": "1.1.11",
+          "changes": "create: add requires field and setup skill auto-scaffold"
+        },
+        {
+          "version": "1.1.10",
+          "changes": "create: add scopes collection and setup skill convention"
+        },
+        {
+          "version": "1.1.9",
+          "changes": "Split manage into 6 independent skills: create, update, remove, skill-add, skill-update, skill-remove"
+        },
+        {
+          "version": "1.0.3",
+          "changes": "manage: full lifecycle rewrite — create/update/remove, skill-add/skill-update/skill-remove, catalog-first sync"
+        },
+        {
+          "version": "1.0.2",
+          "changes": "manage: update plugin.json template with skills/changelog structure"
+        },
+        {
+          "version": "1.0.1",
+          "changes": "Rename create skill to manage; add lifecycle operations and Z versioning"
+        },
+        {
+          "version": "1.0.0",
+          "changes": "Initial release with create skill"
+        }
+      ],
+      "skills": [
+        {
+          "name": "create",
+          "version": 24,
+          "changelog": [
+            {
+              "version": 24,
+              "changes": "update setup scaffold to check both tool and plugin deps with unified type table"
+            },
+            {
+              "version": 22,
+              "changes": "Update catalog template and setup scaffold to use dependencies[] with type discriminator"
+            },
+            {
+              "version": 11,
+              "changes": "Add requires field and setup skill auto-scaffold from dependencies"
+            },
+            {
+              "version": 10,
+              "changes": "Add scopes collection and setup skill convention"
+            },
+            {
+              "version": 4,
+              "changes": "Extracted from manage skill"
+            }
+          ]
+        },
+        {
+          "name": "update",
+          "version": 5,
+          "changelog": [
+            {
+              "version": 5,
+              "changes": "Extracted from manage skill"
+            }
+          ]
+        },
+        {
+          "name": "remove",
+          "version": 6,
+          "changelog": [
+            {
+              "version": 6,
+              "changes": "Extracted from manage skill"
+            }
+          ]
+        },
+        {
+          "name": "skill-add",
+          "version": 19,
+          "changelog": [
+            {
+              "version": 19,
+              "changes": "Update README.md when adding a skill"
+            },
+            {
+              "version": 7,
+              "changes": "Extracted from manage skill"
+            }
+          ]
+        },
+        {
+          "name": "skill-update",
+          "version": 8,
+          "changelog": [
+            {
+              "version": 8,
+              "changes": "Extracted from manage skill"
+            }
+          ]
+        },
+        {
+          "name": "skill-remove",
+          "version": 20,
+          "changelog": [
+            {
+              "version": 20,
+              "changes": "Remove skill row from README.md on deletion"
+            },
+            {
+              "version": 9,
+              "changes": "Extracted from manage skill"
+            }
+          ]
+        },
+        {
+          "name": "skill-doctor",
+          "version": 25,
+          "changelog": [
+            {
+              "version": 25,
+              "changes": "C6: clarify that setup must verify plugin deps via cache directory; add install instructions"
+            },
+            {
+              "version": 21,
+              "changes": "C6/C9: update to read dependencies[] instead of requires[]"
+            },
+            {
+              "version": 17,
+              "changes": "C5: replace broad space-based signals with explicit tool reference patterns to eliminate false positives"
+            },
+            {
+              "version": 16,
+              "changes": "C6 expanded: detect skill-level requires, not only plugin-level"
+            },
+            {
+              "version": 14,
+              "changes": "Rename skill-check → skill-doctor"
+            },
+            {
+              "version": 12,
+              "changes": "Initial release — 9-check battery: version consistency, frontmatter fields, allowed-tools gaps, requires/setup, description suffix, changelog; severity CRITICAL/MAJOR/MINOR with [auto]/[manual] fix flags"
+            }
+          ]
+        },
+        {
+          "name": "doc-doctor",
+          "version": 26,
+          "changelog": [
+            {
+              "version": 26,
+              "changes": "add D9: check plugin type:plugin dependencies documented in README.md"
+            },
+            {
+              "version": 23,
+              "changes": "Update D1 spec template to use dependencies[] field"
+            },
+            {
+              "version": 18,
+              "changes": "D7 now [auto] (README.md auto-generate/update); add D8 language check"
+            },
+            {
+              "version": 15,
+              "changes": "Rename doc-update → doc-doctor"
+            },
+            {
+              "version": 13,
+              "changes": "Initial release"
+            }
+          ]
+        }
+      ],
+      "ports": {
+        "claudecode": {
+          "status": "beta",
+          "path": "claudecode/p4-plugin"
+        },
+        "ghcopilot": {
+          "status": "proposal"
+        },
+        "geminicli": {
+          "status": "proposal"
+        },
+        "codex": {
+          "status": "proposal"
+        }
+      }
+    },
+    {
+      "name": "p4-converter",
+      "description": "Converts documents to Markdown (PDF, DOC, DOCX, PPT, PPTX) using a multi-step local tool pipeline.",
+      "category": "productivity",
+      "status": "beta",
+      "version": "1.0.6",
+      "spec": "specs/p4-converter.md",
+      "changelog": [
+        {
+          "version": "1.0.6",
+          "changes": "setup: add plugin dep check with unified type table"
+        },
+        {
+          "version": "1.0.5",
+          "changes": "setup: read dependencies[] instead of requires[]"
+        },
+        {
+          "version": "1.0.4",
+          "changes": "fix qpdf constraint >=10.0.0; unify SOURCE_FOLDER variable; clarify inventory loop, Step 6.1 tool, and OUTPUT_PATH env var; update script docstrings"
+        },
+        {
+          "version": "1.0.3",
+          "changes": "any-to-md: add input-path, glob/file selection, and output-path parameters"
+        },
+        {
+          "version": "1.0.2",
+          "changes": "Add any-to-md skill — full 6-step conversion pipeline"
+        },
+        {
+          "version": "1.0.1",
+          "changes": "Add setup skill — dependency verification"
+        },
+        {
+          "version": "1.0.0",
+          "changes": "Initial plugin scaffold"
+        }
+      ],
+      "skills": [
+        {
+          "name": "setup",
+          "version": 6,
+          "changelog": [
+            {
+              "version": 6,
+              "changes": "add plugin dependency check with unified type table; update description"
+            },
+            {
+              "version": 5,
+              "changes": "Read dependencies[] filtered by type=tool instead of requires[]"
+            },
+            {
+              "version": 1,
+              "changes": "Initial release — dependency check table with install instructions"
+            }
+          ]
+        },
+        {
+          "name": "any-to-md",
+          "version": 4,
+          "changelog": [
+            {
+              "version": 4,
+              "changes": "fix {path} undefined → SOURCE_FOLDER throughout; clarify OUTPUT_PATH from env var; fix reprocess double-ask; explicit Read tool in Step 6.1; 999-page limit note; per-document loop declaration"
+            },
+            {
+              "version": 3,
+              "changes": "add input-path / glob-or-file / output-path parameter collection; output path defaults to co-located with source"
+            },
+            {
+              "version": 2,
+              "changes": "Initial release — 6-step conversion pipeline (libreoffice → qpdf → LLM → python → review)"
+            }
+          ]
+        }
+      ],
+      "ports": {
+        "claudecode": {
+          "status": "beta",
+          "path": "claudecode/p4-converter"
+        }
+      },
+      "dependencies": [
+        {
+          "type": "tool",
+          "name": "qpdf",
+          "version": ">=10.0.0"
+        },
+        {
+          "type": "tool",
+          "name": "python3",
+          "version": ">=3.8.0"
+        },
+        {
+          "type": "tool",
+          "name": "libreoffice",
+          "version": ">=7.0.0"
+        }
+      ]
+    },
+    {
+      "name": "p4-crawler",
+      "description": "Web crawler and documentation extractor: crawls sites (static or SPA/Storybook), filters by topic, downloads attachments, and generates structured Markdown output.",
+      "category": "productivity",
+      "status": "beta",
+      "version": "1.0.2",
+      "spec": "specs/p4-crawler.md",
+      "scopes": [
+        "local-gitignore"
+      ],
+      "dependencies": [
+        {
+          "type": "tool",
+          "name": "python3",
+          "version": ">=3.8.0"
+        },
+        {
+          "type": "tool",
+          "name": "curl",
+          "version": "*"
+        }
+      ],
+      "changelog": [
+        {
+          "version": "1.0.2",
+          "changes": "Add extract skill — full pipeline: configure, crawl, dedup, filter, download, generate"
+        },
+        {
+          "version": "1.0.1",
+          "changes": "Initial release — setup skill"
+        }
+      ],
+      "skills": [
+        {
+          "name": "setup",
+          "version": 1,
+          "changelog": [
+            {
+              "version": 1,
+              "changes": "Initial release"
+            }
+          ]
+        },
+        {
+          "name": "extract",
+          "version": 2,
+          "changelog": [
+            {
+              "version": 2,
+              "changes": "Initial release — full crawl-to-markdown pipeline"
+            }
+          ]
+        }
+      ],
+      "ports": {
+        "claudecode": {
+          "status": "beta",
+          "path": "claudecode/p4-crawler"
+        }
+      }
+    },
+    {
+      "name": "p4-agent",
+      "description": "Agent definition auditor: validates markdown agent files for structural completeness, naming conventions, and cross-reference integrity.",
+      "category": "productivity",
+      "status": "beta",
+      "version": "1.0.5",
+      "spec": "specs/p4-agent.md",
+      "changelog": [
+        {
+          "version": "1.0.5",
+          "changes": "Promote to beta — version scheme 0.1.x → 1.0.x (Z=5)"
+        },
+        {
+          "version": "0.1.4",
+          "changes": "Implement md-check skill (v4): A1 syntax/spelling, A2 clarity, A3 contradictions, A4 frontmatter"
+        },
+        {
+          "version": "0.1.5",
+          "changes": "Implement md-checkrefs skill (v5): reference graph traversal + B1 + A1-A4 on all files"
+        },
+        {
+          "version": "0.1.3",
+          "changes": "Define check battery: A1-A4 for md-check, B1 for md-checkrefs"
+        },
+        {
+          "version": "0.1.2",
+          "changes": "Add md-checkrefs skill definition"
+        },
+        {
+          "version": "0.1.1",
+          "changes": "Initial proposal — md-check skill definition"
+        }
+      ],
+      "skills": [
+        {
+          "name": "md-check",
+          "version": 4,
+          "changelog": [
+            {
+              "version": 4,
+              "changes": "Initial implementation: A1 syntax/spelling, A2 clarity, A3 contradictions, A4 frontmatter"
+            },
+            {
+              "version": 3,
+              "changes": "Define A1-A4 check battery"
+            },
+            {
+              "version": 1,
+              "changes": "Initial proposal"
+            }
+          ]
+        },
+        {
+          "name": "md-checkrefs",
+          "version": 5,
+          "changelog": [
+            {
+              "version": 5,
+              "changes": "Initial implementation: reference graph traversal, B1 integrity, A1-A4 on all files"
+            },
+            {
+              "version": 2,
+              "changes": "Initial proposal"
+            }
+          ]
+        }
+      ],
+      "ports": {
+        "claudecode": {
+          "status": "proposal",
+          "path": "claudecode/p4-agent"
+        }
+      }
+    }
+  ]
+}

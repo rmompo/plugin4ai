@@ -1,0 +1,175 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ccvv.local/schemas/cvs.schema.json",
+  "title": "CVs Metadata",
+  "description": "Schema for profiles/[id]/data/cvs.json - CV generation and export metadata",
+  "type": "object",
+  "required": ["info", "metadata"],
+  "properties": {
+    "info": {
+      "type": "object",
+      "required": ["version", "total_metadata", "total_exports", "last_generated", "last_exported"],
+      "properties": {
+        "version": {
+          "type": "string",
+          "description": "CVs metadata format version"
+        },
+        "total_metadata": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total number of CV metadata entries"
+        },
+        "total_exports": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total number of exports across all metadata"
+        },
+        "last_generated": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp of last CV generation"
+        },
+        "last_exported": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp of last export"
+        }
+      },
+      "additionalProperties": false
+    },
+    "metadata": {
+      "type": "array",
+      "description": "List of CV metadata entries",
+      "items": {
+        "type": "object",
+        "required": ["id", "description", "position", "created", "folder", "slug", "parameters", "keywords", "offer_analyzed", "files", "exports"],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Unique metadata ID"
+          },
+          "description": {
+            "type": "string",
+            "description": "Brief description of this CV"
+          },
+          "position": {
+            "type": "string",
+            "description": "Target position"
+          },
+          "company": {
+            "type": ["string", "null"],
+            "description": "Target company (null if generic)"
+          },
+          "created": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Creation timestamp"
+          },
+          "updated": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Last regeneration timestamp (optional, added by cv-regen)"
+          },
+          "folder": {
+            "type": "string",
+            "description": "Output folder name (relative to profile output/)"
+          },
+          "slug": {
+            "type": "string",
+            "pattern": "^[a-z0-9_]+$",
+            "description": "URL-friendly identifier"
+          },
+          "parameters": {
+            "type": "array",
+            "description": "Questions and answers used to generate this CV",
+            "items": {
+              "type": "object",
+              "required": ["question", "answer"],
+              "properties": {
+                "question": {
+                  "type": "string"
+                },
+                "answer": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "keywords": {
+            "type": "array",
+            "description": "Keywords extracted from job offer",
+            "items": {
+              "type": "string"
+            }
+          },
+          "offer_analyzed": {
+            "type": "boolean",
+            "description": "Whether a job offer was analyzed"
+          },
+          "files": {
+            "type": "object",
+            "required": ["cv"],
+            "properties": {
+              "cv": {
+                "type": "string",
+                "description": "CV META filename"
+              },
+              "letter": {
+                "type": "string",
+                "description": "Cover letter META filename"
+              }
+            }
+          },
+          "exports": {
+            "type": "array",
+            "description": "List of exports for this CV",
+            "items": {
+              "type": "object",
+              "required": ["id", "created", "format", "language", "files"],
+              "properties": {
+                "id": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "description": "Export ID (sequential within this metadata)"
+                },
+                "created": {
+                  "type": "string",
+                  "format": "date-time",
+                  "description": "Export timestamp"
+                },
+                "format": {
+                  "type": "string",
+                  "enum": ["pdf", "docx", "html", "md"],
+                  "description": "Export format"
+                },
+                "language": {
+                  "type": "string",
+                  "enum": ["es", "en", "fr", "de", "it", "pt"],
+                  "description": "Language code (ISO 639-1). Supported: es (Español), en (English), fr (Français), de (Deutsch), it (Italiano), pt (Português)"
+                },
+                "files": {
+                  "type": "object",
+                  "required": ["cv"],
+                  "properties": {
+                    "cv": {
+                      "type": "string",
+                      "description": "Exported CV filename"
+                    },
+                    "letter": {
+                      "type": "string",
+                      "description": "Exported cover letter filename"
+                    }
+                  }
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

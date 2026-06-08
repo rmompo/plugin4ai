@@ -1,0 +1,9 @@
+{
+  "name": "p4-buddy",
+  "version": "1.0.2",
+  "description": "Company-specific skills for Claude Code: GComp mission report generation from workspace context.",
+  "author": {
+    "name": "rmompo",
+    "email": "rmompo@gmail.com"
+  }
+}

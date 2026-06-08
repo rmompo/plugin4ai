@@ -1,0 +1,9 @@
+{
+  "name": "p4-claudecode",
+  "version": "1.0.2",
+  "description": "Claude Code-exclusive enhancements: custom statusline with project path, git branch, active model and color-coded usage metrics.",
+  "author": {
+    "name": "rmompo",
+    "email": "rmompo@gmail.com"
+  }
+}

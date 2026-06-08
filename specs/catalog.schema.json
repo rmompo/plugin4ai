@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "plugin4ai/catalog.schema.json",
+  "title": "plugin4ai Catalog",
+  "description": "Single source of truth for all plugins, skills, versions, changelogs and CLI ports",
+  "type": "object",
+  "required": ["name", "description", "owner", "clis", "plugins"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "name": {"type": "string"},
+    "description": {"type": "string"},
+    "owner": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": {"type": "string"},
+        "email": {"type": "string", "format": "email"}
+      }
+    },
+    "clis": {
+      "type": "object",
+      "description": "Supported CLI targets — key is the CLI identifier used in ports",
+      "propertyNames": {"enum": ["claudecode", "ghcopilot", "geminicli", "codex"]},
+      "additionalProperties": {
+        "type": "object",
+        "required": ["name", "vendor", "install"],
+        "properties": {
+          "name":    {"type": "string"},
+          "vendor":  {"type": "string"},
+          "url":     {"type": "string", "format": "uri"},
+          "install": {"type": "string"},
+          "notes":   {"type": "string"}
+        }
+      }
+    },
+    "plugins": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "description", "category", "status", "version", "skills", "ports"],
+        "properties": {
+          "name":        {"type": "string", "description": "Unique plugin identifier, kebab-case"},
+          "description": {"type": "string"},
+          "category": {
+            "type": "string",
+            "enum": ["productivity", "development", "security", "testing", "devops", "documentation", "other"]
+          },
+          "status": {
+            "type": "string",
+            "enum": ["proposal", "accepted", "beta", "stable", "production", "deprecated"]
+          },
+          "version": {"type": "string", "description": "Semver X.Y.Z — Z is the monotonic skill version counter"},
+          "spec":    {"type": "string", "description": "Relative path to the canonical spec file"},
+          "scopes": {
+            "type": "array",
+            "description": "Persistent storage scopes used by this plugin. global → ~/.p4/<plugin>/, local → .p4/<plugin>/, local-gitignore → .p4/<plugin>/ (gitignored). Omit if no persistent storage needed.",
+            "items": {
+              "type": "string",
+              "enum": ["global", "local", "local-gitignore"]
+            },
+            "uniqueItems": true
+          },
+          "dependencies": {
+            "type": "array",
+            "description": "Dependencies required by this plugin. Omit if none. Each entry has a type: 'tool' (system binary) or 'plugin' (another plugin4ai plugin). For type=tool, version is required using operators: =x.y.z, >=x.y.z, >x.y.z, <=x.y.z, <x.y.z, >=x.y.z <a.b.c, *. For type=plugin, omit version — plugins are always at latest.",
+            "items": {
+              "type": "object",
+              "required": ["type", "name"],
+              "properties": {
+                "type":    {"type": "string", "enum": ["tool", "plugin"], "description": "tool = system binary verified with `which`; plugin = another plugin4ai plugin"},
+                "name":    {"type": "string", "description": "Binary name (e.g. pandoc, python3) for type=tool; plugin name (e.g. p4-converter) for type=plugin"},
+                "version": {"type": "string", "description": "Version constraint for type=tool only. Examples: >=2.0.0, *, =3.1.3. Omit for type=plugin."}
+              }
+            }
+          },
+          "changelog": {
+            "type": "array",
+            "description": "Plugin-level changelog, newest first",
+            "items": {
+              "type": "object",
+              "required": ["version", "changes"],
+              "properties": {
+                "version": {"type": "string"},
+                "changes": {"type": "string"}
+              }
+            }
+          },
+          "skills": {
+            "type": "array",
+            "description": "Skills included in the plugin, with version and changelog",
+            "items": {
+              "type": "object",
+              "required": ["name", "version"],
+              "properties": {
+                "name":    {"type": "string"},
+                "version": {"type": "integer", "description": "Monotonic Z counter — increments globally across all skills"},
+                "dependencies": {
+                  "type": "array",
+                  "description": "Skill-level dependencies (tool or plugin). Same structure as plugin-level dependencies. Omit if none.",
+                  "items": {
+                    "type": "object",
+                    "required": ["type", "name"],
+                    "properties": {
+                      "type":    {"type": "string", "enum": ["tool", "plugin"]},
+                      "name":    {"type": "string"},
+                      "version": {"type": "string"}
+                    }
+                  }
+                },
+                "changelog": {
+                  "type": "array",
+                  "description": "Skill-level changelog, newest first",
+                  "items": {
+                    "type": "object",
+                    "required": ["version", "changes"],
+                    "properties": {
+                      "version": {"type": "integer"},
+                      "changes": {"type": "string"}
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "ports": {
+            "type": "object",
+            "description": "CLI port entries — absent = not yet evaluated",
+            "propertyNames": {"enum": ["claudecode", "ghcopilot", "geminicli", "codex"]},
+            "additionalProperties": {
+              "type": "object",
+              "required": ["status"],
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "enum": ["proposal", "accepted", "beta", "stable", "production", "deprecated", "not-applicable"]
+                },
+                "path":  {"type": "string", "description": "Relative path to the port directory from repo root"},
+                "notes": {"type": "string"}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ccvv.local/schemas/profiles.schema.json",
+  "title": "Profiles Registry",
+  "description": "Schema for resources/profiles.json - Registry of all profiles",
+  "type": "object",
+  "required": ["metadata", "profiles"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["version", "updated"],
+      "properties": {
+        "version": {
+          "type": "number",
+          "description": "Schema version",
+          "minimum": 1.0
+        },
+        "updated": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Last update timestamp (ISO 8601)"
+        }
+      },
+      "additionalProperties": false
+    },
+    "profiles": {
+      "type": "array",
+      "description": "List of registered profiles",
+      "items": {
+        "type": "object",
+        "required": ["profile", "name", "email"],
+        "properties": {
+          "profile": {
+            "type": "string",
+            "pattern": "^[a-z0-9_]{3,20}$",
+            "description": "Profile ID (alphanumeric lowercase + underscore, 3-20 chars)"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Full name"
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "description": "Email address"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

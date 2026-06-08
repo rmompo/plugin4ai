@@ -1,0 +1,9 @@
+{
+  "name": "p4-agent",
+  "version": "1.0.5",
+  "description": "Agent definition auditor: validates markdown agent files for structural completeness, naming conventions, and cross-reference integrity.",
+  "author": {
+    "name": "rmompo",
+    "email": "rmompo@gmail.com"
+  }
+}

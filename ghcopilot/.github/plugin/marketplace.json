@@ -1,0 +1,19 @@
+{
+  "name": "plugin4ai-ghcopilot",
+  "owner": {
+    "name": "rmompo",
+    "email": "rmompo@gmail.com"
+  },
+  "metadata": {
+    "description": "Personal plugin marketplace for GitHub Copilot CLI — productivity skills for everyday development",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "p4-core",
+      "description": "Essential productivity skills: intelligent model routing by task complexity and automatic Conventional Commits formatting",
+      "version": "1.0.0",
+      "source": "./plugins/p4-core"
+    }
+  ]
+}

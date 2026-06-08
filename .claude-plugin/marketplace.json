@@ -1,0 +1,91 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "plugin4ai-claudecode",
+  "description": "Personal plugin marketplace for Claude Code — productivity skills for everyday development",
+  "owner": {
+    "name": "rmompo",
+    "email": "rmompo@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "p4-core",
+      "description": "Core productivity plugin: behavioral directives (P4D), intelligent model routing via subagents, and Conventional Commits enforcement.",
+      "author": {
+        "name": "rmompo"
+      },
+      "category": "productivity",
+      "source": "./claudecode/p4-core",
+      "homepage": "https://github.com/rmompo/plugin4ai/tree/main/claudecode/p4-core"
+    },
+    {
+      "name": "p4-claudecode",
+      "description": "Visual enhancement: custom statusline with project path, git branch, active model and color-coded usage metrics.",
+      "author": {
+        "name": "rmompo"
+      },
+      "category": "productivity",
+      "source": "./claudecode/p4-claudecode",
+      "homepage": "https://github.com/rmompo/plugin4ai/tree/main/claudecode/p4-claudecode"
+    },
+    {
+      "name": "p4-buddy",
+      "description": "<company>-specific skills: GComp mission report generator with full 145-entry competency catalog.",
+      "author": {
+        "name": "rmompo"
+      },
+      "category": "productivity",
+      "source": "./claudecode/p4-buddy",
+      "homepage": "https://github.com/rmompo/plugin4ai/tree/main/claudecode/p4-buddy"
+    },
+    {
+      "name": "p4-ccvv",
+      "description": "AI-powered CV generation and management — multi-user profiles, job offer adaptation, and multi-format export.",
+      "author": {
+        "name": "rmompo"
+      },
+      "category": "productivity",
+      "source": "./claudecode/p4-ccvv",
+      "homepage": "https://github.com/rmompo/plugin4ai/tree/main/claudecode/p4-ccvv"
+    },
+    {
+      "name": "p4-plugin",
+      "description": "Plugin lifecycle management: scaffold new plugins with all required files and registry entries in one step.",
+      "author": {
+        "name": "rmompo"
+      },
+      "category": "productivity",
+      "source": "./claudecode/p4-plugin",
+      "homepage": "https://github.com/rmompo/plugin4ai/tree/main/claudecode/p4-plugin"
+    },
+    {
+      "name": "p4-converter",
+      "description": "Converts documents to Markdown (PDF, DOC, DOCX, PPT, PPTX) using a multi-step local tool pipeline.",
+      "author": {
+        "name": "rmompo"
+      },
+      "category": "productivity",
+      "source": "./claudecode/p4-converter",
+      "homepage": "https://github.com/rmompo/plugin4ai/tree/main/claudecode/p4-converter"
+    },
+    {
+      "name": "p4-crawler",
+      "description": "Web crawler and documentation extractor: crawls sites (static or SPA/Storybook), filters by topic, downloads attachments, and generates structured Markdown output.",
+      "author": {
+        "name": "rmompo"
+      },
+      "category": "productivity",
+      "source": "./claudecode/p4-crawler",
+      "homepage": "https://github.com/rmompo/plugin4ai/tree/main/claudecode/p4-crawler"
+    },
+    {
+      "name": "p4-agent",
+      "description": "Agent definition auditor: validates markdown agent files for structural completeness, naming conventions, and cross-reference integrity.",
+      "author": {
+        "name": "rmompo"
+      },
+      "category": "productivity",
+      "source": "./claudecode/p4-agent",
+      "homepage": "https://github.com/rmompo/plugin4ai/tree/main/claudecode/p4-agent"
+    }
+  ]
+}

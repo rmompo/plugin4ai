@@ -1,0 +1,9 @@
+{
+  "name": "p4-core",
+  "version": "1.2.17",
+  "description": "Core behavioral directives (P4D), intelligent model routing, and Conventional Commits enforcement",
+  "author": {
+    "name": "rmompo",
+    "email": "rmompo@gmail.com"
+  }
+}

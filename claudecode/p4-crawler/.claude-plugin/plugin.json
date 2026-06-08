@@ -1,0 +1,12 @@
+{
+  "name": "p4-crawler",
+  "version": "1.0.2",
+  "description": "Web crawler and documentation extractor: crawls sites (static or SPA/Storybook), filters by topic, downloads attachments, and generates structured Markdown output.",
+  "author": {
+    "name": "rmompo",
+    "email": "rmompo@gmail.com"
+  },
+  "scopes": [
+    "local-gitignore"
+  ]
+}
