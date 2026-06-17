@@ -21,9 +21,9 @@ p4-antigravity/
  ⌂ ~/proyecto   ⎇ main   ✦ Gemini 3.5 Flash   CX12% SN5% WK88%
 ```
 
-- **Segmento 1** `⌂ pwd` — fondo amarillo brillante, texto negro (reverse)
-- **Segmento 2** `⎇ branch` — fondo cyan brillante, texto negro (reverse)
-- **Segmento 3** `✦ model` — fondo magenta brillante, texto negro (reverse)
+- **Segmento 1** `⌂ pwd` — fondo amarillo (reverse video)
+- **Segmento 2** `⎇ branch` — fondo cyan (reverse video)
+- **Segmento 3** `✦ model` — fondo púrpura (reverse video)
 - **Segmento 4** `CX SN WK` — etiquetas en blanco, valores coloreados por umbral (solo si el CLI provee los datos)
 
 ## Instalación

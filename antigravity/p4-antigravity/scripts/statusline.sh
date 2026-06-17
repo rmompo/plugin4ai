@@ -26,30 +26,25 @@ input=$(cat)
 # ANSI escape helpers
 # -----------------------------------------------------------------------------
 RESET=$'\033[0m'
-REV=$'\033[7m'
 
-# Standard colors (used before REV → become background color)
-BRIGHT_YELLOW=$'\033[93m'   # Segment 1 background: bright yellow
-BRIGHT_CYAN=$'\033[96m'     # Segment 2 background: bright cyan
-BRIGHT_MAGENTA=$'\033[95m'  # Segment 3 background: bright magenta
+# Segment background colors — standard (non-bright) codes, same as p4-claudecode
+YELLOW=$'\033[33m'    # Segment 1: directory
+CYAN=$'\033[36m'      # Segment 2: git branch
+PURPLE=$'\033[35m'    # Segment 3: model
 
 # Percentage value colors
 GREEN=$'\033[32m'
-YELLOW=$'\033[33m'
 RED=$'\033[31m'
 
 # -----------------------------------------------------------------------------
-# rev_block COLOR TEXT
-#   Renders a reverse-video highlighted segment.
-#   Setting COLOR first, then REV, makes that color the background.
-#   The terminal's default foreground (black on light themes, or overridden
-#   by the "30m" below) becomes the text color.
+# seg_block COLOR TEXT
+#   Renders a colored segment using reverse video, matching p4-claudecode style.
+#   COLOR is a standard foreground code (30-37); reverse swaps it to background.
 # -----------------------------------------------------------------------------
-rev_block() {
+seg_block() {
   local color="$1"
   local text="$2"
-  # \033[30m = black text, applied after REV so it overrides the swapped fg
-  printf '%s%s%s %s %s' "$color" "$REV" $'\033[30m' "$text" "$RESET"
+  printf '%s%s %s %s' "$color" $'\033[7m' "$text" "$RESET"
 }
 
 # -----------------------------------------------------------------------------
@@ -62,7 +57,7 @@ rev_block() {
 pct_color() {
   local rounded
   rounded=$(printf '%.0f' "$1" 2>/dev/null) || rounded=0
-  if   [ "$rounded" -le 50 ]; then printf '%s' "$GREEN"
+  if   [ "$rounded" -le 40 ]; then printf '%s' "$GREEN"
   elif [ "$rounded" -le 75 ]; then printf '%s' "$YELLOW"
   else                              printf '%s' "$RED"
   fi
@@ -110,14 +105,14 @@ SEP=" "
 # Build output
 # -----------------------------------------------------------------------------
 
-# Segment 1: ⌂ pwd — bright yellow background, black text
-output="$(rev_block "$BRIGHT_YELLOW" "⌂ ${project_dir}")"
+# Segment 1: ⌂ pwd — yellow background
+output="$(seg_block "$YELLOW" "⌂ ${project_dir}")"
 
-# Segment 2: ⎇ branch — bright cyan background, black text
-output="${output}${SEP}$(rev_block "$BRIGHT_CYAN" "⎇ ${git_branch}")"
+# Segment 2: ⎇ branch — cyan background
+output="${output}${SEP}$(seg_block "$CYAN" "⎇ ${git_branch}")"
 
-# Segment 3: ✦ model — bright magenta background, black text
-output="${output}${SEP}$(rev_block "$BRIGHT_MAGENTA" "✦ ${model}")"
+# Segment 3: ✦ model — purple background
+output="${output}${SEP}$(seg_block "$PURPLE" "✦ ${model}")"
 
 # Segment 4: CXxx% SNxx% WKxx% — labels normal, values colored by threshold
 # Each metric is only rendered if the CLI provides its value.

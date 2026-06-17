@@ -20,15 +20,15 @@ El script `scripts/statusline.sh` recibe un payload JSON de Antigravity CLI vía
 
 | Segmento | Símbolo | Fondo | Texto |
 |---|---|---|---|
-| Directorio | `⌂` | Amarillo brillante | Negro |
-| Rama Git | `⎇` | Cyan brillante | Negro |
-| Modelo | `✦` | Magenta brillante | Negro |
+| Directorio | `⌂` | Amarillo | Terminal default |
+| Rama Git | `⎇` | Cyan | Terminal default |
+| Modelo | `✦` | Púrpura | Terminal default |
 | Uso (si disponible) | `CX` `SN` `WK` | Normal | Verde / Amarillo / Rojo |
 
 ## Umbrales de color para uso
 
-- 🟢 Verde: `<= 50%`
-- 🟡 Amarillo: `50% < x <= 75%`
+- 🟢 Verde: `<= 40%`
+- 🟡 Amarillo: `40% < x <= 75%`
 - 🔴 Rojo: `> 75%`
 
 ## Instalación
