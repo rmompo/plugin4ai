@@ -20,10 +20,10 @@
     "clis": {
       "type": "object",
       "description": "Supported CLI targets — key is the CLI identifier used in ports",
-      "propertyNames": {"enum": ["claudecode", "ghcopilot", "geminicli", "codex"]},
+      "propertyNames": {"enum": ["claudecode", "ghcopilot", "antigravity", "codex"]},
       "additionalProperties": {
         "type": "object",
-        "required": ["name", "vendor", "install"],
+        "required": ["name", "vendor"],
         "properties": {
           "name":    {"type": "string"},
           "vendor":  {"type": "string"},
@@ -125,7 +125,7 @@
           "ports": {
             "type": "object",
             "description": "CLI port entries — absent = not yet evaluated",
-            "propertyNames": {"enum": ["claudecode", "ghcopilot", "geminicli", "codex"]},
+            "propertyNames": {"enum": ["claudecode", "ghcopilot", "antigravity", "codex"]},
             "additionalProperties": {
               "type": "object",
               "required": ["status"],

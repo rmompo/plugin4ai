@@ -19,13 +19,6 @@
       "url": "https://cli.github.com",
       "install": "gh extension install github/gh-copilot"
     },
-    "geminicli": {
-      "name": "Gemini CLI",
-      "vendor": "Google",
-      "url": "https://github.com/google-gemini/gemini-cli",
-      "install": "npm install -g @google/gemini-cli",
-      "notes": "Transitioning to Antigravity CLI (Google I/O 2026). Plugin system preserved under new name."
-    },
     "antigravity": {
       "name": "Antigravity CLI",
       "vendor": "Google",
@@ -260,9 +253,9 @@
           "status": "beta",
           "path": "ghcopilot/plugins/p4-core"
         },
-        "geminicli": {
+        "antigravity": {
           "status": "proposal",
-          "notes": "Architecture compatible. Pending evaluation of Antigravity plugin format."
+          "notes": "Pending evaluation of Antigravity plugin format."
         },
         "codex": {
           "status": "proposal",
@@ -315,7 +308,7 @@
         "ghcopilot": {
           "status": "not-applicable"
         },
-        "geminicli": {
+        "antigravity": {
           "status": "not-applicable"
         },
         "codex": {
@@ -368,7 +361,7 @@
         "ghcopilot": {
           "status": "proposal"
         },
-        "geminicli": {
+        "antigravity": {
           "status": "proposal"
         },
         "codex": {
@@ -534,7 +527,7 @@
         "ghcopilot": {
           "status": "proposal"
         },
-        "geminicli": {
+        "antigravity": {
           "status": "proposal"
         },
         "codex": {
@@ -802,7 +795,7 @@
         "ghcopilot": {
           "status": "proposal"
         },
-        "geminicli": {
+        "antigravity": {
           "status": "proposal"
         },
         "codex": {
@@ -1000,9 +993,6 @@
           "status": "not-applicable"
         },
         "ghcopilot": {
-          "status": "not-applicable"
-        },
-        "geminicli": {
           "status": "not-applicable"
         },
         "antigravity": {
