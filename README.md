@@ -12,10 +12,10 @@ A single repository for AI CLI plugins. Each plugin is a self-contained concept 
 |-----|--------|--------|---------|
 | [Claude Code](https://claude.ai/code) | Anthropic | [`claudecode/`](./claudecode/) | `claude plugins marketplace add rmompo/plugin4ai` |
 | [GitHub Copilot CLI](https://cli.github.com) | Microsoft / GitHub | [`ghcopilot/`](./ghcopilot/) | *(see folder README)* |
-| [Gemini CLI](https://github.com/google-gemini/gemini-cli) ¹ | Google | `geminicli/` *(planned)* | `npm install -g @google/gemini-cli` |
+| [Antigravity CLI](https://github.com/google/antigravity-cli) ¹ | Google | [`antigravity/`](./antigravity/) | *(see folder README)* |
 | [Codex CLI](https://github.com/openai/codex) | OpenAI | `codex/` *(planned)* | `npm install -g @openai/codex` |
 
-> ¹ Gemini CLI está siendo reemplazado por **Antigravity CLI** (Google I/O 2026). El sistema de plugins se preserva con el nuevo nombre.
+> ¹ Antigravity CLI es el sucesor de Gemini CLI, anunciado en Google I/O 2026.
 
 ---
 
@@ -27,6 +27,7 @@ A single repository for AI CLI plugins. Each plugin is a self-contained concept 
 | [`p4-claudecode`](./claudecode/p4-claudecode/) | Custom status bar for Claude Code with project, branch, model and usage metrics | `stable` | [spec](./specs/p4-claudecode.md) |
 | [`p4-buddy`](./claudecode/p4-buddy/) | Skills for <company> employees — GComp mission report generation | `beta` | [spec](./specs/p4-buddy.md) |
 | [`p4-plugin`](./claudecode/p4-plugin/) | Lifecycle tooling for this marketplace — create and manage plugins and skills | `beta` | [spec](./specs/p4-plugin.md) |
+| [`p4-antigravity`](./antigravity/p4-antigravity/) | Powerline-style status bar for Antigravity CLI with session, branch, model and usage metrics | `beta` | — |
 
 ---
 

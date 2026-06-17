@@ -26,6 +26,12 @@
       "install": "npm install -g @google/gemini-cli",
       "notes": "Transitioning to Antigravity CLI (Google I/O 2026). Plugin system preserved under new name."
     },
+    "antigravity": {
+      "name": "Antigravity CLI",
+      "vendor": "Google",
+      "url": "https://github.com/google/antigravity-cli",
+      "notes": "Successor to Gemini CLI, announced at Google I/O 2026. Native plugin system via agy plugin install."
+    },
     "codex": {
       "name": "Codex CLI",
       "vendor": "OpenAI",
@@ -963,6 +969,62 @@
           "path": "claudecode/p4-crawler"
         }
       }
+    },
+    {
+      "name": "p4-antigravity",
+      "description": "Antigravity CLI-exclusive enhancements: powerline-style statusline with project path, git branch, active model and color-coded usage metrics.",
+      "category": "productivity",
+      "status": "beta",
+      "version": "1.0.0",
+      "spec": "specs/p4-antigravity.md",
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "changes": "Initial release — statusline skill"
+        }
+      ],
+      "skills": [
+        {
+          "name": "statusline",
+          "version": 1,
+          "changelog": [
+            {
+              "version": 1,
+              "changes": "Initial release"
+            }
+          ]
+        }
+      ],
+      "ports": {
+        "claudecode": {
+          "status": "not-applicable"
+        },
+        "ghcopilot": {
+          "status": "not-applicable"
+        },
+        "geminicli": {
+          "status": "not-applicable"
+        },
+        "antigravity": {
+          "status": "beta",
+          "path": "antigravity/p4-antigravity"
+        },
+        "codex": {
+          "status": "not-applicable"
+        }
+      },
+      "dependencies": [
+        {
+          "type": "tool",
+          "name": "python3",
+          "version": ">=3.0.0"
+        },
+        {
+          "type": "tool",
+          "name": "git",
+          "version": "*"
+        }
+      ]
     },
     {
       "name": "p4-agent",
