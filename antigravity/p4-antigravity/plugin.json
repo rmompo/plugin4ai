@@ -1,0 +1,5 @@
+{
+  "name": "p4-antigravity",
+  "version": "1.0.0",
+  "description": "Visual statusline plugin for Antigravity CLI. Renders a powerline-style statusbar with project directory, git branch, model name, and usage metrics."
+}
