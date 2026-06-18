@@ -23,11 +23,17 @@ A single repository for AI CLI plugins. Each plugin is a self-contained concept 
 
 | Plugin | Description | Status | Spec |
 |--------|-------------|--------|------|
-| [`p4-core`](./claudecode/p4-core/) | Behavioral directives (P4D), model routing, and Conventional Commits enforcement | `stable` | [spec](./specs/p4-core.md) |
-| [`p4-claudecode`](./claudecode/p4-claudecode/) | Custom status bar for Claude Code with project, branch, model and usage metrics | `stable` | [spec](./specs/p4-claudecode.md) |
-| [`p4-buddy`](./claudecode/p4-buddy/) | Skills for <company> employees — GComp mission report generation | `beta` | [spec](./specs/p4-buddy.md) |
-| [`p4-plugin`](./claudecode/p4-plugin/) | Lifecycle tooling for this marketplace — create and manage plugins and skills | `beta` | [spec](./specs/p4-plugin.md) |
-| [`p4-antigravity`](./antigravity/p4-antigravity/) | Powerline-style status bar for Antigravity CLI with session, branch, model and usage metrics | `beta` | — |
+| `p4-core` | Behavioral directives (P4D), model routing, and Conventional Commits enforcement | `stable` | [spec](./specs/p4-core.md) |
+| `p4-claudecode` | Custom status bar for Claude Code with project, branch, model and usage metrics | `stable` | [spec](./specs/p4-claudecode.md) |
+| `p4-buddy` | Skills for <company> employees — GComp mission report generation | `beta` | [spec](./specs/p4-buddy.md) |
+| `p4-plugin` | Lifecycle tooling for this marketplace — create and manage plugins and skills | `beta` | [spec](./specs/p4-plugin.md) |
+| `p4-antigravity` | Powerline-style status bar for Antigravity CLI with session, branch, model and usage metrics | `beta` | [spec](./specs/p4-antigravity.md) |
+
+---
+
+## Installation & Lifecycle
+
+For detailed install, update, uninstall, enable, and disable instructions per CLI → **[INSTALL.md](./INSTALL.md)**
 
 ---
 
