@@ -92,6 +92,16 @@ Lists all p4-* plugin skills installed in the current CLI, in a Markdown table w
 
 ---
 
+### 🧹 `git-sanitize`
+
+Ensures every git repo has correct line-ending hygiene. At session start, silently checks for `.gitattributes` with `eol=lf` and tracked files with CRLF contamination. Creates the file if missing and offers to normalize contaminated files. Silent when everything is clean.
+
+**Invocation:**
+- Auto — fires at session start via the p4-core agent
+- Explicit — `/p4-core:git-sanitize`
+
+---
+
 ### 🔧 `setup`
 
 Verifies that all external tools required by p4-core skills are installed and available in PATH. Reports status with install instructions for each missing dependency.

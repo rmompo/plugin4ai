@@ -1,6 +1,6 @@
 # Plugin Spec: p4-core
 
-> **Status:** `stable` | **Version:** `1.2.15` | **Ports:** Claude Code CLI/TUI, GitHub Copilot CLI/TUI
+> **Status:** `stable` | **Version:** `1.2.18` | **Ports:** Claude Code CLI/TUI, GitHub Copilot CLI/TUI
 
 ---
 
@@ -165,6 +165,51 @@ Print a table of all installed p4-* plugin skills with their version, tool avail
 
 ---
 
+## Skill: `git-sanitize`
+
+### Purpose
+
+Ensure every git repo has correct line-ending hygiene. Fires automatically at session start: creates `.gitattributes` with `eol=lf` if missing, detects tracked files with CRLF contamination, and offers to normalize them. Silent when everything is already clean.
+
+### Invocation
+
+```bash
+/p4-core:git-sanitize    # explicit run — always prints full status report
+```
+
+Auto — fires at session start via the p4-core agent.
+
+### Behavior
+
+| State | Session-start | Explicit |
+|-------|--------------|---------|
+| `.gitattributes` OK, no CRLF files | silent | ✅ status report |
+| `.gitattributes` missing/incomplete | creates it + prints notice | creates it + report |
+| CRLF files found | asks user to normalize | asks user to normalize |
+| Not a git repo | silent exit | silent exit |
+
+### `.gitattributes` content enforced
+
+```
+* text=auto eol=lf
+*.png binary  *.jpg binary  *.woff binary  *.vsix binary  ...
+```
+
+### Port status
+
+| Port | Status |
+|------|--------|
+| claudecode | ✅ stable |
+| ghcopilot | ✅ stable |
+| antigravity | ✅ stable |
+| codex | ✅ stable |
+
+### Non-Goals
+- Does not modify files without user confirmation
+- Does not affect user's `core.autocrlf` git config — operates at repo level via `.gitattributes`
+
+---
+
 ## Skill: `setup`
 
 ### Purpose
@@ -187,6 +232,9 @@ Verify that all external tools required by p4-core skills are installed and reac
 
 | Version | Changes |
 |---------|---------|
+| 1.2.18 | Add `git-sanitize` skill — session-start CRLF hygiene enforcer |
+| 1.2.17 | `sanitize`: update argument-hint to `[path]` |
+| 1.2.16 | `sanitize`: new skill (moved from p4-plugin) |
 | 1.2.3 | Skill versions normalized to Z system (integers) |
 | 1.2.0 | Skill renames: commit→git-commit, model-routing→model-route, behaviour→model-behaviour |
 | 1.1.0 | Add model-behaviour skill (P4D directives) |

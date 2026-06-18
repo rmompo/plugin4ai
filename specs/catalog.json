@@ -39,9 +39,13 @@
       "description": "Core productivity plugin: behavioral directives (P4D), intelligent model routing via subagents, and Conventional Commits enforcement.",
       "category": "productivity",
       "status": "stable",
-      "version": "1.2.17",
+      "version": "1.2.18",
       "spec": "specs/p4-core.md",
       "changelog": [
+        {
+          "version": "1.2.18",
+          "changes": "git-sanitize: new session-start skill — enforces .gitattributes eol=lf and detects/fixes CRLF-contaminated tracked files"
+        },
         {
           "version": "1.2.17",
           "changes": "sanitize: update argument-hint to [path]"
@@ -222,6 +226,29 @@
           ]
         },
         {
+          "name": "git-sanitize",
+          "version": 1,
+          "changelog": [
+            {
+              "version": 1,
+              "changes": "Initial release — session-start skill: creates .gitattributes with eol=lf, detects and normalizes CRLF-contaminated tracked files"
+            }
+          ],
+          "dependencies": [
+            {
+              "type": "tool",
+              "name": "git",
+              "version": "*"
+            }
+          ],
+          "ports": {
+            "claudecode": "stable",
+            "ghcopilot": "stable",
+            "antigravity": "stable",
+            "codex": "stable"
+          }
+        },
+        {
           "name": "sanitize",
           "version": 29,
           "changelog": [
@@ -256,12 +283,12 @@
         "antigravity": {
           "status": "beta",
           "path": "antigravity/p4-core",
-          "notes": "Ported skills: git-commit, model-behaviour, sanitize, setup. Excluded: skill-list, model-route (not applicable)."
+          "notes": "Ported skills: git-commit, model-behaviour, sanitize, setup, git-sanitize. Excluded: skill-list, model-route (not applicable)."
         },
         "codex": {
           "status": "beta",
           "path": "codex/p4-core",
-          "notes": "Ported skills: git-commit, model-behaviour, sanitize, setup. Excluded: skill-list, model-route (not applicable)."
+          "notes": "Ported skills: git-commit, model-behaviour, sanitize, setup, git-sanitize. Excluded: skill-list, model-route (not applicable)."
         }
       }
     },
