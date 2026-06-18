@@ -50,7 +50,7 @@ If any condition fails → installs/updates automatically and reports briefly.
 Color thresholds: ≤40% green · ≤75% yellow · >75% red.
 
 ### Non-Goals
-- Does not port to other CLIs (no statusline API available)
+- Does not port to other CLIs/TUIs (no statusline API available)
 - Does not modify any project files
 - Does not affect Claude's behavior or responses
 

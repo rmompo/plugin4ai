@@ -1,6 +1,6 @@
 # Plugin Installation Guide
 
-Plugin and skill lifecycle operations for each supported CLI. Processes vary significantly between CLIs — some are fully command-driven, others are TUI-based or require manual file management.
+Plugin and skill lifecycle operations for each supported CLI. Processes vary significantly between CLIs/TUIs — some are fully command-driven, others are TUI-based or require manual file management.
 
 ---
 
