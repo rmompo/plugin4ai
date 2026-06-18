@@ -10,6 +10,12 @@ Designed for intranet documentation extraction. Supports authenticated sites (Jo
 
 ---
 
+## Port Status
+
+| CLI | Location | Status |
+|-----|----------|--------|
+| Claude Code CLI/TUI | `claudecode/p4-crawler/` | ✅ Beta |
+
 ## Skill: `setup`
 
 ### Purpose
@@ -42,12 +48,6 @@ Orchestrates the full documentation extraction pipeline in 8 phases: configure (
 - Does not support parallel crawling (sequential by design for rate-limiting compliance)
 
 ---
-
-## Port Status
-
-| CLI | Location | Status |
-|-----|----------|--------|
-| Claude Code CLI/TUI | `claudecode/p4-crawler/` | ✅ Beta |
 
 ## Changelog
 

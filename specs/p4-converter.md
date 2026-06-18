@@ -10,6 +10,15 @@ The output is a clean `.md` file with YAML frontmatter, proper heading hierarchy
 
 ---
 
+## Port Status
+
+| CLI | Location | Status |
+|-----|----------|--------|
+| Claude Code CLI/TUI | `claudecode/p4-converter/` | ✅ Beta |
+| GitHub Copilot CLI/TUI | `ghcopilot/p4-converter/` *(planned)* | 🔲 Not yet |
+
+---
+
 ## Skill: `setup`
 
 ### Purpose
@@ -86,15 +95,6 @@ split_tool: qpdf
 | `qpdf` | `>=10.0.0` | PDF splitting | No |
 | `python3` | `>=3.8.0` | Consolidation script | No |
 | `libreoffice` | `>=7.0.0` | DOC/DOCX/PPT/PPTX → PDF | Only if non-PDF inputs |
-
----
-
-## Port Status
-
-| CLI | Location | Status |
-|-----|----------|--------|
-| Claude Code CLI/TUI | `claudecode/p4-converter/` | ✅ Beta |
-| GitHub Copilot CLI/TUI | `ghcopilot/p4-converter/` *(planned)* | 🔲 Not yet |
 
 ---
 

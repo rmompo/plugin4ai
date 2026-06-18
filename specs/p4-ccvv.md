@@ -10,6 +10,15 @@ All data is stored globally at `~/.p4/p4-ccvv/` following the p4-* scope convent
 
 ---
 
+## Port Status
+
+| CLI | Location | Status |
+|-----|----------|--------|
+| Claude Code CLI/TUI | `claudecode/p4-ccvv/` | ✅ Beta |
+| GitHub Copilot CLI/TUI | — | Proposal |
+| Antigravity CLI/TUI | — | Proposal |
+| Codex CLI/TUI | — | Proposal |
+
 ## Skill: `setup`
 
 ### Purpose
@@ -101,15 +110,6 @@ Converts a CV draft to a final output format (PDF, DOCX, HTML, MD) in the select
 `es` (Español), `en` (English), `fr` (Français), `de` (Deutsch), `it` (Italiano), `pt` (Português)
 
 ---
-
-## Port Status
-
-| CLI | Location | Status |
-|-----|----------|--------|
-| Claude Code CLI/TUI | `claudecode/p4-ccvv/` | ✅ Beta |
-| GitHub Copilot CLI/TUI | — | Proposal |
-| Antigravity CLI/TUI | — | Proposal |
-| Codex CLI/TUI | — | Proposal |
 
 ## Changelog
 

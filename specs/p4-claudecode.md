@@ -10,6 +10,15 @@ It is intentionally decoupled from `p4-core` — it can be installed standalone 
 
 ---
 
+## Port Status
+
+| CLI | Location | Status |
+|-----|----------|--------|
+| Claude Code CLI/TUI | `claudecode/p4-claudecode/` | ✅ Stable |
+| GitHub Copilot CLI/TUI | — | ❌ Not applicable |
+| Antigravity CLI/TUI | — | ❌ Not applicable |
+| Codex CLI/TUI | — | ❌ Not applicable |
+
 ## Skill: `statusline`
 
 ### Purpose
@@ -55,15 +64,6 @@ Color thresholds: ≤40% green · ≤75% yellow · >75% red.
 - Does not affect Claude's behavior or responses
 
 ---
-
-## Port Status
-
-| CLI | Location | Status |
-|-----|----------|--------|
-| Claude Code CLI/TUI | `claudecode/p4-claudecode/` | ✅ Stable |
-| GitHub Copilot CLI/TUI | — | ❌ Not applicable |
-| Antigravity CLI/TUI | — | ❌ Not applicable |
-| Codex CLI/TUI | — | ❌ Not applicable |
 
 ## Changelog
 

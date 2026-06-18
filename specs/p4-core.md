@@ -8,6 +8,15 @@
 
 ---
 
+## Port Status
+
+| CLI | Location | Status |
+|-----|----------|--------|
+| Claude Code CLI/TUI | `claudecode/p4-core/` | ✅ Stable |
+| GitHub Copilot CLI/TUI | `ghcopilot/plugins/p4-core/` | ✅ Stable |
+| Antigravity CLI/TUI | `antigravity/p4-core/` | 🔶 Beta |
+| Codex CLI/TUI | `codex/p4-core/` | 🔶 Beta |
+
 ## Skill 1: `model-behaviour`
 
 ### Purpose
@@ -169,15 +178,6 @@ Verify that all external tools required by p4-core skills are installed and reac
 - Does not verify tool versions — only presence (`which`)
 
 ---
-
-## Port Status
-
-| CLI | Location | Status |
-|-----|----------|--------|
-| Claude Code CLI/TUI | `claudecode/p4-core/` | ✅ Stable |
-| GitHub Copilot CLI/TUI | `ghcopilot/plugins/p4-core/` | ✅ Stable |
-| Antigravity CLI/TUI | `antigravity/p4-core/` | 🔶 Beta |
-| Codex CLI/TUI | `codex/p4-core/` | 🔶 Beta |
 
 ## Changelog
 

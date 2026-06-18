@@ -10,6 +10,13 @@ Works standalone — no dependency on `p4-core` or `p4-claudecode`.
 
 ---
 
+## Port Status
+
+| CLI | Location | Status |
+|-----|----------|--------|
+| Claude Code CLI/TUI | `claudecode/p4-buddy/` | ✅ Beta |
+| GitHub Copilot CLI/TUI | — | ❌ Not planned |
+
 ## Skill: `gcomp`
 
 ### Purpose
@@ -106,13 +113,6 @@ Contexto de misión (competencias técnicas):
 - Does not store employee personal data
 
 ---
-
-## Port Status
-
-| CLI | Location | Status |
-|-----|----------|--------|
-| Claude Code CLI/TUI | `claudecode/p4-buddy/` | ✅ Beta |
-| GitHub Copilot CLI/TUI | — | ❌ Not planned |
 
 ## Changelog
 

@@ -10,6 +10,15 @@
 
 ---
 
+## Port Status
+
+| CLI | Location | Status |
+|-----|----------|--------|
+| Claude Code CLI/TUI | `claudecode/p4-plugin/` | ✅ Beta |
+| GitHub Copilot CLI/TUI | `ghcopilot/plugins/p4-plugin/` | 🔶 Beta |
+| Antigravity CLI/TUI | `antigravity/p4-plugin/` | 🔶 Beta |
+| Codex CLI/TUI | `codex/p4-plugin/` | 🔶 Beta |
+
 ## Skills
 
 | Skill | Invocation | Description |
@@ -72,15 +81,6 @@ Plugin version is `X.Y.Z`:
 - Does not fill in skill logic — only scaffolds the structure
 
 ---
-
-## Port Status
-
-| CLI | Location | Status |
-|-----|----------|--------|
-| Claude Code CLI/TUI | `claudecode/p4-plugin/` | ✅ Beta |
-| GitHub Copilot CLI/TUI | `ghcopilot/plugins/p4-plugin/` | 🔶 Beta |
-| Antigravity CLI/TUI | `antigravity/p4-plugin/` | 🔶 Beta |
-| Codex CLI/TUI | `codex/p4-plugin/` | 🔶 Beta |
 
 ## Changelog
 

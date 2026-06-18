@@ -10,6 +10,12 @@ Designed to be used as a quality gate before committing agent definitions to a r
 
 ---
 
+## Port Status
+
+| CLI | Location | Status |
+|-----|----------|--------|
+| Claude Code CLI/TUI | `claudecode/p4-agent/` | ⏳ Proposal |
+
 ## Skill: `md-check`
 
 ### Purpose
@@ -93,12 +99,6 @@ Flag each broken reference with its location and the missing target path.
 - Does not recursively follow references beyond the explicitly linked files (no deep graph traversal unless the linked file itself contains further references)
 
 ---
-
-## Port Status
-
-| CLI | Location | Status |
-|-----|----------|--------|
-| Claude Code CLI/TUI | `claudecode/p4-agent/` | ⏳ Proposal |
 
 ## Changelog
 
