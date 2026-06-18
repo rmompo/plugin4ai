@@ -29,7 +29,7 @@
     },
     {
       "name": "p4-buddy",
-      "description": "<company>-specific skills: GComp mission report generator with full 145-entry competency catalog.",
+      "description": "<company>-specific skills: <hr-platform> mission report generator with full 145-entry competency catalog.",
       "author": {
         "name": "rmompo"
       },

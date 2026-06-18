@@ -6,7 +6,7 @@
 
 ## Overview
 
-`p4-buddy` is a collection of skills for <company> employees using Claude Code CLI/TUI. It provides tooling for internal <company> platform workflows, starting with GComp mission reporting.
+`p4-buddy` is a collection of skills for <company> employees using Claude Code CLI/TUI. It provides tooling for internal <company> platform workflows, starting with <hr-platform> mission reporting.
 
 Works standalone — no dependency on `p4-core` or `p4-claudecode`.
 
@@ -25,7 +25,7 @@ Works standalone — no dependency on `p4-core` or `p4-claudecode`.
 
 ### Purpose
 
-Generate a ready-to-paste GComp mission report for an <company> employee, inferring all fields automatically from the active workspace or a user-provided hint, and confirming each section interactively via `AskUserQuestion` before producing the final output.
+Generate a ready-to-paste <hr-platform> mission report for an <company> employee, inferring all fields automatically from the active workspace or a user-provided hint, and confirming each section interactively via `AskUserQuestion` before producing the final output.
 
 ### Invocation
 
@@ -72,7 +72,7 @@ Uses `AskUserQuestion` to confirm sections one at a time — never dumps the ful
 
 ### Competency catalog
 
-145 official GComp competencies embedded in `SKILL.md`. The skill only selects values from this catalog — no invented entries.
+145 official competencies embedded in `SKILL.md`. The skill only selects values from this catalog — no invented entries.
 
 ### Output format
 
@@ -116,8 +116,8 @@ Contexto de misión (competencias técnicas):
 ```
 
 ### Non-Goals
-- Does not submit data to GComp automatically (copy-paste only)
-- Does not access the GComp API
+- Does not submit data to <hr-platform> automatically (copy-paste only)
+- Does not access the <hr-platform> API
 - Does not store employee personal data
 
 ---

@@ -6,7 +6,7 @@
 
 | Skill | Invocation | What it does |
 |-------|-----------|--------------|
-| `gcomp` | `/p4-buddy:gcomp [hint]` | Generates a ready-to-paste GComp mission report from the active project or a user hint |
+| `gcomp` | `/p4-buddy:gcomp [hint]` | Generates a ready-to-paste <hr-platform> mission report from the active project or a user hint |
 
 ## Installation
 
@@ -29,6 +29,6 @@ The skill infers all mission fields automatically and confirms each section inte
 
 ## Notes
 
-- Designed for <company> employees using the GComp competency management platform.
-- Competency catalog includes all 145 official GComp entries.
+- Designed for <company> employees using the <hr-platform> competency management platform.
+- Competency catalog includes all 145 official competency entries.
 - Works standalone — no dependency on other p4 plugins.

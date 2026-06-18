@@ -320,7 +320,7 @@
     },
     {
       "name": "p4-buddy",
-      "description": "Skills for <company> employees: GComp mission report generation from workspace context.",
+      "description": "Skills for <company> employees: <hr-platform> mission report generation from workspace context.",
       "category": "productivity",
       "status": "beta",
       "version": "1.0.2",
