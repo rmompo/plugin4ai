@@ -250,7 +250,7 @@
           "path": "claudecode/p4-core"
         },
         "ghcopilot": {
-          "status": "beta",
+          "status": "stable",
           "path": "ghcopilot/plugins/p4-core"
         },
         "antigravity": {
@@ -361,7 +361,8 @@
           "path": "claudecode/p4-buddy"
         },
         "ghcopilot": {
-          "status": "proposal"
+          "status": "beta",
+          "path": "ghcopilot/plugins/p4-buddy"
         },
         "antigravity": {
           "status": "proposal"
@@ -887,6 +888,15 @@
         "claudecode": {
           "status": "beta",
           "path": "claudecode/p4-converter"
+        },
+        "ghcopilot": {
+          "status": "proposal"
+        },
+        "antigravity": {
+          "status": "proposal"
+        },
+        "codex": {
+          "status": "proposal"
         }
       },
       "dependencies": [
@@ -965,6 +975,15 @@
         "claudecode": {
           "status": "beta",
           "path": "claudecode/p4-crawler"
+        },
+        "ghcopilot": {
+          "status": "proposal"
+        },
+        "antigravity": {
+          "status": "proposal"
+        },
+        "codex": {
+          "status": "proposal"
         }
       }
     },
@@ -1092,6 +1111,15 @@
         "claudecode": {
           "status": "proposal",
           "path": "claudecode/p4-agent"
+        },
+        "ghcopilot": {
+          "status": "proposal"
+        },
+        "antigravity": {
+          "status": "proposal"
+        },
+        "codex": {
+          "status": "proposal"
         }
       }
     }

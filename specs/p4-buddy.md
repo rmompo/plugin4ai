@@ -1,6 +1,6 @@
 # Plugin Spec: p4-buddy
 
-> **Status:** `beta` | **Version:** `1.0.2` | **Ports:** Claude Code CLI/TUI only
+> **Status:** `beta` | **Version:** `1.0.2` | **Ports:** Claude Code CLI/TUI, GitHub Copilot CLI/TUI
 
 ---
 
@@ -17,7 +17,9 @@ Works standalone — no dependency on `p4-core` or `p4-claudecode`.
 | CLI/TUI | Location | Status |
 |-----|----------|--------|
 | Claude Code CLI/TUI | `claudecode/p4-buddy/` | ✅ Beta |
-| GitHub Copilot CLI/TUI | — | ❌ Not planned |
+| GitHub Copilot CLI/TUI | `ghcopilot/plugins/p4-buddy/` | 🔶 Beta |
+| Antigravity CLI/TUI | — | ⏳ Proposal |
+| Codex CLI/TUI | — | ⏳ Proposal |
 
 ---
 

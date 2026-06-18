@@ -1,6 +1,6 @@
 # Plugin Spec: p4-agent
 
-> **Status:** `beta` | **Version:** `1.0.5` | **Ports:** Claude Code CLI/TUI only
+> **Status:** `beta` | **Version:** `1.0.5` | **Ports:** Claude Code CLI/TUI
 
 ---
 
@@ -17,6 +17,9 @@ Designed to be used as a quality gate before committing agent definitions to a r
 | CLI/TUI | Location | Status |
 |-----|----------|--------|
 | Claude Code CLI/TUI | `claudecode/p4-agent/` | ⏳ Proposal |
+| GitHub Copilot CLI/TUI | — | ⏳ Proposal |
+| Antigravity CLI/TUI | — | ⏳ Proposal |
+| Codex CLI/TUI | — | ⏳ Proposal |
 
 ---
 

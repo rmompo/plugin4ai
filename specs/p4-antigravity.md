@@ -12,14 +12,14 @@ Provides a powerline-style status bar for Antigravity CLI/TUI (`agy`) that rende
 
 ---
 
-## Ports
+## Port Status
 
-| CLI/TUI | Status |
-|-----|--------|
-| Antigravity CLI/TUI | `beta` |
-| Claude Code CLI/TUI | `not-applicable` |
-| GitHub Copilot CLI/TUI | `not-applicable` |
-| Codex CLI/TUI | `not-applicable` |
+| CLI/TUI | Location | Status |
+|-----|----------|--------|
+| Antigravity CLI/TUI | `antigravity/p4-antigravity/` | ✅ Beta |
+| Claude Code CLI/TUI | — | ❌ Not applicable |
+| GitHub Copilot CLI/TUI | — | ❌ Not applicable |
+| Codex CLI/TUI | — | ❌ Not applicable |
 
 ---
 

@@ -1,6 +1,6 @@
 # Plugin Spec: p4-converter
 
-> **Status:** `beta` | **Version:** `1.0.6` | **Ports:** Claude Code CLI/TUI only
+> **Status:** `beta` | **Version:** `1.0.6` | **Ports:** Claude Code CLI/TUI
 
 ---
 
@@ -17,7 +17,9 @@ The output is a clean `.md` file with YAML frontmatter, proper heading hierarchy
 | CLI/TUI | Location | Status |
 |-----|----------|--------|
 | Claude Code CLI/TUI | `claudecode/p4-converter/` | ✅ Beta |
-| GitHub Copilot CLI/TUI | `ghcopilot/p4-converter/` *(planned)* | 🔲 Not yet |
+| GitHub Copilot CLI/TUI | — | ⏳ Proposal |
+| Antigravity CLI/TUI | — | ⏳ Proposal |
+| Codex CLI/TUI | — | ⏳ Proposal |
 
 ---
 

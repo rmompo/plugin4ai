@@ -19,9 +19,11 @@ gh copilot plugins install p4-core
 
 | Plugin | Status | Skills |
 |--------|--------|--------|
-| [`p4-core`](./plugins/p4-core/README.md) | stable | `model-routing`, `commit` ¹ |
+| [`p4-core`](./plugins/p4-core/README.md) | stable | `git-commit`, `model-behaviour`, `sanitize`, `setup` ¹ |
+| [`p4-plugin`](./plugins/p4-plugin/README.md) | beta | `create`, `update`, `remove`, `skill-add`, `skill-update`, `skill-remove`, `skill-doctor`, `doc-doctor` |
+| [`p4-buddy`](./plugins/p4-buddy/README.md) | beta | `gcomp` |
 
-> ¹ The `setup` skill (statusline install) is Claude Code CLI/TUI only and is not ported to this CLI.
+> ¹ `skill-list` and `model-route` are Claude Code CLI/TUI-exclusive and are not ported to this CLI.
 
 ## Update the marketplace index
 
