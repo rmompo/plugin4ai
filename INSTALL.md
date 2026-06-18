@@ -4,7 +4,7 @@ Plugin and skill lifecycle operations for each supported CLI. Processes vary sig
 
 ---
 
-## Claude Code
+## Claude Code CLI/TUI
 
 ### Install
 
@@ -56,7 +56,7 @@ claude plugin enable <plugin>
 claude plugin disable <plugin>
 ```
 
-Or use the interactive TUI — run `/plugin` inside a Claude Code session.
+Or use the interactive TUI — run `/plugin` inside a Claude Code CLI/TUI session.
 
 ### List
 
@@ -84,7 +84,7 @@ claude plugin prune    # lists orphans and asks for confirmation
 
 ---
 
-## GitHub Copilot CLI
+## GitHub Copilot CLI/TUI
 
 ### Install
 
@@ -146,7 +146,7 @@ copilot plugin marketplace remove <marketplace>     # unregister
 
 ---
 
-## Antigravity CLI
+## Antigravity CLI/TUI
 
 ### Install
 
@@ -211,7 +211,7 @@ agy plugin import gemini
 
 ---
 
-## Codex CLI
+## Codex CLI/TUI
 
 Plugin management in Codex is primarily **TUI-driven**. Open the plugin browser with:
 
@@ -275,16 +275,16 @@ To invoke a skill once a plugin is installed:
 
 | CLI | Invocation |
 |-----|-----------|
-| Claude Code | `/<plugin>:<skill>` |
-| GitHub Copilot | `/<plugin>:<skill>` |
-| Antigravity CLI | `/<plugin>:<skill>` |
-| Codex CLI | `/<plugin>:<skill>` |
+| Claude Code CLI/TUI | `/<plugin>:<skill>` |
+| GitHub Copilot CLI/TUI | `/<plugin>:<skill>` |
+| Antigravity CLI/TUI | `/<plugin>:<skill>` |
+| Codex CLI/TUI | `/<plugin>:<skill>` |
 
 ---
 
 ## Quick reference
 
-| Operation | Claude Code | GitHub Copilot | Antigravity CLI | Codex CLI |
+| Operation | Claude Code CLI/TUI | GitHub Copilot CLI/TUI | Antigravity CLI/TUI | Codex CLI/TUI |
 |-----------|------------|----------------|-----------------|-----------|
 | Install | `claude plugin install <p>@<mp>` | `copilot plugin install <p>@<mp>` | `agy plugin install <path>` | TUI: `/plugins` |
 | Update | `claude plugin update <p>@<mp>` | `copilot plugin update <p>` | reinstall via `agy plugin install` | TUI: `/plugins` |

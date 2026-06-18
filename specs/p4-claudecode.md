@@ -1,10 +1,10 @@
 # Plugin Spec: p4-claudecode
 
-> **Status:** `stable` | **Version:** `1.0.2` | **Ports:** Claude Code only
+> **Status:** `stable` | **Version:** `1.0.2` | **Ports:** Claude Code CLI/TUI only
 
 ## Overview
 
-`p4-claudecode` is a Claude Code-exclusive visual enhancement plugin. It replaces the default statusline with a custom color-coded bar that surfaces project context, git state, active model and usage metrics at a glance.
+`p4-claudecode` is a Claude Code CLI/TUI-exclusive visual enhancement plugin. It replaces the default statusline with a custom color-coded bar that surfaces project context, git state, active model and usage metrics at a glance.
 
 It is intentionally decoupled from `p4-core` — it can be installed standalone or alongside any other plugin.
 
@@ -14,7 +14,7 @@ It is intentionally decoupled from `p4-core` — it can be installed standalone 
 
 ### Purpose
 
-Install the statusline script and activate it in Claude Code's settings. Runs automatically at session start via the plugin's default agent. The `/p4-claudecode:statusline` skill is available as a manual fallback or for reinstallation.
+Install the statusline script and activate it in Claude Code CLI/TUI's settings. Runs automatically at session start via the plugin's default agent. The `/p4-claudecode:statusline` skill is available as a manual fallback or for reinstallation.
 
 ### Invocation
 
@@ -60,10 +60,10 @@ Color thresholds: ≤40% green · ≤75% yellow · >75% red.
 
 | CLI | Location | Status |
 |-----|----------|--------|
-| Claude Code | `claudecode/p4-claudecode/` | ✅ Stable |
-| GitHub Copilot CLI | — | ❌ Not applicable |
-| Antigravity CLI | — | ❌ Not applicable |
-| Codex CLI | — | ❌ Not applicable |
+| Claude Code CLI/TUI | `claudecode/p4-claudecode/` | ✅ Stable |
+| GitHub Copilot CLI/TUI | — | ❌ Not applicable |
+| Antigravity CLI/TUI | — | ❌ Not applicable |
+| Codex CLI/TUI | — | ❌ Not applicable |
 
 ## Changelog
 

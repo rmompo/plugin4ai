@@ -1,10 +1,10 @@
 # Plugin Spec: p4-buddy
 
-> **Status:** `beta` | **Version:** `1.0.2` | **Ports:** Claude Code only
+> **Status:** `beta` | **Version:** `1.0.2` | **Ports:** Claude Code CLI/TUI only
 
 ## Overview
 
-`p4-buddy` is a collection of skills for <company> employees using Claude Code. It provides tooling for internal <company> platform workflows, starting with GComp mission reporting.
+`p4-buddy` is a collection of skills for <company> employees using Claude Code CLI/TUI. It provides tooling for internal <company> platform workflows, starting with GComp mission reporting.
 
 Works standalone — no dependency on `p4-core` or `p4-claudecode`.
 
@@ -111,8 +111,8 @@ Contexto de misión (competencias técnicas):
 
 | CLI | Location | Status |
 |-----|----------|--------|
-| Claude Code | `claudecode/p4-buddy/` | ✅ Beta |
-| GitHub Copilot CLI | — | ❌ Not planned |
+| Claude Code CLI/TUI | `claudecode/p4-buddy/` | ✅ Beta |
+| GitHub Copilot CLI/TUI | — | ❌ Not planned |
 
 ## Changelog
 

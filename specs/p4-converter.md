@@ -1,6 +1,6 @@
 # Plugin Spec: p4-converter
 
-> **Status:** `beta` | **Version:** `1.0.6` | **Ports:** Claude Code only
+> **Status:** `beta` | **Version:** `1.0.6` | **Ports:** Claude Code CLI/TUI only
 
 ## Overview
 
@@ -93,8 +93,8 @@ split_tool: qpdf
 
 | CLI | Location | Status |
 |-----|----------|--------|
-| Claude Code | `claudecode/p4-converter/` | ✅ Beta |
-| GitHub Copilot | `ghcopilot/p4-converter/` *(planned)* | 🔲 Not yet |
+| Claude Code CLI/TUI | `claudecode/p4-converter/` | ✅ Beta |
+| GitHub Copilot CLI/TUI | `ghcopilot/p4-converter/` *(planned)* | 🔲 Not yet |
 
 ---
 

@@ -1,6 +1,6 @@
 # Plugin Spec: p4-ccvv
 
-> **Status:** `beta` | **Version:** `1.0.16` | **Ports:** Claude Code only
+> **Status:** `beta` | **Version:** `1.0.16` | **Ports:** Claude Code CLI/TUI only
 
 ## Overview
 
@@ -106,10 +106,10 @@ Converts a CV draft to a final output format (PDF, DOCX, HTML, MD) in the select
 
 | CLI | Location | Status |
 |-----|----------|--------|
-| Claude Code | `claudecode/p4-ccvv/` | ✅ Beta |
-| GitHub Copilot | — | Proposal |
-| Antigravity CLI | — | Proposal |
-| Codex CLI | — | Proposal |
+| Claude Code CLI/TUI | `claudecode/p4-ccvv/` | ✅ Beta |
+| GitHub Copilot CLI/TUI | — | Proposal |
+| Antigravity CLI/TUI | — | Proposal |
+| Codex CLI/TUI | — | Proposal |
 
 ## Changelog
 

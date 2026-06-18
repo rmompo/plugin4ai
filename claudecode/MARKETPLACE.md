@@ -1,6 +1,6 @@
-# Claude Code Marketplace
+# Claude Code CLI/TUI Marketplace
 
-This directory is a self-contained Claude Code plugin marketplace.  
+This directory is a self-contained Claude Code CLI/TUI plugin marketplace.  
 Register it once and all plugins become available via `claude plugins install`.
 
 ## Register the marketplace

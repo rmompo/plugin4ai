@@ -8,25 +8,25 @@
   },
   "clis": {
     "claudecode": {
-      "name": "Claude Code",
+      "name": "Claude Code CLI/TUI",
       "vendor": "Anthropic",
       "url": "https://claude.ai/code",
       "install": "claude plugins marketplace add rmompo/plugin4ai"
     },
     "ghcopilot": {
-      "name": "GitHub Copilot CLI",
+      "name": "GitHub Copilot CLI/TUI",
       "vendor": "Microsoft / GitHub",
       "url": "https://cli.github.com",
       "install": "gh extension install github/gh-copilot"
     },
     "antigravity": {
-      "name": "Antigravity CLI",
+      "name": "Antigravity CLI/TUI",
       "vendor": "Google",
       "url": "https://github.com/google/antigravity-cli",
       "notes": "Successor to Gemini CLI, announced at Google I/O 2026. Native plugin system via agy plugin install."
     },
     "codex": {
-      "name": "Codex CLI",
+      "name": "Codex CLI/TUI",
       "vendor": "OpenAI",
       "url": "https://github.com/openai/codex",
       "install": "npm install -g @openai/codex",

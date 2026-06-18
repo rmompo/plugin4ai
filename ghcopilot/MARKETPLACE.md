@@ -1,6 +1,6 @@
-# GitHub Copilot CLI Marketplace
+# GitHub Copilot CLI/TUI Marketplace
 
-This directory is a self-contained GitHub Copilot CLI plugin marketplace.  
+This directory is a self-contained GitHub Copilot CLI/TUI plugin marketplace.  
 Register it once and all plugins become available via `gh copilot plugins install`.
 
 ## Register the marketplace
@@ -21,7 +21,7 @@ gh copilot plugins install p4-core
 |--------|--------|--------|
 | [`p4-core`](./plugins/p4-core/README.md) | stable | `model-routing`, `commit` ¹ |
 
-> ¹ The `setup` skill (statusline install) is Claude Code only and is not ported to this CLI.
+> ¹ The `setup` skill (statusline install) is Claude Code CLI/TUI only and is not ported to this CLI.
 
 ## Update the marketplace index
 

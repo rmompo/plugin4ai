@@ -1,6 +1,6 @@
 # Plugin Spec: p4-agent
 
-> **Status:** `beta` | **Version:** `1.0.5` | **Ports:** Claude Code only
+> **Status:** `beta` | **Version:** `1.0.5` | **Ports:** Claude Code CLI/TUI only
 
 ## Overview
 
@@ -98,7 +98,7 @@ Flag each broken reference with its location and the missing target path.
 
 | CLI | Location | Status |
 |-----|----------|--------|
-| Claude Code | `claudecode/p4-agent/` | ⏳ Proposal |
+| Claude Code CLI/TUI | `claudecode/p4-agent/` | ⏳ Proposal |
 
 ## Changelog
 

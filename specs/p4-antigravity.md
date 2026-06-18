@@ -2,11 +2,11 @@
 
 **Status:** beta  
 **Version:** 1.0.0  
-**CLI:** Antigravity CLI (exclusive)
+**CLI:** Antigravity CLI/TUI (exclusive)
 
 ## Purpose
 
-Provides a powerline-style status bar for Antigravity CLI (`agy`) that renders real-time session information: working directory, git branch, active model name, and color-coded usage metrics.
+Provides a powerline-style status bar for Antigravity CLI/TUI (`agy`) that renders real-time session information: working directory, git branch, active model name, and color-coded usage metrics.
 
 ## Statusline format
 
@@ -65,10 +65,10 @@ agy plugin install ./plugin4ai/antigravity/p4-antigravity
 
 | CLI | Status |
 |-----|--------|
-| Antigravity CLI | `beta` |
-| Claude Code | `not-applicable` |
-| GitHub Copilot CLI | `not-applicable` |
-| Codex CLI | `not-applicable` |
+| Antigravity CLI/TUI | `beta` |
+| Claude Code CLI/TUI | `not-applicable` |
+| GitHub Copilot CLI/TUI | `not-applicable` |
+| Codex CLI/TUI | `not-applicable` |
 
 ## Changelog
 

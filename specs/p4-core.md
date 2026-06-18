@@ -1,6 +1,6 @@
 # Plugin Spec: p4-core
 
-> **Status:** `stable` | **Version:** `1.2.15` | **Ports:** Claude Code, GitHub Copilot CLI
+> **Status:** `stable` | **Version:** `1.2.15` | **Ports:** Claude Code CLI/TUI, GitHub Copilot CLI/TUI
 
 ## Overview
 
@@ -174,10 +174,10 @@ Verify that all external tools required by p4-core skills are installed and reac
 
 | CLI | Location | Status |
 |-----|----------|--------|
-| Claude Code | `claudecode/p4-core/` | ✅ Stable |
-| GitHub Copilot CLI | `ghcopilot/plugins/p4-core/` | ✅ Stable |
-| Antigravity CLI | `antigravity/p4-core/` | 🔶 Beta |
-| Codex CLI | `codex/p4-core/` | 🔶 Beta |
+| Claude Code CLI/TUI | `claudecode/p4-core/` | ✅ Stable |
+| GitHub Copilot CLI/TUI | `ghcopilot/plugins/p4-core/` | ✅ Stable |
+| Antigravity CLI/TUI | `antigravity/p4-core/` | 🔶 Beta |
+| Codex CLI/TUI | `codex/p4-core/` | 🔶 Beta |
 
 ## Changelog
 

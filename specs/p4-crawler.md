@@ -1,6 +1,6 @@
 # Plugin Spec: p4-crawler
 
-> **Status:** `beta` | **Version:** `1.0.2` | **Ports:** Claude Code only
+> **Status:** `beta` | **Version:** `1.0.2` | **Ports:** Claude Code CLI/TUI only
 
 ## Overview
 
@@ -47,7 +47,7 @@ Orchestrates the full documentation extraction pipeline in 8 phases: configure (
 
 | CLI | Location | Status |
 |-----|----------|--------|
-| Claude Code | `claudecode/p4-crawler/` | ✅ Beta |
+| Claude Code CLI/TUI | `claudecode/p4-crawler/` | ✅ Beta |
 
 ## Changelog
 
