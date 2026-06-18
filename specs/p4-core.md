@@ -176,8 +176,8 @@ Verify that all external tools required by p4-core skills are installed and reac
 |-----|----------|--------|
 | Claude Code | `claudecode/p4-core/` | ✅ Stable |
 | GitHub Copilot CLI | `ghcopilot/plugins/p4-core/` | ✅ Stable |
-| Gemini CLI | — | 🔶 Proposal |
-| Codex CLI | — | 🔶 Proposal |
+| Antigravity CLI | `antigravity/p4-core/` | 🔶 Beta |
+| Codex CLI | `codex/p4-core/` | 🔶 Beta |
 
 ## Changelog
 

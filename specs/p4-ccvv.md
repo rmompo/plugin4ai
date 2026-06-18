@@ -108,8 +108,8 @@ Converts a CV draft to a final output format (PDF, DOCX, HTML, MD) in the select
 |-----|----------|--------|
 | Claude Code | `claudecode/p4-ccvv/` | ✅ Beta |
 | GitHub Copilot | — | Proposal |
-| Gemini CLI | — | Proposal |
-| Codex | — | Proposal |
+| Antigravity CLI | — | Proposal |
+| Codex CLI | — | Proposal |
 
 ## Changelog
 

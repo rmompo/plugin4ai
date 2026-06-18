@@ -62,7 +62,7 @@ Color thresholds: ≤40% green · ≤75% yellow · >75% red.
 |-----|----------|--------|
 | Claude Code | `claudecode/p4-claudecode/` | ✅ Stable |
 | GitHub Copilot CLI | — | ❌ Not applicable |
-| Gemini CLI | — | ❌ Not applicable |
+| Antigravity CLI | — | ❌ Not applicable |
 | Codex CLI | — | ❌ Not applicable |
 
 ## Changelog

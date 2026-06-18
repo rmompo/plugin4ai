@@ -78,9 +78,9 @@ Plugin version is `X.Y.Z`:
 | CLI | Location | Status |
 |-----|----------|--------|
 | Claude Code | `claudecode/p4-plugin/` | ✅ Beta |
-| GitHub Copilot CLI | — | 🔶 Proposal |
-| Gemini CLI | — | 🔶 Proposal |
-| Codex CLI | — | 🔶 Proposal |
+| GitHub Copilot CLI | `ghcopilot/plugins/p4-plugin/` | 🔶 Beta |
+| Antigravity CLI | `antigravity/p4-plugin/` | 🔶 Beta |
+| Codex CLI | `codex/p4-plugin/` | 🔶 Beta |
 
 ## Changelog
 

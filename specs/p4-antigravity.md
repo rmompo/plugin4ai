@@ -11,7 +11,7 @@ Provides a powerline-style status bar for Antigravity CLI (`agy`) that renders r
 ## Statusline format
 
 ```
- ⌂ ~/project   ⎇ main   ✦ Gemini 3.5 Flash   CX12% SN5% WK88%
+ ⌂ ~/project   ⎇ main   ✦ Antigravity 2.0 Flash   CX12% SN5% WK88%
 ```
 
 | Segment | Symbol | Background | Text |
@@ -23,8 +23,8 @@ Provides a powerline-style status bar for Antigravity CLI (`agy`) that renders r
 
 ### Usage thresholds
 
-- 🟢 Green: `<= 50%`
-- 🟡 Yellow: `50% < x <= 75%`
+- 🟢 Green: `<= 40%`
+- 🟡 Yellow: `40% < x <= 75%`
 - 🔴 Red: `> 75%`
 
 ## Skills
@@ -42,13 +42,13 @@ git clone https://github.com/rmompo/plugin4ai.git
 # 2. Install the plugin
 agy plugin install ./plugin4ai/antigravity/p4-antigravity
 
-# 3. Register as statusLine in ~/.gemini/antigravity-cli/settings.json
+# 3. Register as statusLine in ~/.gemini/config/settings.json
 ```
 
 ```json
 "statusLine": {
   "type": "command",
-  "command": "~/.gemini/antigravity-cli/plugins/p4-antigravity/scripts/statusline.sh"
+  "command": "~/.gemini/config/plugins/p4-antigravity/scripts/statusline.sh"
 }
 ```
 
