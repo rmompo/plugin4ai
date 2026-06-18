@@ -2,6 +2,8 @@
 
 > **Status:** `beta` | **Version:** `1.0.16` | **Ports:** Claude Code CLI/TUI only
 
+---
+
 ## Overview
 
 AI-powered CV generation and management system. Extracts structured profile data from existing CVs, adapts content to specific job offers, and exports to multiple formats. Supports multiple users with isolated profile storage.
@@ -18,6 +20,8 @@ All data is stored globally at `~/.p4/p4-ccvv/` following the p4-* scope convent
 | GitHub Copilot CLI/TUI | — | Proposal |
 | Antigravity CLI/TUI | — | Proposal |
 | Codex CLI/TUI | — | Proposal |
+
+---
 
 ## Skill: `setup`
 

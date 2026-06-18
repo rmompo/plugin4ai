@@ -2,6 +2,8 @@
 
 > **Status:** `stable` | **Version:** `1.2.15` | **Ports:** Claude Code CLI/TUI, GitHub Copilot CLI/TUI
 
+---
+
 ## Overview
 
 `p4-core` bundles three skills that address the most common friction points in daily AI-assisted development: enforcing behavioral directives, choosing the right model, and writing consistent commit messages. All three skills activate automatically from context and can also be invoked explicitly.
@@ -16,6 +18,8 @@
 | GitHub Copilot CLI/TUI | `ghcopilot/plugins/p4-core/` | ✅ Stable |
 | Antigravity CLI/TUI | `antigravity/p4-core/` | 🔶 Beta |
 | Codex CLI/TUI | `codex/p4-core/` | 🔶 Beta |
+
+---
 
 ## Skill 1: `model-behaviour`
 

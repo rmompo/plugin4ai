@@ -4,9 +4,13 @@
 **Version:** 1.0.0  
 **CLI:** Antigravity CLI/TUI (exclusive)
 
+---
+
 ## Purpose
 
 Provides a powerline-style status bar for Antigravity CLI/TUI (`agy`) that renders real-time session information: working directory, git branch, active model name, and color-coded usage metrics.
+
+---
 
 ## Ports
 
@@ -16,6 +20,8 @@ Provides a powerline-style status bar for Antigravity CLI/TUI (`agy`) that rende
 | Claude Code CLI/TUI | `not-applicable` |
 | GitHub Copilot CLI/TUI | `not-applicable` |
 | Codex CLI/TUI | `not-applicable` |
+
+---
 
 ## Statusline format
 
@@ -36,11 +42,15 @@ Provides a powerline-style status bar for Antigravity CLI/TUI (`agy`) that rende
 - 🟡 Yellow: `40% < x <= 75%`
 - 🔴 Red: `> 75%`
 
+---
+
 ## Skills
 
 | Skill | Invocation | Description |
 |-------|------------|-------------|
 | `statusline` | automatic (registered as `statusLine` command) | Renders the powerline-style status bar. Reads JSON from stdin, emits ANSI-colored output to stdout. |
+
+---
 
 ## Installation
 
@@ -61,6 +71,8 @@ agy plugin install ./plugin4ai/antigravity/p4-antigravity
 }
 ```
 
+---
+
 ## Dependencies
 
 | Type | Name | Version |
@@ -69,6 +81,8 @@ agy plugin install ./plugin4ai/antigravity/p4-antigravity
 | tool | `python3` | >= 3.0.0 |
 | tool | `git` | * |
 | runtime | Terminal with ANSI + Nerd Fonts support | — |
+
+---
 
 ## Changelog
 

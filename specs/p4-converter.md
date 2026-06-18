@@ -2,6 +2,8 @@
 
 > **Status:** `beta` | **Version:** `1.0.6` | **Ports:** Claude Code CLI/TUI only
 
+---
+
 ## Overview
 
 `p4-converter` converts PDF, DOC, DOCX, PPT, and PPTX documents to structured, LLM-optimized Markdown. It uses a 6-step local pipeline driven by three external tools (`qpdf`, `python3`, `libreoffice`) and Claude's own vision/reading capabilities for content extraction.

@@ -2,6 +2,8 @@
 
 > **Status:** `beta` | **Version:** `1.0.2` | **Ports:** Claude Code CLI/TUI only
 
+---
+
 ## Overview
 
 `p4-buddy` is a collection of skills for <company> employees using Claude Code CLI/TUI. It provides tooling for internal <company> platform workflows, starting with GComp mission reporting.
@@ -16,6 +18,8 @@ Works standalone — no dependency on `p4-core` or `p4-claudecode`.
 |-----|----------|--------|
 | Claude Code CLI/TUI | `claudecode/p4-buddy/` | ✅ Beta |
 | GitHub Copilot CLI/TUI | — | ❌ Not planned |
+
+---
 
 ## Skill: `gcomp`
 
@@ -77,6 +81,8 @@ Uses `AskUserQuestion` to confirm sections one at a time — never dumps the ful
   MISIÓN GCOMP — LISTA PARA COPIAR
 ═══════════════════════════════════════════════════
 
+---
+
 ## 1. DESCRIPCIÓN DEL PROYECTO
 
 Cliente:          <value>
@@ -90,6 +96,8 @@ Descripción:
 *** Punto clave
 
 ═══════════════════════════════════════════════════
+
+---
 
 ## 2. PARTICIPACIÓN EN LA MISIÓN
 

@@ -2,6 +2,8 @@
 
 > **Status:** `beta` | **Version:** `1.1.26` | **Ports:** Claude Code CLI/TUI only
 
+---
+
 ## Overview
 
 `p4-plugin` provides full lifecycle management for the plugin4ai marketplace. It handles creation, modification and removal of plugins and skills, keeping all catalogs and the CLI cache in sync automatically after every operation.
@@ -18,6 +20,8 @@
 | GitHub Copilot CLI/TUI | `ghcopilot/plugins/p4-plugin/` | 🔶 Beta |
 | Antigravity CLI/TUI | `antigravity/p4-plugin/` | 🔶 Beta |
 | Codex CLI/TUI | `codex/p4-plugin/` | 🔶 Beta |
+
+---
 
 ## Skills
 

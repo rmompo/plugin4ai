@@ -2,6 +2,8 @@
 
 > **Status:** `stable` | **Version:** `1.0.2` | **Ports:** Claude Code CLI/TUI only
 
+---
+
 ## Overview
 
 `p4-claudecode` is a Claude Code CLI/TUI-exclusive visual enhancement plugin. It replaces the default statusline with a custom color-coded bar that surfaces project context, git state, active model and usage metrics at a glance.
@@ -18,6 +20,8 @@ It is intentionally decoupled from `p4-core` — it can be installed standalone 
 | GitHub Copilot CLI/TUI | — | ❌ Not applicable |
 | Antigravity CLI/TUI | — | ❌ Not applicable |
 | Codex CLI/TUI | — | ❌ Not applicable |
+
+---
 
 ## Skill: `statusline`
 

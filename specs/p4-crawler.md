@@ -2,6 +2,8 @@
 
 > **Status:** `beta` | **Version:** `1.0.2` | **Ports:** Claude Code CLI/TUI only
 
+---
+
 ## Overview
 
 p4-crawler is a web crawler and documentation extractor. It systematically explores websites — both static (curl-based) and SPAs (Playwright-based: Angular, React, Storybook) — filters discovered content by topic and keywords, downloads pages and attachments (PDF, DOC, XLS), converts them to Markdown, and generates a structured index with metrics.
@@ -15,6 +17,8 @@ Designed for intranet documentation extraction. Supports authenticated sites (Jo
 | CLI | Location | Status |
 |-----|----------|--------|
 | Claude Code CLI/TUI | `claudecode/p4-crawler/` | ✅ Beta |
+
+---
 
 ## Skill: `setup`
 
