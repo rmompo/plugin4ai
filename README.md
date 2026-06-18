@@ -2,7 +2,7 @@
 
 > Code once, port where you need it.
 
-A single repository for AI CLI plugins. Each plugin is a self-contained concept that gets ported to supported CLIs/TUIs as native extensions — only where it makes sense.
+A single repository for AI CLI/TUI plugins. Each plugin is a self-contained concept that gets ported to supported CLIs/TUIs as native extensions — only where it makes sense.
 
 ---
 
