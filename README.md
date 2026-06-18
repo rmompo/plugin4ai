@@ -33,7 +33,7 @@ A single repository for AI CLI/TUI plugins. Each plugin is a self-contained conc
 
 ## Installation & Lifecycle
 
-For detailed install, update, uninstall, enable, and disable instructions per CLI/TUI/TUI → **[INSTALL.md](./INSTALL.md)**
+For detailed install, update, uninstall, enable, and disable instructions per CLI/TUI → **[INSTALL.md](./INSTALL.md)**
 
 ---
 
