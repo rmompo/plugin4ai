@@ -1,0 +1,9 @@
+{
+  "name": "p4-plugin",
+  "version": "1.0.0",
+  "description": "Plugin lifecycle management for Codex CLI: create, update, remove, and audit plugins and skills.",
+  "author": {
+    "name": "rmompo",
+    "email": "rmompo@gmail.com"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "p4-core",
+  "version": "1.0.0",
+  "description": "Core productivity plugin: behavioral directives (P4D), Conventional Commits enforcement, and dependency verification.",
+  "author": {
+    "name": "rmompo",
+    "email": "rmompo@gmail.com"
+  }
+}

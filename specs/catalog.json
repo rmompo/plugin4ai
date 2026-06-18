@@ -254,12 +254,14 @@
           "path": "ghcopilot/plugins/p4-core"
         },
         "antigravity": {
-          "status": "proposal",
-          "notes": "Pending evaluation of Antigravity plugin format."
+          "status": "beta",
+          "path": "antigravity/p4-core",
+          "notes": "Ported skills: git-commit, model-behaviour, sanitize, setup. Excluded: skill-list, model-route (not applicable)."
         },
         "codex": {
-          "status": "proposal",
-          "notes": "Pending evaluation of Codex extension format."
+          "status": "beta",
+          "path": "codex/p4-core",
+          "notes": "Ported skills: git-commit, model-behaviour, sanitize, setup. Excluded: skill-list, model-route (not applicable)."
         }
       }
     },
@@ -793,13 +795,16 @@
           "path": "claudecode/p4-plugin"
         },
         "ghcopilot": {
-          "status": "proposal"
+          "status": "beta",
+          "path": "ghcopilot/plugins/p4-plugin"
         },
         "antigravity": {
-          "status": "proposal"
+          "status": "beta",
+          "path": "antigravity/p4-plugin"
         },
         "codex": {
-          "status": "proposal"
+          "status": "beta",
+          "path": "codex/p4-plugin"
         }
       }
     },
