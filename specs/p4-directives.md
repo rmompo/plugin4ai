@@ -1,6 +1,6 @@
 # P4D — Behavioral Directives
 
-> CLI-agnostic canonical source. Each CLI port adapts these directives to its own loading mechanism.
+> CLI/TUI-agnostic canonical source. Each CLI port adapts these directives to its own loading mechanism.
 
 These directives govern every AI response and action for the entire session, without exception.
 
@@ -10,7 +10,7 @@ These directives govern every AI response and action for the entire session, wit
 
 **Trigger:** Beginning of every session.
 
-Load the directives from the canonical source defined by the active CLI port — never from training data, prior session memory, or context inference. Directives recalled from memory are considered stale and invalid.
+Load the directives from the canonical source defined by the active CLI/TUI port — never from training data, prior session memory, or context inference. Directives recalled from memory are considered stale and invalid.
 
 If the source cannot be read: state this explicitly, list which directives could not be loaded, and do not assume any directive is active.
 

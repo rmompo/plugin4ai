@@ -14,7 +14,7 @@ All data is stored globally at `~/.p4/p4-ccvv/` following the p4-* scope convent
 
 ## Port Status
 
-| CLI | Location | Status |
+| CLI/TUI | Location | Status |
 |-----|----------|--------|
 | Claude Code CLI/TUI | `claudecode/p4-ccvv/` | ✅ Beta |
 | GitHub Copilot CLI/TUI | — | Proposal |

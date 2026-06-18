@@ -1,6 +1,6 @@
 # Plugin Installation Guide
 
-Plugin and skill lifecycle operations for each supported CLI. Processes vary significantly between CLIs/TUIs — some are fully command-driven, others are TUI-based or require manual file management.
+Plugin and skill lifecycle operations for each supported CLI/TUI. Processes vary significantly between CLIs/TUIs — some are fully command-driven, others are TUI-based or require manual file management.
 
 ---
 
@@ -273,7 +273,7 @@ Skills are bundled inside plugins. There is no separate install/remove command f
 
 To invoke a skill once a plugin is installed:
 
-| CLI | Invocation |
+| CLI/TUI | Invocation |
 |-----|-----------|
 | Claude Code CLI/TUI | `/<plugin>:<skill>` |
 | GitHub Copilot CLI/TUI | `/<plugin>:<skill>` |

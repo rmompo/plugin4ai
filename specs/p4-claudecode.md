@@ -14,7 +14,7 @@ It is intentionally decoupled from `p4-core` — it can be installed standalone 
 
 ## Port Status
 
-| CLI | Location | Status |
+| CLI/TUI | Location | Status |
 |-----|----------|--------|
 | Claude Code CLI/TUI | `claudecode/p4-claudecode/` | ✅ Stable |
 | GitHub Copilot CLI/TUI | — | ❌ Not applicable |

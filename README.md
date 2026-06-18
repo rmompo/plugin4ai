@@ -8,7 +8,7 @@ A single repository for AI CLI/TUI plugins. Each plugin is a self-contained conc
 
 ## Supported CLIs/TUIs
 
-| CLI | Vendor | Folder | Install |
+| CLI/TUI | Vendor | Folder | Install |
 |-----|--------|--------|---------|
 | [Claude Code CLI/TUI](https://claude.ai/code) | Anthropic | [`claudecode/`](./claudecode/) | `claude plugins marketplace add rmompo/plugin4ai` |
 | [GitHub Copilot CLI/TUI](https://cli.github.com) | Microsoft / GitHub | [`ghcopilot/`](./ghcopilot/) | *(see folder README)* |
@@ -33,7 +33,7 @@ A single repository for AI CLI/TUI plugins. Each plugin is a self-contained conc
 
 ## Installation & Lifecycle
 
-For detailed install, update, uninstall, enable, and disable instructions per CLI → **[INSTALL.md](./INSTALL.md)**
+For detailed install, update, uninstall, enable, and disable instructions per CLI/TUI/TUI → **[INSTALL.md](./INSTALL.md)**
 
 ---
 

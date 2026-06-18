@@ -1,7 +1,7 @@
 {
   "$schema": "./catalog.schema.json",
   "name": "plugin4ai",
-  "description": "Personal AI CLI plugin catalog — cross-platform productivity skills",
+  "description": "Personal AI CLI/TUI plugin catalog — cross-platform productivity skills",
   "owner": {
     "name": "rmompo",
     "email": "rmompo@gmail.com"
@@ -970,7 +970,7 @@
     },
     {
       "name": "p4-antigravity",
-      "description": "Antigravity CLI-exclusive enhancements: powerline-style statusline with project path, git branch, active model and color-coded usage metrics.",
+      "description": "Antigravity CLI/TUI-exclusive enhancements: powerline-style statusline with project path, git branch, active model and color-coded usage metrics.",
       "category": "productivity",
       "status": "beta",
       "version": "1.0.0",

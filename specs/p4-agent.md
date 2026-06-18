@@ -14,7 +14,7 @@ Designed to be used as a quality gate before committing agent definitions to a r
 
 ## Port Status
 
-| CLI | Location | Status |
+| CLI/TUI | Location | Status |
 |-----|----------|--------|
 | Claude Code CLI/TUI | `claudecode/p4-agent/` | ⏳ Proposal |
 

@@ -14,7 +14,7 @@ Provides a powerline-style status bar for Antigravity CLI/TUI (`agy`) that rende
 
 ## Ports
 
-| CLI | Status |
+| CLI/TUI | Status |
 |-----|--------|
 | Antigravity CLI/TUI | `beta` |
 | Claude Code CLI/TUI | `not-applicable` |

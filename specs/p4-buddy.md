@@ -14,7 +14,7 @@ Works standalone — no dependency on `p4-core` or `p4-claudecode`.
 
 ## Port Status
 
-| CLI | Location | Status |
+| CLI/TUI | Location | Status |
 |-----|----------|--------|
 | Claude Code CLI/TUI | `claudecode/p4-buddy/` | ✅ Beta |
 | GitHub Copilot CLI/TUI | — | ❌ Not planned |

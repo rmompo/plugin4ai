@@ -14,7 +14,7 @@ The output is a clean `.md` file with YAML frontmatter, proper heading hierarchy
 
 ## Port Status
 
-| CLI | Location | Status |
+| CLI/TUI | Location | Status |
 |-----|----------|--------|
 | Claude Code CLI/TUI | `claudecode/p4-converter/` | ✅ Beta |
 | GitHub Copilot CLI/TUI | `ghcopilot/p4-converter/` *(planned)* | 🔲 Not yet |

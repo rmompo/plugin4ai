@@ -14,7 +14,7 @@ Designed for intranet documentation extraction. Supports authenticated sites (Jo
 
 ## Port Status
 
-| CLI | Location | Status |
+| CLI/TUI | Location | Status |
 |-----|----------|--------|
 | Claude Code CLI/TUI | `claudecode/p4-crawler/` | ✅ Beta |
 

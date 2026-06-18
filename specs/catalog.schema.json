@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "plugin4ai/catalog.schema.json",
   "title": "plugin4ai Catalog",
-  "description": "Single source of truth for all plugins, skills, versions, changelogs and CLI ports",
+  "description": "Single source of truth for all plugins, skills, versions, changelogs and CLI/TUI ports",
   "type": "object",
   "required": ["name", "description", "owner", "clis", "plugins"],
   "properties": {
@@ -19,7 +19,7 @@
     },
     "clis": {
       "type": "object",
-      "description": "Supported CLI targets — key is the CLI identifier used in ports",
+      "description": "Supported CLI/TUI targets — key is the CLI/TUI identifier used in ports",
       "propertyNames": {"enum": ["claudecode", "ghcopilot", "antigravity", "codex"]},
       "additionalProperties": {
         "type": "object",
@@ -124,7 +124,7 @@
           },
           "ports": {
             "type": "object",
-            "description": "CLI port entries — absent = not yet evaluated",
+            "description": "CLI/TUI port entries — absent = not yet evaluated",
             "propertyNames": {"enum": ["claudecode", "ghcopilot", "antigravity", "codex"]},
             "additionalProperties": {
               "type": "object",

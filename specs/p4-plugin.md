@@ -14,7 +14,7 @@
 
 ## Port Status
 
-| CLI | Location | Status |
+| CLI/TUI | Location | Status |
 |-----|----------|--------|
 | Claude Code CLI/TUI | `claudecode/p4-plugin/` | ✅ Beta |
 | GitHub Copilot CLI/TUI | `ghcopilot/plugins/p4-plugin/` | 🔶 Beta |
