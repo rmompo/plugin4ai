@@ -1,6 +1,6 @@
 {
   "name": "p4-coding",
-  "version": "1.0.6",
+  "version": "1.1.6",
   "description": "Coding standards and best practices for Claude Code: universal directives (SOLID, DRY, naming, error handling) auto-loaded at session start, with stack-specific skills for TypeScript, Python, Go, and Java.",
   "author": {
     "name": "rmompo",

@@ -1187,9 +1187,13 @@
       "description": "Coding standards and best practices plugin: universal directives (SOLID, DRY, naming, error handling, security) auto-loaded at session start, with stack-specific skills for TypeScript, Python, Go, and Java.",
       "category": "productivity",
       "status": "beta",
-      "version": "1.0.6",
+      "version": "1.1.6",
       "spec": "specs/p4-coding.md",
       "changelog": [
+        {
+          "version": "1.1.6",
+          "changes": "agent: detect project stack at session start and suggest activating the relevant stack-specific skill (typescript-standards, python-standards) or note proposal skills (go-standards, java-standards)"
+        },
         {
           "version": "1.0.6",
           "changes": "Add code-review skill (proposal)"
