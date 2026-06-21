@@ -1,7 +1,7 @@
 ---
 name: skill-remove
 description: Removes a skill from a plugin. Deletes the SKILL.md, updates catalog.json (Z does not decrease), and syncs the CLI cache. Destructive — requires explicit confirmation. Also invoked explicitly as /p4-plugin:skill-remove with the plugin and skill name.
-version: 20
+version: 34
 argument-hint: "<plugin> <skill>"
 allowed-tools: [Bash, Read, Edit, Write, AskUserQuestion]
 ---
@@ -98,6 +98,18 @@ Find the row matching the skill name and delete it. If no skills table exists or
 
 ---
 
+## Step 4d — Update marketplace files
+
+### `claudecode/MARKETPLACE.md`
+
+Find the row for `<plugin>` in the Available plugins table and remove `<skill>` from the **Skills** column. If it was the only skill, replace with `—`.
+
+### `ghcopilot/MARKETPLACE.md` (only if the skill was included in the ghcopilot port)
+
+Check `catalog.json` → `ports.ghcopilot.status`. If `beta` or `stable`, remove the skill from the ghcopilot skills column the same way.
+
+---
+
 ## Step 5 — Sync cache (no version bump)
 
 ```python
@@ -133,8 +145,10 @@ Deleted:
 Updated:
   claudecode/<plugin>/README.md
 
-Catalogs updated:
+Marketplaces updated:
   specs/catalog.json  →  ~/.p4/catalog.json (synced)
+  claudecode/MARKETPLACE.md  (Skills column)
+  [ghcopilot/MARKETPLACE.md — if skill was ported to ghcopilot]
 
 Cache synced: ~/.claude/plugins/cache/plugin4ai-claudecode/<plugin>/<version>/
 

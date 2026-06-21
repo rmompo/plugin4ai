@@ -1,7 +1,7 @@
 ---
 name: skill-add
 description: Adds a new skill to an existing plugin. Bumps Z versioning in catalog.json and plugin.json, creates the SKILL.md, and syncs the CLI cache. Also invoked explicitly as /p4-plugin:skill-add with the plugin and skill name.
-version: 19
+version: 33
 argument-hint: "<plugin> <skill>"
 allowed-tools: [Bash, Read, Edit, Write, AskUserQuestion]
 ---
@@ -160,6 +160,22 @@ Insert before the closing blank line of the table. All content must be in Englis
 
 ---
 
+## Step 5c — Update marketplace files
+
+### `claudecode/MARKETPLACE.md`
+
+Find the row for `<plugin>` in the Available plugins table and update the **Skills** column to append the new skill name:
+
+```
+`<existing-skill1>`, `<existing-skill2>`, `<new-skill>`
+```
+
+### `ghcopilot/MARKETPLACE.md` (only if the new skill is included in the ghcopilot port)
+
+Check `catalog.json` → `ports.ghcopilot.status` for this plugin. If `beta` or `stable`, and the new skill is ported to ghcopilot, update the skills column in `ghcopilot/MARKETPLACE.md` the same way.
+
+---
+
 ## Step 6 — Sync cache
 
 ```python
@@ -192,8 +208,10 @@ Files created/updated:
   claudecode/<plugin>/skills/<skill>/SKILL.md
   claudecode/<plugin>/README.md
 
-Catalogs updated:
+Marketplaces updated:
   specs/catalog.json  →  ~/.p4/catalog.json (synced)
+  claudecode/MARKETPLACE.md  (Skills column)
+  [ghcopilot/MARKETPLACE.md — if skill is ported to ghcopilot]
 
 Cache synced: ~/.claude/plugins/cache/plugin4ai-claudecode/<plugin>/<new_version>/
 

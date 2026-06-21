@@ -587,9 +587,17 @@
       "description": "Marketplace lifecycle tooling: create and manage plugins and skills with automatic version tracking.",
       "category": "productivity",
       "status": "beta",
-      "version": "1.1.32",
+      "version": "1.1.34",
       "spec": "specs/p4-plugin.md",
       "changelog": [
+        {
+          "version": "1.1.33",
+          "changes": "skill-add: add Step 5c — update claudecode/MARKETPLACE.md and ghcopilot/MARKETPLACE.md skills column on skill addition"
+        },
+        {
+          "version": "1.1.34",
+          "changes": "skill-remove: add Step 4d — update claudecode/MARKETPLACE.md and ghcopilot/MARKETPLACE.md skills column on skill removal"
+        },
         {
           "version": "1.1.31",
           "changes": "create: consolidate all marketplace updates into Step 7 (7.1–7.4), remove redundant Step 6, fix auto-setup column in MARKETPLACE.md row"
@@ -772,8 +780,12 @@
         },
         {
           "name": "skill-add",
-          "version": 19,
+          "version": 33,
           "changelog": [
+            {
+              "version": 33,
+              "changes": "add Step 5c: update claudecode/MARKETPLACE.md and ghcopilot/MARKETPLACE.md skills column after adding a skill"
+            },
             {
               "version": 19,
               "changes": "Update README.md when adding a skill"
@@ -796,8 +808,12 @@
         },
         {
           "name": "skill-remove",
-          "version": 20,
+          "version": 34,
           "changelog": [
+            {
+              "version": 34,
+              "changes": "add Step 4d: update claudecode/MARKETPLACE.md and ghcopilot/MARKETPLACE.md skills column after removing a skill"
+            },
             {
               "version": 20,
               "changes": "Remove skill row from README.md on deletion"
