@@ -1,7 +1,7 @@
 ---
 name: create
 description: Scaffolds a new plugin with all required files and registers it in every catalog. Also invoked explicitly as /p4-plugin:create with the plugin name and optional skill names.
-version: 29
+version: 31
 argument-hint: "<plugin> [skill1 skill2 ...]"
 allowed-tools: [Bash, Read, Edit, Write, AskUserQuestion]
 ---
@@ -276,29 +276,54 @@ shutil.copy2(f"{REPO_ROOT}/specs/catalog.json", os.path.expanduser("~/.p4/catalo
 
 ---
 
-## Step 6 — Update .claude-plugin/marketplace.json
+## Step 7 — Update all active marketplace files
 
-Add to the `"plugins"` array:
+### 7.1 — `claudecode/MARKETPLACE.md`
+
+Add row to the "Available plugins" table in alphabetical order:
+
+```
+| [`<plugin>`](./<plugin>/README.md) | <status> | `<skill1>`, `<skill2>` | <auto-setup> |
+```
+
+- `<status>`: from Step 1 (e.g. `beta`)
+- Skills: comma-separated list of all implemented skills (exclude proposal)
+- `<auto-setup>`: `✅ via agent` if the plugin has `settings.json` + `agents/<plugin>.md`; otherwise `—`
+
+### 7.2 — `.claude-plugin/marketplace.json`
+
+Add entry to the `"plugins"` array:
 
 ```json
 {
   "name": "<plugin>",
   "description": "<description>",
   "author": {"name": "rmompo"},
-  "category": "productivity",
+  "category": "<category>",
   "source": "./claudecode/<plugin>",
   "homepage": "https://github.com/rmompo/plugin4ai/tree/main/claudecode/<plugin>"
 }
 ```
 
----
+### 7.3 — `ghcopilot/.github/plugin/marketplace.json` (only if ghcopilot port is `beta`/`stable`)
 
-## Step 7 — Update claudecode/MARKETPLACE.md
+Add entry:
 
-Add row to the "Available plugins" table:
+```json
+{
+  "name": "<plugin>",
+  "description": "<description>",
+  "version": "<version>",
+  "source": "./plugins/<plugin>"
+}
+```
+
+### 7.4 — `ghcopilot/MARKETPLACE.md` (only if ghcopilot port is `beta`/`stable`)
+
+Add row in alphabetical order:
 
 ```
-| [`<plugin>`](./<plugin>/README.md) | beta | `<skill>` | — |
+| [`<plugin>`](./plugins/<plugin>/README.md) | <status> | <ported skills list> |
 ```
 
 ---
@@ -357,20 +382,7 @@ ghcopilot/plugins/<plugin>/skills/<skill>/SKILL.md
 
 3. Create `REPO_ROOT/ghcopilot/plugins/<plugin>/README.md` with skills table.
 
-4. Update `REPO_ROOT/ghcopilot/MARKETPLACE.md` — add row:
-```markdown
-| [`<plugin>`](./plugins/<plugin>/README.md) | <status> | <skills list> |
-```
-
-5. Update `REPO_ROOT/ghcopilot/.github/plugin/marketplace.json` — add entry:
-```json
-{
-  "name": "<plugin>",
-  "description": "<description>",
-  "version": "1.0.<Z>",
-  "source": "./plugins/<plugin>"
-}
-```
+4. Marketplace files are handled by **Step 7.3** and **Step 7.4** — do not duplicate here.
 
 ### Antigravity / Codex ports
 
@@ -412,13 +424,13 @@ Files created:
   specs/<plugin>.md
   [ghcopilot/plugins/<plugin>/  — if ghcopilot port is beta/stable]
 
-Catalogs updated:
+Marketplaces updated:
   specs/catalog.json  →  ~/.p4/catalog.json (synced)
   .claude-plugin/marketplace.json
   claudecode/MARKETPLACE.md
-  README.md  (plugins table)
-  [ghcopilot/MARKETPLACE.md — if ghcopilot port is beta/stable]
+  README.md  (plugins table — alphabetical, correct group)
   [ghcopilot/.github/plugin/marketplace.json — if ghcopilot port is beta/stable]
+  [ghcopilot/MARKETPLACE.md — if ghcopilot port is beta/stable]
 
 Cache synced: ~/.claude/plugins/cache/plugin4ai-claudecode/<plugin>/1.0.<Z>/
 

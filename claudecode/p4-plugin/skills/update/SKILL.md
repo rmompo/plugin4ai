@@ -1,7 +1,7 @@
 ---
 name: update
 description: Updates plugin metadata (description, status, ports, version bump) and propagates changes to all catalogs and the CLI cache. Also invoked explicitly as /p4-plugin:update with the plugin name.
-version: 30
+version: 32
 argument-hint: "<plugin>"
 allowed-tools: [Bash, Read, Edit, Write, AskUserQuestion]
 ---
@@ -11,12 +11,16 @@ allowed-tools: [Bash, Read, Edit, Write, AskUserQuestion]
 Updates plugin metadata and propagates changes to all catalogs and the CLI cache.
 
 ```
-specs/catalog.json                              ← PRIMARY — written first
+specs/catalog.json                                    ← PRIMARY — written first
    ↓
-claudecode/<plugin>/.claude-plugin/plugin.json  ← version if bumped
-.claude-plugin/marketplace.json                 ← description if changed
-claudecode/MARKETPLACE.md                       ← status/skills if changed
-~/.claude/plugins/cache/plugin4ai-claudecode/   ← CLI cache (if version changed)
+claudecode/<plugin>/.claude-plugin/plugin.json        ← version if bumped
+.claude-plugin/marketplace.json                       ← description/skills if changed
+claudecode/MARKETPLACE.md                             ← description/status/skills if changed
+ghcopilot/.github/plugin/marketplace.json             ← description/skills if changed (if ghcopilot port active)
+ghcopilot/MARKETPLACE.md                              ← description/status/skills if changed (if ghcopilot port active)
+specs/<plugin>.md                                     ← Port Status table if ports changed
+README.md                                             ← status column if plugin status changed
+~/.claude/plugins/cache/plugin4ai-claudecode/         ← CLI cache (if version changed)
 ```
 
 ---
@@ -83,14 +87,29 @@ shutil.copy2(catalog_path, os.path.expanduser("~/.p4/catalog.json"))
 
 ## Step 4 — Update derived files
 
+Apply updates to all files affected by the collected changes. Check each trigger independently:
+
+### Claude Code files (always applicable)
+
 - `claudecode/<plugin>/.claude-plugin/plugin.json` → update `version` if bumped
-- `.claude-plugin/marketplace.json` → update `description` if changed
-- `claudecode/MARKETPLACE.md` → update status/skill columns if changed
+- `.claude-plugin/marketplace.json` → update `description` if changed; update skill list in `source` entry if skills changed
+- `claudecode/MARKETPLACE.md` → update `status` column if status changed; update `Skills` column if skills changed; update `Auto-setup` column if agent was added/removed
+
+### GitHub Copilot files (only if `ghcopilot` port status is `beta` or `stable`)
+
+- `ghcopilot/.github/plugin/marketplace.json` → update `description` if changed; update skill list if skills changed
+- `ghcopilot/MARKETPLACE.md` → update `status` column if status changed; update skills column if skills included in this port changed
+
+### Cross-CLI documentation
+
 - `specs/<plugin>.md` → update Port Status table if any port status changed
-- `README.md` (repo root) → update `status` column in the correct group table (Group 1: general plugins / Group 2: CLI/TUI-specific) if plugin status changed. If the plugin does not yet appear in README.md, insert it in alphabetical order within its group following the same two-group convention as `create` Step 7b.
-- If a port was promoted to `beta`/`stable`:
-  - Scaffold port files (see `create` Step 7c)
-  - Update the corresponding CLI's MARKETPLACE.md and marketplace index
+- `README.md` (repo root) → update `status` column in the correct group table (Group 1: general / Group 2: CLI-specific) if plugin status changed. If missing, insert in alphabetical order following `create` Step 7b.
+
+### Port promotion
+
+If a port was promoted from `proposal` to `beta`/`stable`:
+- Scaffold port files (see `create` Step 7c)
+- Register in the promoted CLI's MARKETPLACE.md and marketplace index
 
 ---
 
@@ -126,8 +145,12 @@ Changes applied:
 
 Catalogs updated:
   specs/catalog.json  →  ~/.p4/catalog.json (synced)
-  [.claude-plugin/marketplace.json — if description changed]
-  [claudecode/MARKETPLACE.md — if status/skills changed]
+  [.claude-plugin/marketplace.json — if description/skills changed]
+  [claudecode/MARKETPLACE.md — if description/status/skills changed]
+  [ghcopilot/.github/plugin/marketplace.json — if description/skills changed and ghcopilot port active]
+  [ghcopilot/MARKETPLACE.md — if description/status/skills changed and ghcopilot port active]
+  [specs/<plugin>.md — if ports changed]
+  [README.md — if status changed]
 
 [Cache synced: ~/.claude/plugins/cache/plugin4ai-claudecode/<plugin>/<version>/]
 

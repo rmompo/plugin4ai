@@ -587,9 +587,17 @@
       "description": "Marketplace lifecycle tooling: create and manage plugins and skills with automatic version tracking.",
       "category": "productivity",
       "status": "beta",
-      "version": "1.1.30",
+      "version": "1.1.32",
       "spec": "specs/p4-plugin.md",
       "changelog": [
+        {
+          "version": "1.1.31",
+          "changes": "create: consolidate all marketplace updates into Step 7 (7.1–7.4), remove redundant Step 6, fix auto-setup column in MARKETPLACE.md row"
+        },
+        {
+          "version": "1.1.32",
+          "changes": "update: explicit ghcopilot marketplace updates (description/skills/status changes), comprehensive Step 4 trigger table"
+        },
         {
           "version": "1.1.29",
           "changes": "create: enforce two-group alphabetical README.md convention in Step 7b"
@@ -694,8 +702,12 @@
       "skills": [
         {
           "name": "create",
-          "version": 29,
+          "version": 31,
           "changelog": [
+            {
+              "version": 31,
+              "changes": "consolidate marketplace updates into Step 7 (7.1 claudecode MARKETPLACE.md, 7.2 .claude-plugin/marketplace.json, 7.3–7.4 ghcopilot files); remove redundant Step 6; fix row format with auto-setup column"
+            },
             {
               "version": 29,
               "changes": "Step 7b: insert plugin row in correct group (general vs CLI/TUI-specific) in alphabetical order"
@@ -728,8 +740,12 @@
         },
         {
           "name": "update",
-          "version": 30,
+          "version": 32,
           "changelog": [
+            {
+              "version": 32,
+              "changes": "Step 4: add explicit ghcopilot marketplace triggers (description/skills/status changes, not only port promotion); update flow diagram header"
+            },
             {
               "version": 30,
               "changes": "Step 4: update root README.md respecting two-group structure and alphabetical order"
