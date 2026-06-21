@@ -48,6 +48,16 @@
       "homepage": "https://github.com/rmompo/plugin4ai/tree/main/claudecode/p4-ccvv"
     },
     {
+      "name": "p4-coding",
+      "description": "Coding standards and best practices: universal directives (SOLID, DRY, naming, error handling, security) auto-loaded at session start, with stack-specific skills for TypeScript, Python, Go, and Java.",
+      "author": {
+        "name": "rmompo"
+      },
+      "category": "productivity",
+      "source": "./claudecode/p4-coding",
+      "homepage": "https://github.com/rmompo/plugin4ai/tree/main/claudecode/p4-coding"
+    },
+    {
       "name": "p4-plugin",
       "description": "Plugin lifecycle management: scaffold new plugins with all required files and registry entries in one step.",
       "author": {
