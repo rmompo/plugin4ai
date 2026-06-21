@@ -1,7 +1,7 @@
 ---
 name: create
 description: Scaffolds a new plugin with all required files and registers it in every catalog. Also invoked explicitly as /p4-plugin:create with the plugin name and optional skill names.
-version: 27
+version: 29
 argument-hint: "<plugin> [skill1 skill2 ...]"
 allowed-tools: [Bash, Read, Edit, Write, AskUserQuestion]
 ---
@@ -305,13 +305,29 @@ Add row to the "Available plugins" table:
 
 ## Step 7b — Update root README.md
 
-Add a row to the plugins table in `REPO_ROOT/README.md`:
+The plugins table in `REPO_ROOT/README.md` is split into two groups. Determine which group the new plugin belongs to, then insert its row in alphabetical order within that group.
 
+### Plugin groups
+
+**Group 1 — General plugins** (cross-CLI, not tied to a specific CLI/TUI):
+- Any plugin whose name does NOT include a CLI/TUI identifier.
+- Table columns: `Plugin | Description | Status | Spec`
+- Row format:
 ```markdown
 | `<plugin>` | <one-line description> | `<status>` | [spec](./specs/<plugin>.md) |
 ```
 
-Insert after the last existing plugin row.
+**Group 2 — CLI/TUI-specific plugins** (exclusively for one CLI/TUI):
+- Plugins whose name contains a CLI identifier: `antigravity`, `claudecode`, `copilot`, `codex`, or similar.
+- Table columns: `Plugin | CLI/TUI | Description | Status | Spec`
+- Row format:
+```markdown
+| `<plugin>` | <CLI/TUI name> | <one-line description> | `<status>` | [spec](./specs/<plugin>.md) |
+```
+
+### Insertion rule
+
+Insert the new row **in alphabetical order** within the correct group. Do not append at the end — find the correct alphabetical position.
 
 ---
 

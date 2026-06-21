@@ -587,9 +587,17 @@
       "description": "Marketplace lifecycle tooling: create and manage plugins and skills with automatic version tracking.",
       "category": "productivity",
       "status": "beta",
-      "version": "1.1.28",
+      "version": "1.1.30",
       "spec": "specs/p4-plugin.md",
       "changelog": [
+        {
+          "version": "1.1.29",
+          "changes": "create: enforce two-group alphabetical README.md convention in Step 7b"
+        },
+        {
+          "version": "1.1.30",
+          "changes": "update: enforce two-group alphabetical README.md convention in Step 4"
+        },
         {
           "version": "1.1.27",
           "changes": "create: add port decision step (Step 1 item 8), scaffold non-claudecode ports (Step 7c), update root README.md (Step 7b)"
@@ -686,8 +694,12 @@
       "skills": [
         {
           "name": "create",
-          "version": 27,
+          "version": 29,
           "changelog": [
+            {
+              "version": 29,
+              "changes": "Step 7b: insert plugin row in correct group (general vs CLI/TUI-specific) in alphabetical order"
+            },
             {
               "version": 27,
               "changes": "add port decision collection, Step 7b (root README update), Step 7c (non-claudecode port scaffolding), and port-aware catalog/spec generation"
@@ -716,8 +728,12 @@
         },
         {
           "name": "update",
-          "version": 28,
+          "version": 30,
           "changelog": [
+            {
+              "version": 30,
+              "changes": "Step 4: update root README.md respecting two-group structure and alphabetical order"
+            },
             {
               "version": 28,
               "changes": "add port change collection in Step 2, port scaffolding on promotion, and derived file updates (specs, root README) in Step 4"

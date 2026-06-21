@@ -1,7 +1,7 @@
 ---
 name: update
 description: Updates plugin metadata (description, status, ports, version bump) and propagates changes to all catalogs and the CLI cache. Also invoked explicitly as /p4-plugin:update with the plugin name.
-version: 28
+version: 30
 argument-hint: "<plugin>"
 allowed-tools: [Bash, Read, Edit, Write, AskUserQuestion]
 ---
@@ -87,7 +87,7 @@ shutil.copy2(catalog_path, os.path.expanduser("~/.p4/catalog.json"))
 - `.claude-plugin/marketplace.json` → update `description` if changed
 - `claudecode/MARKETPLACE.md` → update status/skill columns if changed
 - `specs/<plugin>.md` → update Port Status table if any port status changed
-- `README.md` (repo root) → update `status` column in plugins table if plugin status changed
+- `README.md` (repo root) → update `status` column in the correct group table (Group 1: general plugins / Group 2: CLI/TUI-specific) if plugin status changed. If the plugin does not yet appear in README.md, insert it in alphabetical order within its group following the same two-group convention as `create` Step 7b.
 - If a port was promoted to `beta`/`stable`:
   - Scaffold port files (see `create` Step 7c)
   - Update the corresponding CLI's MARKETPLACE.md and marketplace index
