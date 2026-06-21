@@ -1,7 +1,7 @@
 ---
 name: update
 description: Updates plugin metadata (description, status, ports, version bump) and propagates changes to all catalogs and the CLI cache. Also invoked explicitly as /p4-plugin:update with the plugin name.
-version: 5
+version: 28
 argument-hint: "<plugin>"
 allowed-tools: [Bash, Read, Edit, Write, AskUserQuestion]
 ---
@@ -50,7 +50,13 @@ Use **AskUserQuestion** to collect what needs updating:
 1. New description (leave blank to keep current)
 2. New status (`proposal` / `accepted` / `beta` / `stable` / `production` / `deprecated`)
 3. Version bump type (`none` / `patch X.Y+1.Z` / `major X+1.0.Z`) — Z is never reset manually
-4. Port changes (add or update CLI port statuses)
+4. **Port changes** — for each CLI/TUI (`claudecode`, `ghcopilot`, `antigravity`, `codex`), ask:
+   - Current status (read from catalog.json)
+   - New status if changing: `beta` / `stable` / `proposal` / `not-available`
+   - If promoting a port from `proposal` to `beta`/`stable`:
+     - Which skills to include in that port
+     - Scaffold the port files (same logic as `create` Step 7c)
+     - Register in the corresponding MARKETPLACE.md and marketplace index
 5. Changelog entry description (required if any change is made)
 
 ---
@@ -80,6 +86,11 @@ shutil.copy2(catalog_path, os.path.expanduser("~/.p4/catalog.json"))
 - `claudecode/<plugin>/.claude-plugin/plugin.json` → update `version` if bumped
 - `.claude-plugin/marketplace.json` → update `description` if changed
 - `claudecode/MARKETPLACE.md` → update status/skill columns if changed
+- `specs/<plugin>.md` → update Port Status table if any port status changed
+- `README.md` (repo root) → update `status` column in plugins table if plugin status changed
+- If a port was promoted to `beta`/`stable`:
+  - Scaffold port files (see `create` Step 7c)
+  - Update the corresponding CLI's MARKETPLACE.md and marketplace index
 
 ---
 

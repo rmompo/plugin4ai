@@ -1,7 +1,7 @@
 ---
 name: create
 description: Scaffolds a new plugin with all required files and registers it in every catalog. Also invoked explicitly as /p4-plugin:create with the plugin name and optional skill names.
-version: 24
+version: 27
 argument-hint: "<plugin> [skill1 skill2 ...]"
 allowed-tools: [Bash, Read, Edit, Write, AskUserQuestion]
 ---
@@ -44,6 +44,20 @@ If not provided as arguments, use **AskUserQuestion** to collect:
    - **Tool dependencies** — binary name + version constraint. Operators: `=x.y.z`, `>=x.y.z`, `>x.y.z`, `<=x.y.z`, `<x.y.z`, `>=x.y.z <a.b.c`, `*`. Example: `pandoc >=2.0.0`, `python3 >=3.8.0`
    - **Plugin dependencies** — other plugin4ai plugins this plugin relies on. Example: `p4-converter`. No version — always latest.
 7. Skill name(s) and brief purpose of each (optional — can add later with `skill-add`)
+8. **Port decisions** — for each supported CLI/TUI, decide the status using **AskUserQuestion** (multiSelect allowed):
+
+   | CLI | Options |
+   |-----|---------|
+   | `claudecode` | `beta` / `stable` (always implemented — the primary port) |
+   | `ghcopilot` | `beta` / `stable` / `proposal` / `not-available` |
+   | `antigravity` | `beta` / `stable` / `proposal` / `not-available` |
+   | `codex` | `beta` / `stable` / `proposal` / `not-available` |
+
+   - **`beta` / `stable`**: will be scaffolded and registered in this operation.
+   - **`proposal`**: recorded in `catalog.json` and `specs/<plugin>.md` as planned, but no files created.
+   - **`not-available`**: explicitly excluded — recorded in `catalog.json` with `"status": "not-available"`.
+
+   For any port set to `beta`/`stable`, ask which skills from the initial skill list should be included in that port (some skills may be CLI-exclusive).
 
 ### Naming conventions
 
@@ -191,9 +205,14 @@ Create `REPO_ROOT/specs/<plugin>.md`:
 
 ## Port Status
 
-| CLI | Location | Status |
-|-----|----------|--------|
-| Claude Code | `claudecode/<plugin>/` | ✅ Beta |
+| CLI | Location | Status | Notes |
+|-----|----------|--------|-------|
+| Claude Code | `claudecode/<plugin>/` | ✅ Beta | <skills included> |
+| GitHub Copilot | `ghcopilot/plugins/<plugin>/` | <status> | <notes or —> |
+| Antigravity | `antigravity/<plugin>/` | <status> | <notes or —> |
+| Codex | `codex/<plugin>/` | <status> | <notes or —> |
+
+Replace each `<status>` with: ✅ Beta / ✅ Stable / 🔲 Proposal / ❌ Not available — based on port decisions collected in Step 1.
 
 ## Changelog
 
@@ -232,8 +251,16 @@ Add plugin entry:
     }
   ],
   "ports": {
-    "claudecode": {"status": "beta", "path": "claudecode/<plugin>"}
+    "claudecode": {"status": "beta", "path": "claudecode/<plugin>"},
+    "ghcopilot": {
+      "status": "<decided-status>",
+      "path": "ghcopilot/plugins/<plugin>",          ← only if beta/stable
+      "notes": "<excluded skills if any>"             ← only if applicable
+    },
+    "antigravity": {"status": "<decided-status>"},   ← add path only if beta/stable
+    "codex":       {"status": "<decided-status>"}    ← add path only if beta/stable
   }
+  // Omit path and notes for proposal/not-available ports
 }
 ```
 
@@ -276,6 +303,65 @@ Add row to the "Available plugins" table:
 
 ---
 
+## Step 7b — Update root README.md
+
+Add a row to the plugins table in `REPO_ROOT/README.md`:
+
+```markdown
+| `<plugin>` | <one-line description> | `<status>` | [spec](./specs/<plugin>.md) |
+```
+
+Insert after the last existing plugin row.
+
+---
+
+## Step 7c — Scaffold non-claudecode ports (if beta/stable)
+
+For each port decided as `beta` or `stable` in Step 1 (except `claudecode`):
+
+### GitHub Copilot port
+
+If `ghcopilot` → `beta`/`stable`:
+
+1. Create `REPO_ROOT/ghcopilot/plugins/<plugin>/plugin.json`:
+```json
+{
+  "name": "<plugin>",
+  "skills": "skills/",
+  "version": "1.0.<Z>",
+  "description": "<description> for GitHub Copilot.",
+  "author": {"name": "rmompo", "email": "rmompo@gmail.com"}
+}
+```
+
+2. For each skill included in this port, copy its SKILL.md:
+```
+ghcopilot/plugins/<plugin>/skills/<skill>/SKILL.md
+```
+
+3. Create `REPO_ROOT/ghcopilot/plugins/<plugin>/README.md` with skills table.
+
+4. Update `REPO_ROOT/ghcopilot/MARKETPLACE.md` — add row:
+```markdown
+| [`<plugin>`](./plugins/<plugin>/README.md) | <status> | <skills list> |
+```
+
+5. Update `REPO_ROOT/ghcopilot/.github/plugin/marketplace.json` — add entry:
+```json
+{
+  "name": "<plugin>",
+  "description": "<description>",
+  "version": "1.0.<Z>",
+  "source": "./plugins/<plugin>"
+}
+```
+
+### Antigravity / Codex ports
+
+Apply equivalent scaffolding under `antigravity/<plugin>/` or `codex/<plugin>/` and update their respective MARKETPLACE.md and marketplace index files if they exist.
+
+---
+
 ## Step 8 — Sync cache
 
 ```python
@@ -308,11 +394,15 @@ Files created:
   claudecode/<plugin>/skills/<skill>/SKILL.md
   claudecode/<plugin>/README.md
   specs/<plugin>.md
+  [ghcopilot/plugins/<plugin>/  — if ghcopilot port is beta/stable]
 
 Catalogs updated:
   specs/catalog.json  →  ~/.p4/catalog.json (synced)
   .claude-plugin/marketplace.json
   claudecode/MARKETPLACE.md
+  README.md  (plugins table)
+  [ghcopilot/MARKETPLACE.md — if ghcopilot port is beta/stable]
+  [ghcopilot/.github/plugin/marketplace.json — if ghcopilot port is beta/stable]
 
 Cache synced: ~/.claude/plugins/cache/plugin4ai-claudecode/<plugin>/1.0.<Z>/
 

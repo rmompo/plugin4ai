@@ -28,6 +28,7 @@ A single repository for AI CLI/TUI plugins. Each plugin is a self-contained conc
 | `p4-buddy` | Skills for <company> employees — <hr-platform> mission report generation | `beta` | [spec](./specs/p4-buddy.md) |
 | `p4-plugin` | Lifecycle tooling for this marketplace — create and manage plugins and skills | `beta` | [spec](./specs/p4-plugin.md) |
 | `p4-antigravity` | Powerline-style status bar for Antigravity CLI/TUI with session, branch, model and usage metrics | `beta` | [spec](./specs/p4-antigravity.md) |
+| `p4-coding` | Coding standards and best practices — universal directives (SOLID, DRY, naming, error handling) auto-loaded at session start, with stack-specific skills for TypeScript, Python, Go, and Java | `beta` | [spec](./specs/p4-coding.md) |
 
 ---
 

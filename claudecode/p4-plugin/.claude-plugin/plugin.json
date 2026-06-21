@@ -1,6 +1,6 @@
 {
   "name": "p4-plugin",
-  "version": "1.1.29",
+  "version": "1.1.28",
   "description": "Plugin lifecycle management: scaffolding, updating and publishing Claude Code plugins.",
   "author": {
     "name": "rmompo",

@@ -587,9 +587,17 @@
       "description": "Marketplace lifecycle tooling: create and manage plugins and skills with automatic version tracking.",
       "category": "productivity",
       "status": "beta",
-      "version": "1.1.29",
+      "version": "1.1.28",
       "spec": "specs/p4-plugin.md",
       "changelog": [
+        {
+          "version": "1.1.27",
+          "changes": "create: add port decision step (Step 1 item 8), scaffold non-claudecode ports (Step 7c), update root README.md (Step 7b)"
+        },
+        {
+          "version": "1.1.28",
+          "changes": "update: add port management to Step 2 and Step 4 — prompt for port decisions, scaffold promoted ports, update specs and root README"
+        },
         {
           "version": "1.1.29",
           "changes": "sanitize: skill moved to p4-core"
@@ -678,8 +686,12 @@
       "skills": [
         {
           "name": "create",
-          "version": 24,
+          "version": 27,
           "changelog": [
+            {
+              "version": 27,
+              "changes": "add port decision collection, Step 7b (root README update), Step 7c (non-claudecode port scaffolding), and port-aware catalog/spec generation"
+            },
             {
               "version": 24,
               "changes": "update setup scaffold to check both tool and plugin deps with unified type table"
@@ -704,8 +716,12 @@
         },
         {
           "name": "update",
-          "version": 5,
+          "version": 28,
           "changelog": [
+            {
+              "version": 28,
+              "changes": "add port change collection in Step 2, port scaffolding on promotion, and derived file updates (specs, root README) in Step 4"
+            },
             {
               "version": 5,
               "changes": "Extracted from manage skill"
@@ -1158,55 +1174,94 @@
       "version": "1.0.6",
       "spec": "specs/p4-coding.md",
       "changelog": [
-        { "version": "1.0.6", "changes": "Add code-review skill (proposal)" },
-        { "version": "1.0.5", "changes": "Add java-standards skill (proposal)" },
-        { "version": "1.0.4", "changes": "Add go-standards skill (proposal)" },
-        { "version": "1.0.3", "changes": "Add python-standards skill" },
-        { "version": "1.0.2", "changes": "Add typescript-standards skill" },
-        { "version": "1.0.1", "changes": "Add code-standards skill" },
-        { "version": "1.0.0", "changes": "Initial release" }
+        {
+          "version": "1.0.6",
+          "changes": "Add code-review skill (proposal)"
+        },
+        {
+          "version": "1.0.5",
+          "changes": "Add java-standards skill (proposal)"
+        },
+        {
+          "version": "1.0.4",
+          "changes": "Add go-standards skill (proposal)"
+        },
+        {
+          "version": "1.0.3",
+          "changes": "Add python-standards skill"
+        },
+        {
+          "version": "1.0.2",
+          "changes": "Add typescript-standards skill"
+        },
+        {
+          "version": "1.0.1",
+          "changes": "Add code-standards skill"
+        },
+        {
+          "version": "1.0.0",
+          "changes": "Initial release"
+        }
       ],
       "skills": [
         {
           "name": "code-standards",
           "version": 1,
           "changelog": [
-            { "version": 1, "changes": "Initial release — P4C-001 to P4C-016 universal coding directives" }
+            {
+              "version": 1,
+              "changes": "Initial release — P4C-001 to P4C-016 universal coding directives"
+            }
           ]
         },
         {
           "name": "typescript-standards",
           "version": 2,
           "changelog": [
-            { "version": 2, "changes": "Initial release — P4C-TS-001 to P4C-TS-010 TypeScript/JavaScript directives" }
+            {
+              "version": 2,
+              "changes": "Initial release — P4C-TS-001 to P4C-TS-010 TypeScript/JavaScript directives"
+            }
           ]
         },
         {
           "name": "python-standards",
           "version": 3,
           "changelog": [
-            { "version": 3, "changes": "Initial release — P4C-PY-001 to P4C-PY-010 Python directives" }
+            {
+              "version": 3,
+              "changes": "Initial release — P4C-PY-001 to P4C-PY-010 Python directives"
+            }
           ]
         },
         {
           "name": "go-standards",
           "version": 4,
           "changelog": [
-            { "version": 4, "changes": "Scaffold — proposal, content pending implementation" }
+            {
+              "version": 4,
+              "changes": "Scaffold — proposal, content pending implementation"
+            }
           ]
         },
         {
           "name": "java-standards",
           "version": 5,
           "changelog": [
-            { "version": 5, "changes": "Scaffold — proposal, content pending implementation" }
+            {
+              "version": 5,
+              "changes": "Scaffold — proposal, content pending implementation"
+            }
           ]
         },
         {
           "name": "code-review",
           "version": 6,
           "changelog": [
-            { "version": 6, "changes": "Scaffold — proposal, content pending implementation" }
+            {
+              "version": 6,
+              "changes": "Scaffold — proposal, content pending implementation"
+            }
           ]
         }
       ],
