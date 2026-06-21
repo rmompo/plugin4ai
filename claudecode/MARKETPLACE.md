@@ -27,6 +27,7 @@ claude plugins install p4-core
 | [`p4-converter`](./p4-converter/README.md) | beta | `setup`, `any-to-md` | — |
 | [`p4-crawler`](./p4-crawler/README.md) | beta | `setup`, `extract` | — |
 | [`p4-agent`](./p4-agent/README.md) | beta | `md-check`, `md-checkrefs` | — |
+| [`p4-coding`](./p4-coding/README.md) | beta | `code-standards`, `typescript-standards`, `python-standards` | ✅ via agent |
 
 ## Update the marketplace index
 

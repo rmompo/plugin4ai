@@ -14,6 +14,12 @@
       "description": "Essential productivity skills: intelligent model routing by task complexity and automatic Conventional Commits formatting",
       "version": "1.0.0",
       "source": "./plugins/p4-core"
+    },
+    {
+      "name": "p4-coding",
+      "description": "Coding standards and best practices: universal directives (SOLID, DRY, naming, error handling, security) with TypeScript and Python specific standards.",
+      "version": "1.0.3",
+      "source": "./plugins/p4-coding"
     }
   ]
 }

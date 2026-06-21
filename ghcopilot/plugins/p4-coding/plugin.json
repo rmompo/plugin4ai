@@ -1,0 +1,10 @@
+{
+  "name": "p4-coding",
+  "skills": "skills/",
+  "version": "1.0.3",
+  "description": "Coding standards and best practices for GitHub Copilot: universal directives (SOLID, DRY, naming, error handling) plus stack-specific standards for TypeScript and Python.",
+  "author": {
+    "name": "rmompo",
+    "email": "rmompo@gmail.com"
+  }
+}

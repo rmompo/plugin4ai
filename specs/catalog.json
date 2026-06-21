@@ -1149,6 +1149,84 @@
           "status": "proposal"
         }
       }
+    },
+    {
+      "name": "p4-coding",
+      "description": "Coding standards and best practices plugin: universal directives (SOLID, DRY, naming, error handling, security) auto-loaded at session start, with stack-specific skills for TypeScript, Python, Go, and Java.",
+      "category": "productivity",
+      "status": "beta",
+      "version": "1.0.6",
+      "spec": "specs/p4-coding.md",
+      "changelog": [
+        { "version": "1.0.6", "changes": "Add code-review skill (proposal)" },
+        { "version": "1.0.5", "changes": "Add java-standards skill (proposal)" },
+        { "version": "1.0.4", "changes": "Add go-standards skill (proposal)" },
+        { "version": "1.0.3", "changes": "Add python-standards skill" },
+        { "version": "1.0.2", "changes": "Add typescript-standards skill" },
+        { "version": "1.0.1", "changes": "Add code-standards skill" },
+        { "version": "1.0.0", "changes": "Initial release" }
+      ],
+      "skills": [
+        {
+          "name": "code-standards",
+          "version": 1,
+          "changelog": [
+            { "version": 1, "changes": "Initial release — P4C-001 to P4C-016 universal coding directives" }
+          ]
+        },
+        {
+          "name": "typescript-standards",
+          "version": 2,
+          "changelog": [
+            { "version": 2, "changes": "Initial release — P4C-TS-001 to P4C-TS-010 TypeScript/JavaScript directives" }
+          ]
+        },
+        {
+          "name": "python-standards",
+          "version": 3,
+          "changelog": [
+            { "version": 3, "changes": "Initial release — P4C-PY-001 to P4C-PY-010 Python directives" }
+          ]
+        },
+        {
+          "name": "go-standards",
+          "version": 4,
+          "changelog": [
+            { "version": 4, "changes": "Scaffold — proposal, content pending implementation" }
+          ]
+        },
+        {
+          "name": "java-standards",
+          "version": 5,
+          "changelog": [
+            { "version": 5, "changes": "Scaffold — proposal, content pending implementation" }
+          ]
+        },
+        {
+          "name": "code-review",
+          "version": 6,
+          "changelog": [
+            { "version": 6, "changes": "Scaffold — proposal, content pending implementation" }
+          ]
+        }
+      ],
+      "ports": {
+        "claudecode": {
+          "status": "beta",
+          "path": "claudecode/p4-coding"
+        },
+        "ghcopilot": {
+          "status": "beta",
+          "path": "ghcopilot/plugins/p4-coding",
+          "notes": "Ported skills: code-standards, typescript-standards, python-standards. Excluded: go-standards, java-standards, code-review (proposal)."
+        },
+        "antigravity": {
+          "status": "proposal"
+        },
+        "codex": {
+          "status": "proposal"
+        }
+      }
     }
   ]
 }
