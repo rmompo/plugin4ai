@@ -39,9 +39,13 @@
       "description": "Core productivity plugin: behavioral directives (P4D), intelligent model routing via subagents, and Conventional Commits enforcement.",
       "category": "productivity",
       "status": "stable",
-      "version": "1.2.18",
+      "version": "1.2.29",
       "spec": "specs/p4-core.md",
       "changelog": [
+        {
+          "version": "1.2.29",
+          "changes": "skill-list: remove enabled column, use 🟢/🔴 emoji indicators on plugin and skill cells"
+        },
         {
           "version": "1.2.18",
           "changes": "git-sanitize: new session-start skill — enforces .gitattributes eol=lf and detects/fixes CRLF-contaminated tracked files"
@@ -167,8 +171,36 @@
         },
         {
           "name": "skill-list",
-          "version": 15,
+          "version": 22,
           "changelog": [
+            {
+              "version": 22,
+              "changes": "plugin version line format changed from v1.2.3 to (v1.2.3) with parentheses"
+            },
+            {
+              "version": 21,
+              "changes": "partial skill separators (plugin column continues with │); plugin col always 2 physical lines; physical line counter includes separators and wrap lines; step 4 fully restructured"
+            },
+            {
+              "version": 20,
+              "changes": "description column wraps at 60 chars instead of truncating with ellipsis; row height expands for multi-line descriptions"
+            },
+            {
+              "version": 19,
+              "changes": "remove description truncation — full first sentence, no ellipsis; description column width is dynamic"
+            },
+            {
+              "version": 18,
+              "changes": "plugin cell split into 2 rows (name row + version row); headers center-aligned; data left-aligned; step 4 fully rewritten with numbered subsections and explicit example"
+            },
+            {
+              "version": 17,
+              "changes": "replace pipe Markdown table with Unicode box-drawing character table; dynamic column widths; plugin-group separators"
+            },
+            {
+              "version": 16,
+              "changes": "remove enabled column; use 🟢/🔴 emoji prefix on plugin and skill cells as enabled indicator"
+            },
             {
               "version": 15,
               "changes": "rename tools column to ready; check both tool and plugin deps; update example table"

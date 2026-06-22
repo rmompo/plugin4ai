@@ -1,13 +1,13 @@
 ---
 name: skill-list
-description: Lists all p4-* plugin skills installed in the current CLI, in a table with columns plugin|skill|v|enabled|ready|description. Also invoked explicitly as /p4-core:skill-list.
-version: 15
+description: Lists all p4-* plugin skills installed in the current CLI, in a table with columns plugin|skill|v|ready|description. Also invoked explicitly as /p4-core:skill-list.
+version: 22
 allowed-tools: [Bash, Read]
 ---
 
 # Skill List
 
-Lists all p4-* plugin skills installed in the current CLI, in a Markdown table with columns `plugin | skill | v | enabled | ready | description`.
+Lists all p4-* plugin skills installed in the current CLI, in a Markdown table with columns `plugin | skill | v | ready | description`.
 
 Only plugins compatible with the current CLI (e.g. claudecode) are included.
 
@@ -58,11 +58,16 @@ skill_version = catalog["plugins"][plugin]["skills"][skill_name]["version"]
 
 ---
 
-## Step 3 — Determinar estado enabled
+## Step 3 — Determinar estado enabled (indicador visual)
 
-Un skill está **enabled** si su SKILL.md existe en la versión activa del plugin en cache.
+El estado enabled se indica con un emoji prefijado en las celdas `plugin` y `skill`, **no** como columna separada:
 
-Mostrar `yes` / `no`.
+- **Plugin enabled** → su directorio existe en cache con al menos una versión instalada → prefijo 🟢 en la celda `plugin`.
+- **Plugin disabled** → no existe en cache → prefijo 🔴 en la celda `plugin`.
+- **Skill enabled** → su SKILL.md existe en la versión activa del plugin en cache → prefijo 🟢 en la celda `skill`.
+- **Skill disabled** → SKILL.md no existe → prefijo 🔴 en la celda `skill`.
+
+No hay columna `enabled` en la tabla.
 
 ---
 
@@ -95,37 +100,95 @@ Version checking is not done here — only presence. Detailed version verificati
 
 ## Step 4 — Imprimir tabla
 
-Formato de salida: **tabla Markdown** con columnas alineadas.
+Formato de salida: **tabla con caracteres de caja Unicode**, envuelta en un bloque de código ` ```text ` para preservar el alineado monoespaciado.
 
-### Reglas de formato
+---
 
-- **Columna `plugin`**: mostrar `<plugin> (v<plugin-version>)` únicamente en la **primera fila** de cada plugin. En las filas siguientes del mismo plugin dejar la celda **vacía**.
-- **Columna `skill`**: solo el nombre del skill, sin versión.
-- **Columna `v`**: versión del skill como número entero (`9`, `2`, `10`…). Siempre presente.
-- **Columna `enabled`**: `yes` / `no`.
-- **Columna `ready`**: ✅ si el skill está listo para usar (sin dependencias o todas satisfechas); ❌ si alguna dependencia falta; vacío solo para el skill `setup` (excepción circular).
-- **Columna `description`**: primera oración hasta ". Also invoked".
+### 4.1 — Anchos de columna
 
-Orden de columnas: `plugin | skill | v | enabled | ready | description`
+- Columnas `plugin`, `skill`, `v`, `ready`: ancho dinámico = `max(ancho_header, contenido_más_largo) + 2` (1 espacio de padding a cada lado).
+- Columna `description`: ancho **fijo de 62** (60 chars de contenido + 2 de padding).
+- **Emojis** 🟢 🔴 ✅ ❌ ocupan **2 columnas de terminal**. Al calcular el relleno de espacios, compensar restando 1 por cada emoji presente en la celda.
 
-```markdown
-| plugin               | skill           | v  | enabled | ready | description                                   |
-|----------------------|-----------------|----|---------|-------|-----------------------------------------------|
-| p4-ccvv (v1.0.15)   | export          | 7  | yes     | ✅    | Exports a CV draft to a final format          |
-|                      | generate        | 14 | yes     | ✅    | Generates an adapted CV draft                 |
-|                      | setup           | 15 | yes     |       | Verifies external dependencies for p4-ccvv   |
-| p4-converter (v1.0.6)| any-to-md      | 4  | yes     | ❌    | Converts documents to structured Markdown     |
-|                      | setup           | 6  | yes     |       | Verifies external tools for p4-converter      |
-| p4-core (v1.2.15)   | git-commit      | 1  | yes     | ✅    | Enforces Conventional Commits format          |
-|                      | model-behaviour | 2  | yes     | ✅    | Loads and activates P4D behavioral directives |
-|                      | setup           | 14 | yes     |       | Verifies external dependencies for p4-core    |
-|                      | skill-list      | 15 | yes     | ✅    | Lists all p4-* plugin skills in the current CLI |
-| ...                  | ...             | .. | ...     | ...   | ...                                           |
+---
+
+### 4.2 — Tipos de línea separadora
+
+Hay **dos tipos** de separador, nunca uno solo:
+
+| Tipo | Cuándo | Estructura |
+|------|--------|-----------|
+| **Completo** | Entre plugins / tras cabecera / borde superior e inferior | `├─────┼─────┼─────┼─────┼─────┤` (cruza todas las columnas) |
+| **Parcial** | Entre skills del mismo plugin | `│ {plugin_cell} ├─────┼─────┼─────┼─────┤` (la columna `plugin` continúa con `│`, los demás con `├─┼─┤`) |
+
+En el separador parcial, la celda `plugin` muestra el contenido que le corresponde en esa línea física (ver §4.4).
+
+---
+
+### 4.3 — Alineación
+
+- **Cabeceras**: **centradas** dentro de cada columna.
+- **Datos**: **alineados a la izquierda** en todas las columnas.
+
+---
+
+### 4.4 — Columna `plugin` — siempre 2 líneas físicas de contenido
+
+La columna `plugin` tiene **exactamente 2 líneas de contenido** por grupo de plugin, contando en líneas físicas (incluyendo separadores parciales y líneas de wrap de description):
+
+| Línea física global dentro del grupo | Contenido en columna `plugin` |
+|--------------------------------------|-------------------------------|
+| 0                                    | `🟢 {plugin_name}` o `🔴 {plugin_name}` |
+| 1                                    | `(v{plugin_version})` (ej. `(v1.2.18)`) |
+| ≥ 2                                  | vacío |
+
+Las líneas de separadores parciales y las líneas de wrap **cuentan** como líneas físicas para este índice. La columna `plugin` nunca se repite para el mismo plugin.
+
+---
+
+### 4.5 — Reglas por columna
+
+- **`plugin`**: ver §4.4. No se repite entre skills del mismo grupo.
+- **`skill`**: `🟢 {skill_name}` o `🔴 {skill_name}`. Solo en la primera línea física del skill.
+- **`v`**: versión entera del skill (`7`, `14`…). Solo en la primera línea física del skill.
+- **`ready`**: `✅` / `❌` según dependencias; **vacío** para el skill `setup` (excepción circular). Solo en la primera línea física del skill.
+- **`description`**: primera oración completa hasta ". Also invoked", sin truncar, sin ellipsis. Si supera 60 chars se hace **wrap** en líneas adicionales; las demás columnas quedan vacías en esas líneas extra.
+
+Orden de columnas: `plugin │ skill │ v │ ready │ description`
+
+---
+
+### 4.6 — Ejemplo de salida
+
+```text
+┌────────────────────────┬──────────────────────┬────┬───────┬──────────────────────────────────────────────────────────────┐
+│        plugin          │        skill         │ v  │ ready │                         description                          │
+├────────────────────────┼──────────────────────┼────┼───────┼──────────────────────────────────────────────────────────────┤
+│ 🟢 p4-ccvv            │ 🟢 export            │ 7  │ ✅    │ Exports a CV draft to a final format                         │
+│ (v1.0.15)             ├──────────────────────┼────┼───────┼──────────────────────────────────────────────────────────────┤
+│                        │ 🟢 generate          │ 14 │ ✅    │ Generates an adapted CV draft                                │
+│                        ├──────────────────────┼────┼───────┼──────────────────────────────────────────────────────────────┤
+│                        │ 🟢 setup             │ 15 │       │ Verifies external dependencies for p4-ccvv                   │
+├────────────────────────┼──────────────────────┼────┼───────┼──────────────────────────────────────────────────────────────┤
+│ 🟢 p4-core            │ 🟢 git-commit         │ 1  │ ✅    │ Enforces Conventional Commits format, translates to English, │
+│ (v1.2.18)             │                      │    │       │ and strips co-authorship lines                               │
+│                        ├──────────────────────┼────┼───────┼──────────────────────────────────────────────────────────────┤
+│                        │ 🟢 model-behaviour   │ 2  │ ✅    │ Loads and activates P4D behavioral directives for the        │
+│                        │                      │    │       │ session                                                      │
+│                        ├──────────────────────┼────┼───────┼──────────────────────────────────────────────────────────────┤
+│                        │ 🟢 setup             │ 14 │       │ Verifies external dependencies required by p4-core skills    │
+│                        ├──────────────────────┼────┼───────┼──────────────────────────────────────────────────────────────┤
+│                        │ 🟢 skill-list        │ 21 │ ✅    │ Lists all p4-* plugin skills installed in the current CLI    │
+└────────────────────────┴──────────────────────┴────┴───────┴──────────────────────────────────────────────────────────────┘
 ```
 
-Ordenar por `plugin` ASC, luego `skill` ASC.
+Ordenar por `plugin` ASC, luego `skill` ASC dentro de cada grupo.
 
-Terminar con un pie de página:
+---
+
+### 4.7 — Pie de página
+
+Imprimir inmediatamente después de la tabla (fuera del bloque de código):
 
 ```
 **N plugins · M skills · M enabled**
