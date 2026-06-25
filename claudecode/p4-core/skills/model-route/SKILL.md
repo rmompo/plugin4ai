@@ -1,7 +1,7 @@
 ---
 name: model-route
 description: This skill should be used when Claude needs to route a task to the most appropriate model tier. Activates automatically when Claude detects task complexity signals that suggest a different model would be more appropriate. Also invoked explicitly as /p4-core:model-route with an optional task description.
-version: 3
+version: 30
 argument-hint: "[task description]"
 allowed-tools: [Bash]
 ---
@@ -62,10 +62,16 @@ This skill evaluates the current task and delegates it to the appropriate p4-cor
 
 1. **Evaluate the task** using the matrix above — scope, stakes, reasoning depth, frequency
 2. **Select the tier** — default to Standard when complexity is unclear
-3. **Delegate** by invoking the corresponding agent and passing the complete task:
-   - Simple → `p4-core:p4-lightweight`
-   - General → `p4-core:p4-standard`
-   - Complex → `p4-core:p4-advanced`
+3. **Delegate** using the **Agent tool** (NOT a slash command / Skill tool) with the corresponding `subagent_type` and the complete task as `prompt`:
+
+   | Tier | `subagent_type` |
+   |------|----------------|
+   | Simple | `p4-core:p4-lightweight` |
+   | General | `p4-core:p4-standard` |
+   | Complex | `p4-core:p4-advanced` |
+
+   > ⚠️ These are **agent types**, not skills. Invoking them as `/p4-core:p4-advanced` will fail with "Unknown skill". Always use the `Agent` tool.
+
 4. **Briefly explain** the routing decision to the user when relevant:
    > "Routing to p4-advanced (Opus) — this is an architectural decision with broad impact."
    > "Routing to p4-lightweight (Haiku) — quick file search, no reasoning needed."

@@ -39,9 +39,13 @@
       "description": "Core productivity plugin: behavioral directives (P4D), intelligent model routing via subagents, and Conventional Commits enforcement.",
       "category": "productivity",
       "status": "stable",
-      "version": "1.2.29",
+      "version": "1.2.30",
       "spec": "specs/p4-core.md",
       "changelog": [
+        {
+          "version": "1.2.30",
+          "changes": "model-route: fix: delegate via Agent tool, not Skill tool"
+        },
         {
           "version": "1.2.29",
           "changes": "skill-list: remove enabled column, use 🟢/🔴 emoji indicators on plugin and skill cells"
@@ -153,8 +157,12 @@
         },
         {
           "name": "model-route",
-          "version": 3,
+          "version": 30,
           "changelog": [
+            {
+              "version": 30,
+              "changes": "fix: delegate via Agent tool, not Skill tool"
+            },
             {
               "version": 3,
               "changes": "Version alignment to Z system"
