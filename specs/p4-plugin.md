@@ -1,6 +1,6 @@
 # Plugin Spec: p4-plugin
 
-> **Status:** `beta` | **Version:** `1.1.26` | **Ports:** Claude Code CLI/TUI only
+> **Status:** `beta` | **Version:** `1.1.34` | **Ports:** Claude Code CLI/TUI only
 
 ---
 

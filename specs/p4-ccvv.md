@@ -17,9 +17,9 @@ All data is stored globally at `~/.p4/p4-ccvv/` following the p4-* scope convent
 | CLI/TUI | Location | Status |
 |-----|----------|--------|
 | Claude Code CLI/TUI | `claudecode/p4-ccvv/` | ✅ Beta |
-| GitHub Copilot CLI/TUI | — | Proposal |
-| Antigravity CLI/TUI | — | Proposal |
-| Codex CLI/TUI | — | Proposal |
+| GitHub Copilot CLI/TUI | — | ⏳ Proposal |
+| Antigravity CLI/TUI | — | ⏳ Proposal |
+| Codex CLI/TUI | — | ⏳ Proposal |
 
 ---
 

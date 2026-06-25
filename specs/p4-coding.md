@@ -1,12 +1,25 @@
 # Plugin Spec: p4-coding
 
-> **Status:** `beta` | **Version:** `1.0.6` | **Ports:** Claude Code (full), GitHub Copilot (Phase 1)
+> **Status:** `beta` | **Version:** `1.1.6` | **Ports:** Claude Code CLI/TUI, GitHub Copilot CLI/TUI
+
+---
 
 ## Overview
 
 `p4-coding` is a coding standards plugin for the plugin4ai ecosystem. It provides universal coding directives (SOLID, DRY, KISS, naming, error handling, security, testability, complexity control) that load automatically at session start, plus stack-specific directives for TypeScript/JavaScript and Python that can be activated on demand.
 
 The universal directives are identified by the `P4C-NNN` scheme (Plugin4 Coding), and stack-specific ones use a sub-namespace (`P4C-TS-NNN`, `P4C-PY-NNN`, etc.).
+
+---
+
+## Port Status
+
+| CLI/TUI | Location | Status | Notes |
+|---------|----------|--------|-------|
+| Claude Code CLI/TUI | `claudecode/p4-coding/` | ✅ Beta | Full — all 6 skills (3 stable, 3 proposal) |
+| GitHub Copilot CLI/TUI | `ghcopilot/plugins/p4-coding/` | ✅ Beta | Phase 1 only: `code-standards`, `typescript-standards`, `python-standards` |
+| Antigravity CLI/TUI | — | ⏳ Proposal | — |
+| Codex CLI/TUI | — | ⏳ Proposal | — |
 
 ---
 
@@ -149,17 +162,6 @@ Will analyze the current `git diff` or a specified file against all active p4-co
 ```
 
 > **Status: proposal — not yet implemented.**
-
----
-
-## Port Status
-
-| CLI | Location | Status | Notes |
-|-----|----------|--------|-------|
-| Claude Code | `claudecode/p4-coding/` | ✅ Beta | Full — all 6 skills (3 implemented, 3 proposal) |
-| GitHub Copilot | `ghcopilot/plugins/p4-coding/` | ✅ Beta | Phase 1 only: `code-standards`, `typescript-standards`, `python-standards` |
-| Antigravity | — | 🔲 Proposal | — |
-| Codex | — | 🔲 Proposal | — |
 
 ---
 

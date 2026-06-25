@@ -1,6 +1,6 @@
 # Plugin Spec: p4-core
 
-> **Status:** `stable` | **Version:** `1.2.18` | **Ports:** Claude Code CLI/TUI, GitHub Copilot CLI/TUI
+> **Status:** `stable` | **Version:** `1.2.29` | **Ports:** Claude Code CLI/TUI, GitHub Copilot CLI/TUI
 
 ---
 

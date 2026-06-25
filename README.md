@@ -25,9 +25,13 @@ A single repository for AI CLI/TUI plugins. Each plugin is a self-contained conc
 
 | Plugin | Description | Status | Spec |
 |--------|-------------|--------|------|
+| `p4-agent` | Agent definition auditor: validates markdown agent files for structural completeness, naming conventions, and cross-reference integrity | `beta` | [spec](./specs/p4-agent.md) |
 | `p4-buddy` | Skills for <company> employees — <hr-platform> mission report generation | `beta` | [spec](./specs/p4-buddy.md) |
+| `p4-ccvv` | AI-powered CV generation and management — multi-user profiles, job offer adaptation, and multi-format export | `beta` | [spec](./specs/p4-ccvv.md) |
 | `p4-coding` | Coding standards and best practices — universal directives (SOLID, DRY, naming, error handling) auto-loaded at session start, with stack-specific skills for TypeScript, Python, Go, and Java | `beta` | [spec](./specs/p4-coding.md) |
+| `p4-converter` | Converts documents to Markdown (PDF, DOC, DOCX, PPT, PPTX) using a multi-step local tool pipeline | `beta` | [spec](./specs/p4-converter.md) |
 | `p4-core` | Behavioral directives (P4D), model routing, and Conventional Commits enforcement | `stable` | [spec](./specs/p4-core.md) |
+| `p4-crawler` | Web crawler and documentation extractor: crawls sites (static or SPA/Storybook), filters by topic, downloads attachments, and generates structured Markdown output | `beta` | [spec](./specs/p4-crawler.md) |
 | `p4-plugin` | Lifecycle tooling for this marketplace — create and manage plugins and skills | `beta` | [spec](./specs/p4-plugin.md) |
 
 ### CLI/TUI-specific plugins
@@ -50,7 +54,7 @@ For detailed install, update, uninstall, enable, and disable instructions per CL
 Use the `p4-plugin` skill — it scaffolds everything in one step:
 
 ```
-/p4-plugin:manage create <plugin-name> [skill1 skill2 ...]
+/p4-plugin:create <plugin-name> [skill1 skill2 ...]
 ```
 
 See [`specs/p4-plugin.md`](./specs/p4-plugin.md) for full details.

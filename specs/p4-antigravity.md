@@ -1,12 +1,10 @@
-# p4-antigravity
+# Plugin Spec: p4-antigravity
 
-**Status:** beta  
-**Version:** 1.0.0  
-**CLI:** Antigravity CLI/TUI (exclusive)
+> **Status:** `beta` | **Version:** `1.0.0` | **Ports:** Antigravity CLI/TUI only
 
 ---
 
-## Purpose
+## Overview
 
 Provides a powerline-style status bar for Antigravity CLI/TUI (`agy`) that renders real-time session information: working directory, git branch, active model name, and color-coded usage metrics.
 

@@ -19,7 +19,7 @@ claude plugins install p4-core
 
 | Plugin | Status | Skills | Auto-setup |
 |--------|--------|--------|------------|
-| [`p4-core`](./p4-core/README.md) | stable | `model-behaviour`, `model-route`, `git-commit`, `skill-list`, `setup` | ✅ via agent |
+| [`p4-core`](./p4-core/README.md) | stable | `model-behaviour`, `model-route`, `git-commit`, `git-sanitize`, `sanitize`, `skill-list`, `setup` | ✅ via agent |
 | [`p4-claudecode`](./p4-claudecode/README.md) | stable | `statusline` | ✅ via agent |
 | [`p4-buddy`](./p4-buddy/README.md) | beta | `gcomp` | — |
 | [`p4-plugin`](./p4-plugin/README.md) | beta | `create`, `update`, `remove`, `skill-add`, `skill-update`, `skill-remove`, `skill-doctor`, `doc-doctor` | — |
@@ -27,7 +27,7 @@ claude plugins install p4-core
 | [`p4-converter`](./p4-converter/README.md) | beta | `setup`, `any-to-md` | — |
 | [`p4-crawler`](./p4-crawler/README.md) | beta | `setup`, `extract` | — |
 | [`p4-agent`](./p4-agent/README.md) | beta | `md-check`, `md-checkrefs` | — |
-| [`p4-coding`](./p4-coding/README.md) | beta | `code-standards`, `typescript-standards`, `python-standards` | ✅ via agent |
+| [`p4-coding`](./p4-coding/README.md) | beta | `code-standards`, `typescript-standards`, `python-standards`, `go-standards`, `java-standards`, `code-review` | ✅ via agent |
 
 ## Update the marketplace index
 

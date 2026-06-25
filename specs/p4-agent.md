@@ -16,7 +16,7 @@ Designed to be used as a quality gate before committing agent definitions to a r
 
 | CLI/TUI | Location | Status |
 |-----|----------|--------|
-| Claude Code CLI/TUI | `claudecode/p4-agent/` | ⏳ Proposal |
+| Claude Code CLI/TUI | `claudecode/p4-agent/` | ✅ Beta |
 | GitHub Copilot CLI/TUI | — | ⏳ Proposal |
 | Antigravity CLI/TUI | — | ⏳ Proposal |
 | Codex CLI/TUI | — | ⏳ Proposal |
