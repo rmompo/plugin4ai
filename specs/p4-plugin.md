@@ -1,6 +1,6 @@
 # Plugin Spec: p4-plugin
 
-> **Status:** `beta` | **Version:** `1.1.34` | **Ports:** Claude Code CLI/TUI only
+> **Status:** `beta` | **Version:** `1.1.34` | **Ports:** Claude Code CLI/TUI, GitHub Copilot CLI/TUI, Antigravity CLI/TUI, Codex CLI/TUI
 
 ---
 
@@ -17,9 +17,9 @@
 | CLI/TUI | Location | Status |
 |-----|----------|--------|
 | Claude Code CLI/TUI | `claudecode/p4-plugin/` | ✅ Beta |
-| GitHub Copilot CLI/TUI | `ghcopilot/plugins/p4-plugin/` | 🔶 Beta |
-| Antigravity CLI/TUI | `antigravity/p4-plugin/` | 🔶 Beta |
-| Codex CLI/TUI | `codex/p4-plugin/` | 🔶 Beta |
+| GitHub Copilot CLI/TUI | `ghcopilot/plugins/p4-plugin/` | ✅ Beta |
+| Antigravity CLI/TUI | `antigravity/p4-plugin/` | ✅ Beta |
+| Codex CLI/TUI | `codex/p4-plugin/` | ✅ Beta |
 
 ---
 

@@ -17,7 +17,7 @@ Works standalone — no dependency on `p4-core` or `p4-claudecode`.
 | CLI/TUI | Location | Status |
 |-----|----------|--------|
 | Claude Code CLI/TUI | `claudecode/p4-buddy/` | ✅ Beta |
-| GitHub Copilot CLI/TUI | `ghcopilot/plugins/p4-buddy/` | 🔶 Beta |
+| GitHub Copilot CLI/TUI | `ghcopilot/plugins/p4-buddy/` | ✅ Beta |
 | Antigravity CLI/TUI | `antigravity/p4-buddy/` | ✅ Beta |
 | Codex CLI/TUI | `codex/p4-buddy/` | ✅ Beta |
 

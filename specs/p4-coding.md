@@ -1,6 +1,6 @@
 # Plugin Spec: p4-coding
 
-> **Status:** `beta` | **Version:** `1.1.6` | **Ports:** Claude Code CLI/TUI, GitHub Copilot CLI/TUI
+> **Status:** `beta` | **Version:** `1.1.6` | **Ports:** Claude Code CLI/TUI, GitHub Copilot CLI/TUI, Antigravity CLI/TUI, Codex CLI/TUI
 
 ---
 
@@ -16,10 +16,10 @@ The universal directives are identified by the `P4C-NNN` scheme (Plugin4 Coding)
 
 | CLI/TUI | Location | Status | Notes |
 |---------|----------|--------|-------|
-| Claude Code CLI/TUI | `claudecode/p4-coding/` | ✅ Beta | Full — all 6 skills (3 stable, 3 proposal) |
-| GitHub Copilot CLI/TUI | `ghcopilot/plugins/p4-coding/` | ✅ Beta | Phase 1 only: `code-standards`, `typescript-standards`, `python-standards` |
-| Antigravity CLI/TUI | — | ⏳ Proposal | — |
-| Codex CLI/TUI | — | ⏳ Proposal | — |
+| Claude Code CLI/TUI | `claudecode/p4-coding/` | ✅ Beta | Full — all 6 skills |
+| GitHub Copilot CLI/TUI | `ghcopilot/plugins/p4-coding/` | ✅ Beta | Full — all 6 skills |
+| Antigravity CLI/TUI | `antigravity/p4-coding/` | ✅ Beta | Full — all 6 skills |
+| Codex CLI/TUI | `codex/p4-coding/` | ✅ Beta | Full — all 6 skills |
 
 ---
 
