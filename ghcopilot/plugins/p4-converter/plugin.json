@@ -1,0 +1,10 @@
+{
+  "name": "p4-converter",
+  "version": "1.0.6",
+  "description": "Converts documents to Markdown (PDF, DOC, DOCX, PPT, PPTX) using a multi-step local tool pipeline.",
+  "author": {
+    "name": "rmompo",
+    "email": "rmompo@gmail.com"
+  },
+  "skills": "skills/"
+}

@@ -20,6 +20,42 @@
       "description": "Coding standards and best practices: universal directives (SOLID, DRY, naming, error handling, security) with TypeScript and Python specific standards.",
       "version": "1.0.3",
       "source": "./plugins/p4-coding"
+    },
+    {
+      "name": "p4-plugin",
+      "description": "Plugin lifecycle management: scaffold new plugins with all required files and registry entries in one step.",
+      "version": "1.1.34",
+      "source": "./plugins/p4-plugin"
+    },
+    {
+      "name": "p4-buddy",
+      "description": "<company>-specific skills: <hr-platform> mission report generator with full 145-entry competency catalog.",
+      "version": "1.0.2",
+      "source": "./plugins/p4-buddy"
+    },
+    {
+      "name": "p4-agent",
+      "description": "Agent definition auditor: validates markdown agent files for structural completeness, naming conventions, and cross-reference integrity.",
+      "version": "1.0.0",
+      "source": "./plugins/p4-agent"
+    },
+    {
+      "name": "p4-ccvv",
+      "description": "AI-powered CV generation and management — multi-user profiles, job offer adaptation, and multi-format export.",
+      "version": "1.0.16",
+      "source": "./plugins/p4-ccvv"
+    },
+    {
+      "name": "p4-converter",
+      "description": "Converts documents to Markdown (PDF, DOC, DOCX, PPT, PPTX) using a multi-step local tool pipeline with best-effort degradation.",
+      "version": "1.0.6",
+      "source": "./plugins/p4-converter"
+    },
+    {
+      "name": "p4-crawler",
+      "description": "Web crawler and documentation extractor: crawls static sites (curl-only), filters by topic, downloads attachments, and generates structured Markdown output.",
+      "version": "1.0.2",
+      "source": "./plugins/p4-crawler"
     }
   ]
 }

@@ -1,0 +1,9 @@
+{
+  "name": "p4-ccvv",
+  "version": "1.0.16",
+  "description": "AI-powered CV generation and management — multi-user profiles, job offer adaptation, and multi-format export.",
+  "author": {
+    "name": "rmompo",
+    "email": "rmompo@gmail.com"
+  }
+}

@@ -1,6 +1,6 @@
 # Plugin Spec: p4-crawler
 
-> **Status:** `beta` | **Version:** `1.0.2` | **Ports:** Claude Code CLI/TUI
+> **Status:** `beta` | **Version:** `1.0.2` | **Ports:** Claude Code CLI/TUI, GitHub Copilot CLI/TUI, Antigravity CLI/TUI, Codex CLI/TUI
 
 ---
 
@@ -17,9 +17,9 @@ Designed for intranet documentation extraction. Supports authenticated sites (Jo
 | CLI/TUI | Location | Status |
 |-----|----------|--------|
 | Claude Code CLI/TUI | `claudecode/p4-crawler/` | ✅ Beta |
-| GitHub Copilot CLI/TUI | — | ⏳ Proposal |
-| Antigravity CLI/TUI | — | ⏳ Proposal |
-| Codex CLI/TUI | — | ⏳ Proposal |
+| GitHub Copilot CLI/TUI | `ghcopilot/plugins/p4-crawler/` | ✅ Beta |
+| Antigravity CLI/TUI | `antigravity/p4-crawler/` | ✅ Beta |
+| Codex CLI/TUI | `codex/p4-crawler/` | ✅ Beta |
 
 ---
 

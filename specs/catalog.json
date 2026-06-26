@@ -175,7 +175,12 @@
               "version": 1,
               "changes": "Initial release"
             }
-          ]
+          ],
+          "ports": {
+            "ghcopilot": "beta",
+            "antigravity": "beta",
+            "codex": "beta"
+          }
         },
         {
           "name": "skill-list",
@@ -245,7 +250,12 @@
               "version": 4,
               "changes": "Initial release"
             }
-          ]
+          ],
+          "ports": {
+            "ghcopilot": "beta",
+            "antigravity": "beta",
+            "codex": "beta"
+          }
         },
         {
           "name": "setup",
@@ -419,7 +429,11 @@
               "version": 1,
               "changes": "Initial release"
             }
-          ]
+          ],
+          "ports": {
+            "antigravity": "beta",
+            "codex": "beta"
+          }
         }
       ],
       "ports": {
@@ -526,7 +540,12 @@
               "version": 2,
               "changes": "Initial release"
             }
-          ]
+          ],
+          "ports": {
+            "ghcopilot": "beta",
+            "antigravity": "beta",
+            "codex": "beta"
+          }
         },
         {
           "name": "profile-update",
@@ -540,7 +559,12 @@
               "version": 3,
               "changes": "Initial release"
             }
-          ]
+          ],
+          "ports": {
+            "ghcopilot": "beta",
+            "antigravity": "beta",
+            "codex": "beta"
+          }
         },
         {
           "name": "generate",
@@ -562,7 +586,12 @@
               "version": 4,
               "changes": "Initial release"
             }
-          ]
+          ],
+          "ports": {
+            "ghcopilot": "beta",
+            "antigravity": "beta",
+            "codex": "beta"
+          }
         },
         {
           "name": "regen",
@@ -572,7 +601,12 @@
               "version": 5,
               "changes": "Initial release"
             }
-          ]
+          ],
+          "ports": {
+            "ghcopilot": "beta",
+            "antigravity": "beta",
+            "codex": "beta"
+          }
         },
         {
           "name": "export",
@@ -586,7 +620,12 @@
               "version": 6,
               "changes": "Initial release"
             }
-          ]
+          ],
+          "ports": {
+            "ghcopilot": "beta",
+            "antigravity": "beta",
+            "codex": "beta"
+          }
         }
       ],
       "ports": {
@@ -1012,7 +1051,12 @@
               "version": 2,
               "changes": "Initial release — 6-step conversion pipeline (libreoffice → qpdf → LLM → python → review)"
             }
-          ]
+          ],
+          "ports": {
+            "ghcopilot": "beta",
+            "antigravity": "beta",
+            "codex": "beta"
+          }
         }
       ],
       "ports": {
@@ -1099,7 +1143,12 @@
               "version": 2,
               "changes": "Initial release — full crawl-to-markdown pipeline"
             }
-          ]
+          ],
+          "ports": {
+            "ghcopilot": "beta",
+            "antigravity": "beta",
+            "codex": "beta"
+          }
         }
       ],
       "ports": {

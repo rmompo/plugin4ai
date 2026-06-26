@@ -1,6 +1,6 @@
 # Plugin Spec: p4-core
 
-> **Status:** `stable` | **Version:** `1.2.29` | **Ports:** Claude Code CLI/TUI, GitHub Copilot CLI/TUI
+> **Status:** `stable` | **Version:** `1.2.29` | **Ports:** Claude Code CLI/TUI, GitHub Copilot CLI/TUI, Antigravity CLI/TUI, Codex CLI/TUI
 
 ---
 
@@ -16,8 +16,8 @@
 |-----|----------|--------|
 | Claude Code CLI/TUI | `claudecode/p4-core/` | ✅ Stable |
 | GitHub Copilot CLI/TUI | `ghcopilot/plugins/p4-core/` | ✅ Stable |
-| Antigravity CLI/TUI | `antigravity/p4-core/` | 🔶 Beta |
-| Codex CLI/TUI | `codex/p4-core/` | 🔶 Beta |
+| Antigravity CLI/TUI | `antigravity/p4-core/` | ✅ Beta |
+| Codex CLI/TUI | `codex/p4-core/` | ✅ Beta |
 
 ---
 

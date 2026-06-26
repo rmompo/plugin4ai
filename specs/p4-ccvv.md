@@ -1,6 +1,6 @@
 # Plugin Spec: p4-ccvv
 
-> **Status:** `beta` | **Version:** `1.0.16` | **Ports:** Claude Code CLI/TUI only
+> **Status:** `beta` | **Version:** `1.0.16` | **Ports:** Claude Code CLI/TUI, GitHub Copilot CLI/TUI, Antigravity CLI/TUI, Codex CLI/TUI
 
 ---
 
@@ -17,9 +17,9 @@ All data is stored globally at `~/.p4/p4-ccvv/` following the p4-* scope convent
 | CLI/TUI | Location | Status |
 |-----|----------|--------|
 | Claude Code CLI/TUI | `claudecode/p4-ccvv/` | ✅ Beta |
-| GitHub Copilot CLI/TUI | — | ⏳ Proposal |
-| Antigravity CLI/TUI | — | ⏳ Proposal |
-| Codex CLI/TUI | — | ⏳ Proposal |
+| GitHub Copilot CLI/TUI | `ghcopilot/plugins/p4-ccvv/` | ✅ Beta |
+| Antigravity CLI/TUI | `antigravity/p4-ccvv/` | ✅ Beta |
+| Codex CLI/TUI | `codex/p4-ccvv/` | ✅ Beta |
 
 ---
 

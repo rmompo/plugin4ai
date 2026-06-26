@@ -19,12 +19,17 @@ gh copilot plugins install p4-core
 
 | Plugin | Status | Skills |
 |--------|--------|--------|
-| [`p4-core`](./plugins/p4-core/README.md) | stable | `git-commit`, `model-behaviour`, `sanitize`, `setup` ¹ |
-| [`p4-plugin`](./plugins/p4-plugin/README.md) | beta | `create`, `update`, `remove`, `skill-add`, `skill-update`, `skill-remove`, `skill-doctor`, `doc-doctor` |
-| [`p4-buddy`](./plugins/p4-buddy/README.md) | beta | `gcomp` |
-| [`p4-coding`](./plugins/p4-coding/README.md) | beta | `code-standards`, `typescript-standards`, `python-standards` |
+| [`p4-core`](./plugins/p4-core/) | stable | `git-commit`, `model-behaviour`, `model-route`, `sanitize`, `setup`, `skill-list` |
+| [`p4-plugin`](./plugins/p4-plugin/) | beta | `create`, `update`, `remove`, `skill-add`, `skill-update`, `skill-remove`, `skill-doctor`, `doc-doctor` |
+| [`p4-buddy`](./plugins/p4-buddy/) | beta | `gcomp` |
+| [`p4-coding`](./plugins/p4-coding/) | beta | `code-standards`, `typescript-standards`, `python-standards`, `go-standards`, `java-standards`, `code-review` |
+| [`p4-agent`](./plugins/p4-agent/) | beta | `md-check`, `md-checkrefs` |
+| [`p4-ccvv`](./plugins/p4-ccvv/) | beta | `profile-gather`, `profile-update`, `generate`, `regen`, `export` |
+| [`p4-converter`](./plugins/p4-converter/) | beta | `any-to-md` ¹ |
+| [`p4-crawler`](./plugins/p4-crawler/) | beta | `extract` ² |
 
-> ¹ `skill-list` and `model-route` are Claude Code CLI/TUI-exclusive and are not ported to this CLI.
+> ¹ `any-to-md`: best-effort mode — missing `libreoffice`/`qpdf`/`python3` trigger graceful degradation instead of hard stops.
+> ² `extract`: static (curl-only) mode — Playwright/SPA rendering is not supported.
 
 ## Update the marketplace index
 
