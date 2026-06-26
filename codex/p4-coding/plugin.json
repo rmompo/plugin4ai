@@ -1,0 +1,9 @@
+{
+  "name": "p4-coding",
+  "version": "1.0.0",
+  "description": "Coding standards plugin: universal directives (SOLID, DRY, KISS) auto-loaded at session start, with stack-specific skills for TypeScript, Python, Go, and Java.",
+  "author": {
+    "name": "rmompo",
+    "email": "rmompo@gmail.com"
+  }
+}

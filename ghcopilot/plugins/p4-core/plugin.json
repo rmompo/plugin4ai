@@ -1,7 +1,7 @@
 {
   "name": "p4-core",
-  "description": "Essential productivity skills for GitHub Copilot CLI: intelligent model routing by task complexity and automatic Conventional Commits formatting",
   "version": "1.0.0",
+  "description": "Core productivity skills for GitHub Copilot CLI: behavioral directives (P4D), Conventional Commits enforcement, model routing, and repo sanitization.",
   "author": {
     "name": "rmompo",
     "email": "rmompo@gmail.com"
