@@ -1,0 +1,4 @@
+# Force LF line endings for all text files, regardless of OS or core.autocrlf
+* text=auto eol=lf
+
+*.sh text eol=lf
