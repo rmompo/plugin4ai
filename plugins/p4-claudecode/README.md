@@ -12,7 +12,7 @@ Visual enhancement plugin for Claude Code. Replaces the default statusline with 
 |---------|-------|-------------|
 | `[~/path]` | 🟡 Yellow | Project directory, home collapsed to `~` |
 | `[⎇ branch]` | 🔵 Cyan | Current git branch / worktree |
-| `Model` | 🟠 Orange | Active model display name |
+| `Model` | 🟠 Orange | Active model display name, followed by the effort level in parentheses when available (e.g. `✦ Sonnet 5.5 (medium)`) |
 | `cx:%` | 🟢/🟡/🔴 | Context window usage |
 | `sn:%` | 🟢/🟡/🔴 | 5-hour session rate limit |
 | `wk:%` | 🟢/🟡/🔴 | 7-day weekly rate limit |

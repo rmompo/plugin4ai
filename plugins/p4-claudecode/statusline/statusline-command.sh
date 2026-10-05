@@ -32,6 +32,7 @@ if [ -z "$git_worktree" ]; then
   git_worktree=$(git -C "$(echo "$input" | jq -r '.workspace.project_dir // .workspace.current_dir')" branch --show-current 2>/dev/null || true)
 fi
 model=$(echo "$input" | jq -r '.model.display_name')
+effort=$(echo "$input" | jq -r '.effort.level // empty')
 used_pct=$(echo "$input" | jq -r '.context_window.used_percentage // empty')
 five_hour=$(echo "$input" | jq -r '.rate_limits.five_hour.used_percentage // empty')
 seven_day=$(echo "$input" | jq -r '.rate_limits.seven_day.used_percentage // empty')
@@ -46,8 +47,9 @@ if [ -n "$git_worktree" ]; then
   output="${output}${SEP}$(rev_block "$CYAN" "⎇ ${git_worktree}")"
 fi
 
-# Model — purple reverse block
-output="${output}${SEP}$(rev_block "$PURPLE" "✦ ${model}")"
+# Model (+ effort level when the model supports it) — purple reverse block
+model_label="✦ ${model}${effort:+ (${effort})}"
+output="${output}${SEP}$(rev_block "$PURPLE" "$model_label")"
 
 # Usage: CXxx% SNxx% WKxx% — uppercase labels, value colored by threshold
 usage_part=""

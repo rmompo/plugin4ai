@@ -1,7 +1,7 @@
 ---
 name: statusline
 description: One-time setup skill for p4-claudecode. Installs the statusline script and activates it in ~/.claude/settings.json. Invoke once after installing the plugin. Also invoked explicitly as /p4-claudecode:statusline.
-version: 2
+version: 3
 argument-hint: []
 allowed-tools: [Bash, Read, Edit]
 ---

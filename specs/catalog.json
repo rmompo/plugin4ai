@@ -282,13 +282,17 @@
     },
     {
       "name": "p4-claudecode",
-      "description": "Claude Code-exclusive enhancements: custom statusline with project path, git branch, active model and color-coded usage metrics.",
+      "description": "Claude Code-exclusive enhancements: custom statusline with project path, git branch, active model with effort level and color-coded usage metrics.",
       "category": "productivity",
       "status": "stable",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "spec": "specs/p4-claudecode.md",
       "path": "plugins/p4-claudecode",
       "changelog": [
+        {
+          "version": "1.0.3",
+          "changes": "statusline: show effort level in parentheses after the model name"
+        },
         {
           "version": "1.0.2",
           "changes": "Rename setup skill directory to match canonical name"
@@ -305,8 +309,12 @@
       "skills": [
         {
           "name": "statusline",
-          "version": 2,
+          "version": 3,
           "changelog": [
+            {
+              "version": 3,
+              "changes": "Show effort level in parentheses after the model name"
+            },
             {
               "version": 2,
               "changes": "Fix frontmatter name: setup → statusline to match directory and catalog"

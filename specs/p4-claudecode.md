@@ -1,6 +1,6 @@
 # Plugin Spec: p4-claudecode
 
-> **Status:** `stable` | **Version:** `1.0.2`
+> **Status:** `stable` | **Version:** `1.0.3`
 
 ---
 
@@ -44,7 +44,7 @@ If any condition fails → installs/updates automatically and reports briefly.
 |---------|-------|--------|
 | `⌂ path` | Yellow | `workspace.project_dir`, home-collapsed |
 | `⎇ branch` | Cyan | Git branch / worktree name |
-| `✦ model` | Purple | `model.display_name` |
+| `✦ model (effort)` | Purple | `model.display_name` + `effort.level` (effort omitted if the model does not support it) |
 | `CX:%` | Green/Yellow/Red | `context_window.used_percentage` |
 | `SN:%` | Green/Yellow/Red | `rate_limits.five_hour.used_percentage` |
 | `WK:%` | Green/Yellow/Red | `rate_limits.seven_day.used_percentage` |
@@ -61,5 +61,6 @@ Color thresholds: ≤40% green · ≤75% yellow · >75% red.
 
 | Version | Changes |
 |---------|---------|
+| 1.0.3 | statusline: show effort level in parentheses after the model name |
 | 1.0.1 | Version alignment to Z system |
 | 1.0.0 | Initial release — renamed from p4-statusline, skill setup→statusline |
