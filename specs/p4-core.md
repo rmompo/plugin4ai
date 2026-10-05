@@ -1,23 +1,12 @@
 # Plugin Spec: p4-core
 
-> **Status:** `stable` | **Version:** `1.2.29` | **Ports:** Claude Code CLI/TUI, GitHub Copilot CLI/TUI, Antigravity CLI/TUI, Codex CLI/TUI
+> **Status:** `stable` | **Version:** `1.2.29`
 
 ---
 
 ## Overview
 
 `p4-core` bundles three skills that address the most common friction points in daily AI-assisted development: enforcing behavioral directives, choosing the right model, and writing consistent commit messages. All three skills activate automatically from context and can also be invoked explicitly.
-
----
-
-## Port Status
-
-| CLI/TUI | Location | Status |
-|-----|----------|--------|
-| Claude Code CLI/TUI | `claudecode/p4-core/` | ✅ Stable |
-| GitHub Copilot CLI/TUI | `ghcopilot/plugins/p4-core/` | ✅ Stable |
-| Antigravity CLI/TUI | `antigravity/p4-core/` | ✅ Beta |
-| Codex CLI/TUI | `codex/p4-core/` | ✅ Beta |
 
 ---
 
@@ -194,15 +183,6 @@ Auto — fires at session start via the p4-core agent.
 * text=auto eol=lf
 *.png binary  *.jpg binary  *.woff binary  *.vsix binary  ...
 ```
-
-### Port status
-
-| Port | Status |
-|------|--------|
-| claudecode | ✅ stable |
-| ghcopilot | ✅ stable |
-| antigravity | ✅ stable |
-| codex | ✅ stable |
 
 ### Non-Goals
 - Does not modify files without user confirmation

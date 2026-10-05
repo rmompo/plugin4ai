@@ -1,6 +1,6 @@
 # Plugin Spec: p4-plugin
 
-> **Status:** `beta` | **Version:** `1.1.34` | **Ports:** Claude Code CLI/TUI, GitHub Copilot CLI/TUI, Antigravity CLI/TUI, Codex CLI/TUI
+> **Status:** `beta` | **Version:** `1.1.34`
 
 ---
 
@@ -12,29 +12,18 @@
 
 ---
 
-## Port Status
-
-| CLI/TUI | Location | Status |
-|-----|----------|--------|
-| Claude Code CLI/TUI | `claudecode/p4-plugin/` | ✅ Beta |
-| GitHub Copilot CLI/TUI | `ghcopilot/plugins/p4-plugin/` | ✅ Beta |
-| Antigravity CLI/TUI | `antigravity/p4-plugin/` | ✅ Beta |
-| Codex CLI/TUI | `codex/p4-plugin/` | ✅ Beta |
-
----
-
 ## Skills
 
 | Skill | Invocation | Description |
 |-------|-----------|-------------|
 | `create` | `/p4-plugin:create <plugin> [skills...]` | Scaffold a new plugin with all required files |
-| `update` | `/p4-plugin:update <plugin>` | Update plugin metadata (description, status, ports) |
+| `update` | `/p4-plugin:update <plugin>` | Update plugin metadata (description, status) |
 | `remove` | `/p4-plugin:remove <plugin>` | Remove a plugin from all files and cache |
 | `skill-add` | `/p4-plugin:skill-add <plugin> <skill>` | Add a new skill to an existing plugin |
 | `skill-update` | `/p4-plugin:skill-update <plugin> <skill>` | Bump skill version and update changelogs |
 | `skill-remove` | `/p4-plugin:skill-remove <plugin> <skill>` | Remove a skill from a plugin |
 | `skill-doctor` | `/p4-plugin:skill-doctor [plugin] [skill]` | Audit skills for defects and inconsistencies |
-| `doc-doctor` | `/p4-plugin:doc-doctor [plugin]` | Audit documentation completeness across specs and MARKETPLACE.md |
+| `doc-doctor` | `/p4-plugin:doc-doctor [plugin]` | Audit documentation completeness across specs and plugins/README.md |
 
 ---
 
@@ -43,11 +32,11 @@
 | File | create | update | remove | skill-add | skill-update | skill-remove |
 |------|--------|--------|--------|-----------|--------------|--------------|
 | `specs/catalog.json` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| `claudecode/<plugin>/.claude-plugin/plugin.json` | ✅ | ✅* | ❌ deleted | ✅ | ✅ | — |
+| `plugins/<plugin>/.claude-plugin/plugin.json` | ✅ | ✅* | ❌ deleted | ✅ | ✅ | — |
 | `.claude-plugin/marketplace.json` | ✅ | ✅* | ✅ | — | — | — |
-| `claudecode/MARKETPLACE.md` | ✅ | ✅* | ✅ | — | — | — |
+| `plugins/README.md` | ✅ | ✅* | ✅ | — | — | — |
 | `specs/<plugin>.md` | ✅ | — | ❌ deleted | — | — | — |
-| `claudecode/<plugin>/skills/<skill>/SKILL.md` | ✅ | — | — | ✅ created | ✅ bumped | ❌ deleted |
+| `plugins/<plugin>/skills/<skill>/SKILL.md` | ✅ | — | — | ✅ created | ✅ bumped | ❌ deleted |
 | CLI cache | ✅ | ✅* | ❌ deleted | ✅ | ✅ | ✅ |
 
 *only if version or description changed

@@ -1,6 +1,6 @@
 # Plugin Spec: p4-crawler
 
-> **Status:** `beta` | **Version:** `1.0.2` | **Ports:** Claude Code CLI/TUI, GitHub Copilot CLI/TUI, Antigravity CLI/TUI, Codex CLI/TUI
+> **Status:** `beta` | **Version:** `1.0.2`
 
 ---
 
@@ -9,17 +9,6 @@
 p4-crawler is a web crawler and documentation extractor. It systematically explores websites — both static (curl-based) and SPAs (Playwright-based: Angular, React, Storybook) — filters discovered content by topic and keywords, downloads pages and attachments (PDF, DOC, XLS), converts them to Markdown, and generates a structured index with metrics.
 
 Designed for intranet documentation extraction. Supports authenticated sites (Joomla, form-based, HTTP Basic) with automatic session re-authentication.
-
----
-
-## Port Status
-
-| CLI/TUI | Location | Status |
-|-----|----------|--------|
-| Claude Code CLI/TUI | `claudecode/p4-crawler/` | ✅ Beta |
-| GitHub Copilot CLI/TUI | `ghcopilot/plugins/p4-crawler/` | ✅ Beta |
-| Antigravity CLI/TUI | `antigravity/p4-crawler/` | ✅ Beta |
-| Codex CLI/TUI | `codex/p4-crawler/` | ✅ Beta |
 
 ---
 

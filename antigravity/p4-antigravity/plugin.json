@@ -1,9 +1,0 @@
-{
-  "name": "p4-antigravity",
-  "version": "1.0.0",
-  "description": "Antigravity CLI-exclusive enhancements: powerline-style statusline with project path, git branch, active model and color-coded usage metrics.",
-  "author": {
-    "name": "rmompo",
-    "email": "rmompo@gmail.com"
-  }
-}

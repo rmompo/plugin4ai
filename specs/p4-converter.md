@@ -1,6 +1,6 @@
 # Plugin Spec: p4-converter
 
-> **Status:** `beta` | **Version:** `1.0.6` | **Ports:** Claude Code CLI/TUI, GitHub Copilot CLI/TUI, Antigravity CLI/TUI, Codex CLI/TUI
+> **Status:** `beta` | **Version:** `1.0.6`
 
 ---
 
@@ -9,17 +9,6 @@
 `p4-converter` converts PDF, DOC, DOCX, PPT, and PPTX documents to structured, LLM-optimized Markdown. It uses a 6-step local pipeline driven by three external tools (`qpdf`, `python3`, `libreoffice`) and Claude's own vision/reading capabilities for content extraction.
 
 The output is a clean `.md` file with YAML frontmatter, proper heading hierarchy, Mermaid diagrams where applicable, and no processing artifacts.
-
----
-
-## Port Status
-
-| CLI/TUI | Location | Status |
-|-----|----------|--------|
-| Claude Code CLI/TUI | `claudecode/p4-converter/` | ✅ Beta |
-| GitHub Copilot CLI/TUI | `ghcopilot/plugins/p4-converter/` | ✅ Beta |
-| Antigravity CLI/TUI | `antigravity/p4-converter/` | ✅ Beta |
-| Codex CLI/TUI | `codex/p4-converter/` | ✅ Beta |
 
 ---
 

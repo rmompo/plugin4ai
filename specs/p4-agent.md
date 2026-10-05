@@ -1,6 +1,6 @@
 # Plugin Spec: p4-agent
 
-> **Status:** `beta` | **Version:** `1.0.5` | **Ports:** Claude Code CLI/TUI, GitHub Copilot CLI/TUI, Antigravity CLI/TUI, Codex CLI/TUI
+> **Status:** `beta` | **Version:** `1.0.5`
 
 ---
 
@@ -9,17 +9,6 @@
 p4-agent is a structural auditor for agent definition files written in Markdown. It validates that agent files conform to expected structural conventions, naming rules, and internal consistency. It also verifies that all cross-referenced files exist and are themselves structurally sound.
 
 Designed to be used as a quality gate before committing agent definitions to a repository.
-
----
-
-## Port Status
-
-| CLI/TUI | Location | Status |
-|-----|----------|--------|
-| Claude Code CLI/TUI | `claudecode/p4-agent/` | ✅ Beta |
-| GitHub Copilot CLI/TUI | `ghcopilot/plugins/p4-agent/` | ✅ Beta |
-| Antigravity CLI/TUI | `antigravity/p4-agent/` | ✅ Beta |
-| Codex CLI/TUI | `codex/p4-agent/` | ✅ Beta |
 
 ---
 

@@ -1,25 +1,14 @@
 # Plugin Spec: p4-buddy
 
-> **Status:** `beta` | **Version:** `1.0.2` | **Ports:** Claude Code CLI/TUI, GitHub Copilot CLI/TUI, Antigravity CLI/TUI, Codex CLI/TUI
+> **Status:** `beta` | **Version:** `1.0.2`
 
 ---
 
 ## Overview
 
-`p4-buddy` is a collection of skills for <company> employees using Claude Code CLI/TUI. It provides tooling for internal <company> platform workflows, starting with <hr-platform> mission reporting.
+`p4-buddy` is a collection of skills for <company> employees using Claude Code. It provides tooling for internal <company> platform workflows, starting with <hr-platform> mission reporting.
 
 Works standalone — no dependency on `p4-core` or `p4-claudecode`.
-
----
-
-## Port Status
-
-| CLI/TUI | Location | Status |
-|-----|----------|--------|
-| Claude Code CLI/TUI | `claudecode/p4-buddy/` | ✅ Beta |
-| GitHub Copilot CLI/TUI | `ghcopilot/plugins/p4-buddy/` | ✅ Beta |
-| Antigravity CLI/TUI | `antigravity/p4-buddy/` | ✅ Beta |
-| Codex CLI/TUI | `codex/p4-buddy/` | ✅ Beta |
 
 ---
 

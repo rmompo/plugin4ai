@@ -1,6 +1,6 @@
 # Plugin Spec: p4-coding
 
-> **Status:** `beta` | **Version:** `1.1.6` | **Ports:** Claude Code CLI/TUI, GitHub Copilot CLI/TUI, Antigravity CLI/TUI, Codex CLI/TUI
+> **Status:** `beta` | **Version:** `1.1.6`
 
 ---
 
@@ -9,17 +9,6 @@
 `p4-coding` is a coding standards plugin for the plugin4ai ecosystem. It provides universal coding directives (SOLID, DRY, KISS, naming, error handling, security, testability, complexity control) that load automatically at session start, plus stack-specific directives for TypeScript/JavaScript and Python that can be activated on demand.
 
 The universal directives are identified by the `P4C-NNN` scheme (Plugin4 Coding), and stack-specific ones use a sub-namespace (`P4C-TS-NNN`, `P4C-PY-NNN`, etc.).
-
----
-
-## Port Status
-
-| CLI/TUI | Location | Status | Notes |
-|---------|----------|--------|-------|
-| Claude Code CLI/TUI | `claudecode/p4-coding/` | ✅ Beta | Full — all 6 skills |
-| GitHub Copilot CLI/TUI | `ghcopilot/plugins/p4-coding/` | ✅ Beta | Full — all 6 skills |
-| Antigravity CLI/TUI | `antigravity/p4-coding/` | ✅ Beta | Full — all 6 skills |
-| Codex CLI/TUI | `codex/p4-coding/` | ✅ Beta | Full — all 6 skills |
 
 ---
 

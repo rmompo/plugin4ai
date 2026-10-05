@@ -1,6 +1,6 @@
 # Plugin Spec: p4-ccvv
 
-> **Status:** `beta` | **Version:** `1.0.16` | **Ports:** Claude Code CLI/TUI, GitHub Copilot CLI/TUI, Antigravity CLI/TUI, Codex CLI/TUI
+> **Status:** `beta` | **Version:** `1.0.16`
 
 ---
 
@@ -9,17 +9,6 @@
 AI-powered CV generation and management system. Extracts structured profile data from existing CVs, adapts content to specific job offers, and exports to multiple formats. Supports multiple users with isolated profile storage.
 
 All data is stored globally at `~/.p4/p4-ccvv/` following the p4-* scope convention.
-
----
-
-## Port Status
-
-| CLI/TUI | Location | Status |
-|-----|----------|--------|
-| Claude Code CLI/TUI | `claudecode/p4-ccvv/` | ✅ Beta |
-| GitHub Copilot CLI/TUI | `ghcopilot/plugins/p4-ccvv/` | ✅ Beta |
-| Antigravity CLI/TUI | `antigravity/p4-ccvv/` | ✅ Beta |
-| Codex CLI/TUI | `codex/p4-ccvv/` | ✅ Beta |
 
 ---
 

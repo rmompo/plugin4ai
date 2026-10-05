@@ -1,6 +1,6 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "plugin4ai-claudecode",
+  "name": "plugin4ai",
   "description": "Personal plugin marketplace for Claude Code — productivity skills for everyday development",
   "owner": {
     "name": "rmompo",
@@ -14,8 +14,8 @@
         "name": "rmompo"
       },
       "category": "productivity",
-      "source": "./claudecode/p4-core",
-      "homepage": "https://github.com/rmompo/plugin4ai/tree/main/claudecode/p4-core"
+      "source": "./plugins/p4-core",
+      "homepage": "https://github.com/rmompo/plugin4ai/tree/main/plugins/p4-core"
     },
     {
       "name": "p4-claudecode",
@@ -24,8 +24,8 @@
         "name": "rmompo"
       },
       "category": "productivity",
-      "source": "./claudecode/p4-claudecode",
-      "homepage": "https://github.com/rmompo/plugin4ai/tree/main/claudecode/p4-claudecode"
+      "source": "./plugins/p4-claudecode",
+      "homepage": "https://github.com/rmompo/plugin4ai/tree/main/plugins/p4-claudecode"
     },
     {
       "name": "p4-buddy",
@@ -34,8 +34,8 @@
         "name": "rmompo"
       },
       "category": "productivity",
-      "source": "./claudecode/p4-buddy",
-      "homepage": "https://github.com/rmompo/plugin4ai/tree/main/claudecode/p4-buddy"
+      "source": "./plugins/p4-buddy",
+      "homepage": "https://github.com/rmompo/plugin4ai/tree/main/plugins/p4-buddy"
     },
     {
       "name": "p4-ccvv",
@@ -44,8 +44,8 @@
         "name": "rmompo"
       },
       "category": "productivity",
-      "source": "./claudecode/p4-ccvv",
-      "homepage": "https://github.com/rmompo/plugin4ai/tree/main/claudecode/p4-ccvv"
+      "source": "./plugins/p4-ccvv",
+      "homepage": "https://github.com/rmompo/plugin4ai/tree/main/plugins/p4-ccvv"
     },
     {
       "name": "p4-coding",
@@ -54,8 +54,8 @@
         "name": "rmompo"
       },
       "category": "productivity",
-      "source": "./claudecode/p4-coding",
-      "homepage": "https://github.com/rmompo/plugin4ai/tree/main/claudecode/p4-coding"
+      "source": "./plugins/p4-coding",
+      "homepage": "https://github.com/rmompo/plugin4ai/tree/main/plugins/p4-coding"
     },
     {
       "name": "p4-plugin",
@@ -64,8 +64,8 @@
         "name": "rmompo"
       },
       "category": "productivity",
-      "source": "./claudecode/p4-plugin",
-      "homepage": "https://github.com/rmompo/plugin4ai/tree/main/claudecode/p4-plugin"
+      "source": "./plugins/p4-plugin",
+      "homepage": "https://github.com/rmompo/plugin4ai/tree/main/plugins/p4-plugin"
     },
     {
       "name": "p4-converter",
@@ -74,8 +74,8 @@
         "name": "rmompo"
       },
       "category": "productivity",
-      "source": "./claudecode/p4-converter",
-      "homepage": "https://github.com/rmompo/plugin4ai/tree/main/claudecode/p4-converter"
+      "source": "./plugins/p4-converter",
+      "homepage": "https://github.com/rmompo/plugin4ai/tree/main/plugins/p4-converter"
     },
     {
       "name": "p4-crawler",
@@ -84,8 +84,8 @@
         "name": "rmompo"
       },
       "category": "productivity",
-      "source": "./claudecode/p4-crawler",
-      "homepage": "https://github.com/rmompo/plugin4ai/tree/main/claudecode/p4-crawler"
+      "source": "./plugins/p4-crawler",
+      "homepage": "https://github.com/rmompo/plugin4ai/tree/main/plugins/p4-crawler"
     },
     {
       "name": "p4-agent",
@@ -94,8 +94,8 @@
         "name": "rmompo"
       },
       "category": "productivity",
-      "source": "./claudecode/p4-agent",
-      "homepage": "https://github.com/rmompo/plugin4ai/tree/main/claudecode/p4-agent"
+      "source": "./plugins/p4-agent",
+      "homepage": "https://github.com/rmompo/plugin4ai/tree/main/plugins/p4-agent"
     }
   ]
 }

@@ -1,37 +1,10 @@
 {
   "$schema": "./catalog.schema.json",
   "name": "plugin4ai",
-  "description": "Personal AI CLI/TUI plugin catalog — cross-platform productivity skills",
+  "description": "Personal Claude Code plugin catalog — productivity skills",
   "owner": {
     "name": "rmompo",
     "email": "rmompo@gmail.com"
-  },
-  "clis": {
-    "claudecode": {
-      "name": "Claude Code CLI/TUI",
-      "vendor": "Anthropic",
-      "url": "https://claude.ai/code",
-      "install": "claude plugins marketplace add rmompo/plugin4ai"
-    },
-    "ghcopilot": {
-      "name": "GitHub Copilot CLI/TUI",
-      "vendor": "Microsoft / GitHub",
-      "url": "https://cli.github.com",
-      "install": "gh extension install github/gh-copilot"
-    },
-    "antigravity": {
-      "name": "Antigravity CLI/TUI",
-      "vendor": "Google",
-      "url": "https://github.com/google/antigravity-cli",
-      "notes": "Successor to Gemini CLI, announced at Google I/O 2026. Native plugin system via agy plugin install."
-    },
-    "codex": {
-      "name": "Codex CLI/TUI",
-      "vendor": "OpenAI",
-      "url": "https://github.com/openai/codex",
-      "install": "npm install -g @openai/codex",
-      "notes": "Extension system based on MCP. Native plugin format still maturing."
-    }
   },
   "plugins": [
     {
@@ -41,6 +14,7 @@
       "status": "stable",
       "version": "1.2.30",
       "spec": "specs/p4-core.md",
+      "path": "plugins/p4-core",
       "changelog": [
         {
           "version": "1.2.30",
@@ -175,12 +149,7 @@
               "version": 1,
               "changes": "Initial release"
             }
-          ],
-          "ports": {
-            "ghcopilot": "beta",
-            "antigravity": "beta",
-            "codex": "beta"
-          }
+          ]
         },
         {
           "name": "skill-list",
@@ -250,12 +219,7 @@
               "version": 4,
               "changes": "Initial release"
             }
-          ],
-          "ports": {
-            "ghcopilot": "beta",
-            "antigravity": "beta",
-            "codex": "beta"
-          }
+          ]
         },
         {
           "name": "setup",
@@ -290,13 +254,7 @@
               "name": "git",
               "version": "*"
             }
-          ],
-          "ports": {
-            "claudecode": "stable",
-            "ghcopilot": "stable",
-            "antigravity": "stable",
-            "codex": "stable"
-          }
+          ]
         },
         {
           "name": "sanitize",
@@ -320,27 +278,7 @@
             }
           ]
         }
-      ],
-      "ports": {
-        "claudecode": {
-          "status": "stable",
-          "path": "claudecode/p4-core"
-        },
-        "ghcopilot": {
-          "status": "stable",
-          "path": "ghcopilot/plugins/p4-core"
-        },
-        "antigravity": {
-          "status": "beta",
-          "path": "antigravity/p4-core",
-          "notes": "Ported skills: git-commit, model-behaviour, sanitize, setup, git-sanitize. Excluded: skill-list, model-route (not applicable)."
-        },
-        "codex": {
-          "status": "beta",
-          "path": "codex/p4-core",
-          "notes": "Ported skills: git-commit, model-behaviour, sanitize, setup, git-sanitize. Excluded: skill-list, model-route (not applicable)."
-        }
-      }
+      ]
     },
     {
       "name": "p4-claudecode",
@@ -349,6 +287,7 @@
       "status": "stable",
       "version": "1.0.2",
       "spec": "specs/p4-claudecode.md",
+      "path": "plugins/p4-claudecode",
       "changelog": [
         {
           "version": "1.0.2",
@@ -378,22 +317,7 @@
             }
           ]
         }
-      ],
-      "ports": {
-        "claudecode": {
-          "status": "stable",
-          "path": "claudecode/p4-claudecode"
-        },
-        "ghcopilot": {
-          "status": "not-applicable"
-        },
-        "antigravity": {
-          "status": "not-applicable"
-        },
-        "codex": {
-          "status": "not-applicable"
-        }
-      }
+      ]
     },
     {
       "name": "p4-buddy",
@@ -402,6 +326,7 @@
       "status": "beta",
       "version": "1.0.2",
       "spec": "specs/p4-buddy.md",
+      "path": "plugins/p4-buddy",
       "changelog": [
         {
           "version": "1.0.2",
@@ -429,29 +354,9 @@
               "version": 1,
               "changes": "Initial release"
             }
-          ],
-          "ports": {
-            "antigravity": "beta",
-            "codex": "beta"
-          }
+          ]
         }
-      ],
-      "ports": {
-        "claudecode": {
-          "status": "beta",
-          "path": "claudecode/p4-buddy"
-        },
-        "ghcopilot": {
-          "status": "beta",
-          "path": "ghcopilot/plugins/p4-buddy"
-        },
-        "antigravity": {
-          "status": "proposal"
-        },
-        "codex": {
-          "status": "proposal"
-        }
-      }
+      ]
     },
     {
       "name": "p4-ccvv",
@@ -460,6 +365,7 @@
       "status": "beta",
       "version": "1.0.16",
       "spec": "specs/p4-ccvv.md",
+      "path": "plugins/p4-ccvv",
       "scopes": [
         "global"
       ],
@@ -540,12 +446,7 @@
               "version": 2,
               "changes": "Initial release"
             }
-          ],
-          "ports": {
-            "ghcopilot": "beta",
-            "antigravity": "beta",
-            "codex": "beta"
-          }
+          ]
         },
         {
           "name": "profile-update",
@@ -559,12 +460,7 @@
               "version": 3,
               "changes": "Initial release"
             }
-          ],
-          "ports": {
-            "ghcopilot": "beta",
-            "antigravity": "beta",
-            "codex": "beta"
-          }
+          ]
         },
         {
           "name": "generate",
@@ -586,12 +482,7 @@
               "version": 4,
               "changes": "Initial release"
             }
-          ],
-          "ports": {
-            "ghcopilot": "beta",
-            "antigravity": "beta",
-            "codex": "beta"
-          }
+          ]
         },
         {
           "name": "regen",
@@ -601,12 +492,7 @@
               "version": 5,
               "changes": "Initial release"
             }
-          ],
-          "ports": {
-            "ghcopilot": "beta",
-            "antigravity": "beta",
-            "codex": "beta"
-          }
+          ]
         },
         {
           "name": "export",
@@ -620,29 +506,9 @@
               "version": 6,
               "changes": "Initial release"
             }
-          ],
-          "ports": {
-            "ghcopilot": "beta",
-            "antigravity": "beta",
-            "codex": "beta"
-          }
+          ]
         }
       ],
-      "ports": {
-        "claudecode": {
-          "status": "beta",
-          "path": "claudecode/p4-ccvv"
-        },
-        "ghcopilot": {
-          "status": "proposal"
-        },
-        "antigravity": {
-          "status": "proposal"
-        },
-        "codex": {
-          "status": "proposal"
-        }
-      },
       "dependencies": [
         {
           "type": "tool",
@@ -668,23 +534,8 @@
       "status": "beta",
       "version": "1.1.34",
       "spec": "specs/p4-plugin.md",
+      "path": "plugins/p4-plugin",
       "changelog": [
-        {
-          "version": "1.1.33",
-          "changes": "skill-add: add Step 5c — update claudecode/MARKETPLACE.md and ghcopilot/MARKETPLACE.md skills column on skill addition"
-        },
-        {
-          "version": "1.1.34",
-          "changes": "skill-remove: add Step 4d — update claudecode/MARKETPLACE.md and ghcopilot/MARKETPLACE.md skills column on skill removal"
-        },
-        {
-          "version": "1.1.31",
-          "changes": "create: consolidate all marketplace updates into Step 7 (7.1–7.4), remove redundant Step 6, fix auto-setup column in MARKETPLACE.md row"
-        },
-        {
-          "version": "1.1.32",
-          "changes": "update: explicit ghcopilot marketplace updates (description/skills/status changes), comprehensive Step 4 trigger table"
-        },
         {
           "version": "1.1.29",
           "changes": "create: enforce two-group alphabetical README.md convention in Step 7b"
@@ -692,14 +543,6 @@
         {
           "version": "1.1.30",
           "changes": "update: enforce two-group alphabetical README.md convention in Step 4"
-        },
-        {
-          "version": "1.1.27",
-          "changes": "create: add port decision step (Step 1 item 8), scaffold non-claudecode ports (Step 7c), update root README.md (Step 7b)"
-        },
-        {
-          "version": "1.1.28",
-          "changes": "update: add port management to Step 2 and Step 4 — prompt for port decisions, scaffold promoted ports, update specs and root README"
         },
         {
           "version": "1.1.29",
@@ -792,18 +635,6 @@
           "version": 31,
           "changelog": [
             {
-              "version": 31,
-              "changes": "consolidate marketplace updates into Step 7 (7.1 claudecode MARKETPLACE.md, 7.2 .claude-plugin/marketplace.json, 7.3–7.4 ghcopilot files); remove redundant Step 6; fix row format with auto-setup column"
-            },
-            {
-              "version": 29,
-              "changes": "Step 7b: insert plugin row in correct group (general vs CLI/TUI-specific) in alphabetical order"
-            },
-            {
-              "version": 27,
-              "changes": "add port decision collection, Step 7b (root README update), Step 7c (non-claudecode port scaffolding), and port-aware catalog/spec generation"
-            },
-            {
               "version": 24,
               "changes": "update setup scaffold to check both tool and plugin deps with unified type table"
             },
@@ -830,16 +661,8 @@
           "version": 32,
           "changelog": [
             {
-              "version": 32,
-              "changes": "Step 4: add explicit ghcopilot marketplace triggers (description/skills/status changes, not only port promotion); update flow diagram header"
-            },
-            {
               "version": 30,
               "changes": "Step 4: update root README.md respecting two-group structure and alphabetical order"
-            },
-            {
-              "version": 28,
-              "changes": "add port change collection in Step 2, port scaffolding on promotion, and derived file updates (specs, root README) in Step 4"
             },
             {
               "version": 5,
@@ -861,10 +684,6 @@
           "name": "skill-add",
           "version": 33,
           "changelog": [
-            {
-              "version": 33,
-              "changes": "add Step 5c: update claudecode/MARKETPLACE.md and ghcopilot/MARKETPLACE.md skills column after adding a skill"
-            },
             {
               "version": 19,
               "changes": "Update README.md when adding a skill"
@@ -889,10 +708,6 @@
           "name": "skill-remove",
           "version": 34,
           "changelog": [
-            {
-              "version": 34,
-              "changes": "add Step 4d: update claudecode/MARKETPLACE.md and ghcopilot/MARKETPLACE.md skills column after removing a skill"
-            },
             {
               "version": 20,
               "changes": "Remove skill row from README.md on deletion"
@@ -959,25 +774,7 @@
             }
           ]
         }
-      ],
-      "ports": {
-        "claudecode": {
-          "status": "beta",
-          "path": "claudecode/p4-plugin"
-        },
-        "ghcopilot": {
-          "status": "beta",
-          "path": "ghcopilot/plugins/p4-plugin"
-        },
-        "antigravity": {
-          "status": "beta",
-          "path": "antigravity/p4-plugin"
-        },
-        "codex": {
-          "status": "beta",
-          "path": "codex/p4-plugin"
-        }
-      }
+      ]
     },
     {
       "name": "p4-converter",
@@ -986,6 +783,7 @@
       "status": "beta",
       "version": "1.0.6",
       "spec": "specs/p4-converter.md",
+      "path": "plugins/p4-converter",
       "changelog": [
         {
           "version": "1.0.6",
@@ -1051,29 +849,9 @@
               "version": 2,
               "changes": "Initial release — 6-step conversion pipeline (libreoffice → qpdf → LLM → python → review)"
             }
-          ],
-          "ports": {
-            "ghcopilot": "beta",
-            "antigravity": "beta",
-            "codex": "beta"
-          }
+          ]
         }
       ],
-      "ports": {
-        "claudecode": {
-          "status": "beta",
-          "path": "claudecode/p4-converter"
-        },
-        "ghcopilot": {
-          "status": "proposal"
-        },
-        "antigravity": {
-          "status": "proposal"
-        },
-        "codex": {
-          "status": "proposal"
-        }
-      },
       "dependencies": [
         {
           "type": "tool",
@@ -1099,6 +877,7 @@
       "status": "beta",
       "version": "1.0.2",
       "spec": "specs/p4-crawler.md",
+      "path": "plugins/p4-crawler",
       "scopes": [
         "local-gitignore"
       ],
@@ -1143,80 +922,7 @@
               "version": 2,
               "changes": "Initial release — full crawl-to-markdown pipeline"
             }
-          ],
-          "ports": {
-            "ghcopilot": "beta",
-            "antigravity": "beta",
-            "codex": "beta"
-          }
-        }
-      ],
-      "ports": {
-        "claudecode": {
-          "status": "beta",
-          "path": "claudecode/p4-crawler"
-        },
-        "ghcopilot": {
-          "status": "proposal"
-        },
-        "antigravity": {
-          "status": "proposal"
-        },
-        "codex": {
-          "status": "proposal"
-        }
-      }
-    },
-    {
-      "name": "p4-antigravity",
-      "description": "Antigravity CLI/TUI-exclusive enhancements: powerline-style statusline with project path, git branch, active model and color-coded usage metrics.",
-      "category": "productivity",
-      "status": "beta",
-      "version": "1.0.0",
-      "spec": "specs/p4-antigravity.md",
-      "changelog": [
-        {
-          "version": "1.0.0",
-          "changes": "Initial release — statusline skill"
-        }
-      ],
-      "skills": [
-        {
-          "name": "statusline",
-          "version": 1,
-          "changelog": [
-            {
-              "version": 1,
-              "changes": "Initial release"
-            }
           ]
-        }
-      ],
-      "ports": {
-        "claudecode": {
-          "status": "not-applicable"
-        },
-        "ghcopilot": {
-          "status": "not-applicable"
-        },
-        "antigravity": {
-          "status": "beta",
-          "path": "antigravity/p4-antigravity"
-        },
-        "codex": {
-          "status": "not-applicable"
-        }
-      },
-      "dependencies": [
-        {
-          "type": "tool",
-          "name": "python3",
-          "version": ">=3.0.0"
-        },
-        {
-          "type": "tool",
-          "name": "git",
-          "version": "*"
         }
       ]
     },
@@ -1227,6 +933,7 @@
       "status": "beta",
       "version": "1.0.5",
       "spec": "specs/p4-agent.md",
+      "path": "plugins/p4-agent",
       "changelog": [
         {
           "version": "1.0.5",
@@ -1286,22 +993,7 @@
             }
           ]
         }
-      ],
-      "ports": {
-        "claudecode": {
-          "status": "proposal",
-          "path": "claudecode/p4-agent"
-        },
-        "ghcopilot": {
-          "status": "proposal"
-        },
-        "antigravity": {
-          "status": "proposal"
-        },
-        "codex": {
-          "status": "proposal"
-        }
-      }
+      ]
     },
     {
       "name": "p4-coding",
@@ -1310,6 +1002,7 @@
       "status": "beta",
       "version": "1.1.6",
       "spec": "specs/p4-coding.md",
+      "path": "plugins/p4-coding",
       "changelog": [
         {
           "version": "1.1.6",
@@ -1405,24 +1098,7 @@
             }
           ]
         }
-      ],
-      "ports": {
-        "claudecode": {
-          "status": "beta",
-          "path": "claudecode/p4-coding"
-        },
-        "ghcopilot": {
-          "status": "beta",
-          "path": "ghcopilot/plugins/p4-coding",
-          "notes": "Ported skills: code-standards, typescript-standards, python-standards. Excluded: go-standards, java-standards, code-review (proposal)."
-        },
-        "antigravity": {
-          "status": "proposal"
-        },
-        "codex": {
-          "status": "proposal"
-        }
-      }
+      ]
     }
   ]
 }
